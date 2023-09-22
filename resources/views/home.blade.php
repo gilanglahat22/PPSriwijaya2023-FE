@@ -677,7 +677,7 @@ body {
     top: 4586px;
     left: 0;
     width: 100%;
-    height: 156px;
+    height: 150px;
     font-size: var(--font-size-5xl);
     font-family: var(--font-montserrat);
     color: #fff;

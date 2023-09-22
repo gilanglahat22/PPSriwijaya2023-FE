@@ -21,11 +21,11 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/vote', function () {
+Route::get('/search_vote', function () {
     return view('vote');
 });
 
-Route::get('/vote1', function () {
+Route::get('/votes', function () {
     return view('vote1');
 });
 

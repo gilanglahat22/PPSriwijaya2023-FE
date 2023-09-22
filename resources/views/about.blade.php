@@ -503,7 +503,7 @@
         var groupContainer = document.getElementById("groupContainer");
         if (groupContainer) {
             groupContainer.addEventListener("click", function(e) {
-                window.location.href = "./vote";
+                window.location.href = "./votes";
             });
         }
     </script>

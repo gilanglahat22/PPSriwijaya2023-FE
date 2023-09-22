@@ -972,7 +972,7 @@ body {
       var groupContainer = document.getElementById("groupContainer");
       if (groupContainer) {
         groupContainer.addEventListener("click", function (e) {
-          window.location.href = "/vote";
+          window.location.href = "/search_vote";
         });
       }
       
@@ -1007,7 +1007,7 @@ body {
       var groupContainer2 = document.getElementById("groupContainer2");
       if (groupContainer2) {
         groupContainer2.addEventListener("click", function (e) {
-          window.location.href = "/vote1";
+          window.location.href = "/votes";
         });
       }
       </script>

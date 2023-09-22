@@ -478,7 +478,7 @@
       var groupContainer1 = document.getElementById("groupContainer1");
       if (groupContainer1) {
         groupContainer1.addEventListener("click", function (e) {
-          window.location.href = "./vote";
+          window.location.href = "./votes";
         });
       }
       </script>

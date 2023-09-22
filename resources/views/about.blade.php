@@ -377,7 +377,7 @@
       #ddcaca 94.79%
     );
     width: 100%;
-    height: 2744px;
+    height: 3000px;
     overflow: hidden;
     text-align: center;
     font-size: var(--font-size-37xl);

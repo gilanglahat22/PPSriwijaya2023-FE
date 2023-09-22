@@ -320,11 +320,11 @@
 
         @media (max-width: 478px){
             .vouchers-desktop{
-                height: 2317px;
+                height: 3000px;
             }
 
             .rectangle-parent50{
-                top: 2317px;
+                top: 3000px;
             }
         }
     </style>

@@ -421,11 +421,11 @@
 
         @media (max-width: 478px){
             .contact-desktop{
-                height: 2330px;
+                height: 3000px;
             }
 
             .rectangle-parent52{
-                top: 2330px;
+                top: 3000px;
             }
         }
     </style>

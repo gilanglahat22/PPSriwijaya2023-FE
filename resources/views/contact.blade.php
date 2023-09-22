@@ -4,8 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./contact-desktop.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Alata:wght@400&display=swap"
@@ -26,6 +24,8 @@
         body {
         margin: 0;
         line-height: normal;
+        width: 100%;
+        height: 100%;
         }
 
         .popup-overlay {
@@ -276,12 +276,12 @@
         font-size: var(--font-size-45xl);
         }
         .group-child62 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: var(--color-maroon);
-        width: 1440px;
-        height: 156px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: var(--color-maroon);
+            width: 100%;
+            height: 156px;
         }
         .feline-lab9 {
         text-decoration: underline;
@@ -297,11 +297,15 @@
         }
         .rectangle-parent52 {
         position: absolute;
+        align-items: center;
+        text-align: center;
         top: 1179px;
         left: 0;
-        width: 1440px;
-        height: 156px;
+        width: 100%;
+        height: 150px;
+        font-size: var(--font-size-5xl);
         font-family: var(--font-montserrat);
+        color: #fff;
         }
         .home3 {
         width: 65px;
@@ -379,6 +383,51 @@
         color: var(--color-white);
         font-family: var(--font-abril-fatface);
         }
+        @media (max-width: 1441px){
+            .rectangle-parent52{
+                width: 1441px;
+            }
+            .contact-desktop{
+                width: 1441px;
+            }
+        }
+        @media (max-width: 938px){
+            .contact-desktop{
+                height: 1441px;
+            }
+
+            .rectangle-parent52{
+                top: 1441px;
+            }
+        }
+        @media (max-width: 580px){
+            .contact-desktop{
+                height: 1641px;
+            }
+
+            .rectangle-parent52{
+                top: 1641px;
+            }
+        }
+        @media (max-width: 521px){
+            .contact-desktop{
+                height: 1800px;
+            }
+
+            .rectangle-parent52{
+                top: 1800px;
+            }
+        }
+
+        @media (max-width: 478px){
+            .contact-desktop{
+                height: 2330px;
+            }
+
+            .rectangle-parent52{
+                top: 2330px;
+            }
+        }
     </style>
   </head>
   <body>
@@ -434,13 +483,6 @@
           </div>
         </div>
       </div>
-      <div class="rectangle-parent52">
-        <div class="group-child62"></div>
-        <div class="copyright-2023-container9">
-          Copyright © 2023 Pemilihan Putra Putri Sriwijaya 2023 Powered by
-          <span class="feline-lab9">Feline Lab.</span>
-        </div>
-      </div>
       <div class="home-parent1">
         <div class="home3" id="homeText">Home</div>
         <div class="about3" id="aboutText">About</div>
@@ -451,6 +493,13 @@
           <div class="vote5">Vote</div>
         </div>
       </div>
+    </div>
+    <div class="rectangle-parent52">
+        <div class="group-child62"></div>
+        <div class="copyright-2023-container9">
+            Copyright © 2023 Pemilihan Putra Putri Sriwijaya 2023 Powered by
+            <span class="feline-lab9">Feline Lab.</span>
+        </div>
     </div>
 
     <script>

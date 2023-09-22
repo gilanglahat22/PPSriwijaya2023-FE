@@ -24,6 +24,8 @@
 body {
   margin: 0;
   line-height: normal;
+  width: 100%;
+  height: 100%;
 }
 
 .popup-overlay {
@@ -193,8 +195,9 @@ body {
   top: 0;
   left: 0;
   background-color: var(--color-maroon);
-  width: 1440px;
+  width: 100%;
   height: 156px;
+  text-align: center;
 }
 .feline-lab6 {
   text-decoration: underline;
@@ -205,16 +208,21 @@ body {
   left: calc(50% - 525px);
   font-weight: 600;
   display: inline-block;
-  width: 1044px;
+  width: 100%;
   height: 23.94px;
+  text-align: center;
+  align-items: center;
 }
 .rectangle-parent20 {
   position: absolute;
+  text-align: center;
+  align-items: center;
   top: 1177px;
   left: 0;
-  width: 1440px;
+  width: 100%;
   height: 156px;
   font-family: var(--font-montserrat);
+  color: #fff;
 }
 .vote-desktop-child {
   position: absolute;
@@ -409,6 +417,14 @@ body {
   color: var(--color-white);
   font-family: var(--font-alata);
 }
+    @media (max-width: 1441px){
+        .vote-desktop{
+            width: 1441px;
+        }
+        .rectangle-parent20{
+            width: 1441px;
+        }
+    }
 
   </style>
   <body>
@@ -431,13 +447,6 @@ body {
         <div class="rectangle-parent19" id="groupContainer">
           <div class="group-child29"></div>
           <div class="vote1">Vote</div>
-        </div>
-      </div>
-      <div class="rectangle-parent20">
-        <div class="group-child30"></div>
-        <div class="copyright-2023-container6">
-          Copyright © 2023 Pemilihan Putra Putri Sriwijaya 2023 Powered by
-          <span class="feline-lab6">Feline Lab.</span>
         </div>
       </div>
       <div class="vote-desktop-child"></div>
@@ -483,6 +492,13 @@ body {
           <div class="kirim1">Kirim</div>
         </div>
       </div>
+    </div>
+    <div class="rectangle-parent20">
+        <div class="group-child30"></div>
+        <div class="copyright-2023-container6">
+            Copyright © 2023 Pemilihan Putra Putri Sriwijaya 2023 Powered by
+            <span class="feline-lab6">Feline Lab.</span>
+        </div>
     </div>
 
     <script>

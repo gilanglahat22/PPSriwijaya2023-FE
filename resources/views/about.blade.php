@@ -360,7 +360,7 @@
     position: absolute;
     align-items: center;
     text-align: center;
-    top: 2588px;
+    top: 3000px;
     left: -2px;
     width: 100%;
     height: 120px;

@@ -223,7 +223,7 @@
     height: 85px;
   }
   .about-putra-putri1 {
-    top: 196px;
+    top: 276px;
     left: calc(50% - 417px);
     width: 834px;
   }
@@ -237,7 +237,7 @@
   }
   .mewujudkan-ikatan-putra-container {
     position: absolute;
-    top: calc(50% - 124px);
+    top: calc(50% - 230px);
     left: calc(50% - 513px);
     font-size: var(--font-size-xl);
     font-family: var(--font-alata);
@@ -263,7 +263,7 @@
   }
   .mengoptimalkan-potensi-generas-container {
     position: absolute;
-    top: calc(50% - 124px);
+    top: calc(50% - 230px);
     left: calc(50% + 100px);
     font-size: var(--font-size-xl);
     font-family: var(--font-alata);
@@ -273,12 +273,12 @@
   }
   .about-desktop-child3 {
     position: absolute;
-    top: 352px;
+    top: 427px;
     left: calc(50% - 597px);
     border-radius: var(--br-xl);
     background: linear-gradient(180deg, #d21212 19.79%, #c51e1e);
     width: 1194px;
-    height: 594px;
+    height: 574px;
   }
   .frame-child37 {
     position: relative;
@@ -296,7 +296,7 @@
   }
   .rectangle-parent55 {
     position: absolute;
-    top: calc(50% - 935px);
+    top: calc(50% - 1000px);
     left: calc(50% - 466.5px);
     display: flex;
     flex-direction: row;

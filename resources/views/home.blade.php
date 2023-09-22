@@ -23,6 +23,7 @@
 
 body {
     margin: 0;
+    width: 100%;
     line-height: normal;
 }
 
@@ -380,7 +381,7 @@ body {
 
 .logo-provinsi-sumatera-selatan-group {
     position: absolute;
-    top: 5368px;
+    top: 3711px;
     left: calc(50% - 577px);
     display: flex;
     flex-direction: row;
@@ -393,7 +394,7 @@ body {
 .dinas-pariwisata-dan1,
 .diselenggarakan-oleh1 {
     position: absolute;
-    top: 5192px;
+    top: 3579px;
     left: calc(50% - 346px);
     display: inline-block;
     width: 692px;
@@ -402,13 +403,13 @@ body {
 
 .ayo-dukung-pilihanmu1,
 .dinas-pariwisata-dan1 {
-    top: 5931px;
+    top: 4129px;
     left: calc(50% - 628px);
     width: 1265px;
 }
 
 .dinas-pariwisata-dan1 {
-    top: 5298px;
+    top: 3689px;
     left: calc(50% - 690px);
     font-size: var(--font-size-17xl);
     letter-spacing: 0.05em;
@@ -455,7 +456,7 @@ body {
 
 .rectangle-parent59 {
     position: absolute;
-    top: 6048px;
+    top: 4253px;
     left: calc(50% - 180px);
     width: 360px;
     height: 101px;
@@ -648,8 +649,10 @@ body {
     top: 0;
     left: 0;
     background-color: var(--color-maroon);
-    width: 1440px;
+    /* width: 1440px; */
+    width: 100%;
     height: 156px;
+    text-align: center;
 }
 
 .feline-lab11 {
@@ -668,12 +671,15 @@ body {
 
 .rectangle-parent62 {
     position: absolute;
-    top: 6486px;
+    align-items: center;
+    text-align: center;
+    top: 4586px;
     left: 0;
-    width: 1440px;
+    width: 100%;
     height: 156px;
     font-size: var(--font-size-5xl);
     font-family: var(--font-montserrat);
+    color: #fff;
 }
 
 .putra-putri19 {
@@ -767,13 +773,22 @@ body {
     position: relative;
     background: linear-gradient( 180deg, #9b2a06 14.06%, #b05f5f 63.54%, #ddcaca 94.79%);
     width: 100%;
-    height: 6642px;
+    height: 4586px;
     overflow: hidden;
     text-align: center;
     font-size: var(--font-size-37xl);
     color: var(--color-white);
     font-family: var(--font-abril-fatface);
 }
+@media (max-width: 1441px){
+    .rectangle-parent62 {
+      width: 1441px;
+    }
+
+    .home-desktop{
+      width: 1441px;
+    }
+  }
     </style>
   </head>
   <body>
@@ -880,12 +895,6 @@ body {
       </div>
       <img class="home-desktop-child14" alt="" src="polygon-1.svg" />
 
-      <img
-        class="home-desktop-child15"
-        alt=""
-        src="rectangle-237@2x.png"
-      />
-
       <div class="rectangle-parent59" id="groupContainer">
         <div class="group-child66"></div>
         <div class="vote-now1">Vote Now !</div>
@@ -921,13 +930,6 @@ body {
           <div class="vote7">Vote</div>
         </div>
       </div>
-      <div class="rectangle-parent62">
-        <div class="group-child69"></div>
-        <div class="copyright-2023-container11">
-          Copyright © 2023 Pemilihan Putra Putri Sriwijaya 2023 Powered by
-          <span class="feline-lab11">Feline Lab.</span>
-        </div>
-      </div>
       <div class="putra-putri19">
         Putra – Putri Sriwijaya atau dahulu disebut juga dengan Bujang Gadis
         Sumatera selatan merupakan pemuda pemudi terbaik sumatera selatan yang
@@ -938,33 +940,17 @@ body {
         Putri Sriwijaya memiliki masa jabatan selama 1 (satu) Tahun dalam
         mengemban amanahnya di Sumatera Selatan.
       </div>
-      <div class="frame-parent7">
-        <div class="parent1">
-          <div class="div12">50</div>
-          <div class="alumni-yang-skskskkskskk-container3">
-            <p class="sriwijaya12">- Alumni yang</p>
-            <p class="sriwijaya12">skskskkskskk</p>
-          </div>
-        </div>
-        <div class="parent1">
-          <div class="div12">169</div>
-          <div class="alumni-yang-skskskkskskk-container3">
-            <p class="sriwijaya12">- Alumni yang</p>
-            <p class="sriwijaya12">skskskkskskk</p>
-          </div>
-        </div>
-        <div class="parent1">
-          <div class="div14">1589</div>
-          <div class="alumni-yang-skskskkskskk-container3">
-            <p class="sriwijaya12">- Alumni yang</p>
-            <p class="sriwijaya12">skskskkskskk</p>
-          </div>
-        </div>
-      </div>
       <div class="carousel-2">
         <img class="group-45-1-1" alt="" src="group-45-1-1@2x.png" />
 
         <img class="group-45-1-1" alt="" src="group-46-1@2x.png" />
+      </div>
+    </div>
+    <div class="rectangle-parent62">
+      <div class="group-child69"></div>
+      <div class="copyright-2023-container11">
+        Copyright © 2023 Pemilihan Putra Putri Sriwijaya 2023 Powered by
+        <span class="feline-lab11">Feline Lab.</span>
       </div>
     </div>
 

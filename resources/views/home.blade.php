@@ -254,13 +254,14 @@ body {
 }
 
 .home-desktop-child12 {
-    position: absolute;
-    top: 832px;
-    left: calc(50% - 678px);
-    border-radius: var(--br-xl);
-    background: linear-gradient(180deg, #b8b8b8 19.79%, #ee9090 66.67%);
-    width: 1355px;
-    height: 796px;
+  position: absolute;
+  top: 832px;
+  left: calc(50% - 678px);
+  border-radius: var(--br-xl);
+  background: linear-gradient(180deg, #b8b8b8 19.79%, #ee9090 66.67%);
+  width: 1350px;
+  height: 750px;
+  padding-top: 3%;
 }
 
 .home-desktop-child13 {
@@ -780,6 +781,14 @@ body {
     color: var(--color-white);
     font-family: var(--font-abril-fatface);
 }
+.homeAndroidChild5 {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 92%;
+    border-radius: var(--br-8xs);
+  }
 @media (max-width: 1441px){
     .rectangle-parent62 {
       width: 1441px;
@@ -811,8 +820,12 @@ body {
 
       <img class="home-desktop-child11" alt="" src="group-36.svg" />
 
-      <div class="home-desktop-child12"></div>
-      <div class="home-desktop-child13"></div>
+      <div class="home-desktop-child12">
+        <video class="homeAndroidChild5" controls autoplay>  
+            <source src="PPS_TRAILER_REVISI_LOGO.mp4" type="video/mp4">  
+        </video>
+      </div>
+      <!-- <div class="home-desktop-child13"></div> -->
       <div class="logo-ypps-1-1-2-parent4">
         <img
           class="logo-ypps-1-1-211"
@@ -893,7 +906,7 @@ body {
       <div class="dinas-pariwisata-dan1">
         Dinas Pariwisata dan Kebudayaan Provinsi Sumatera Selatan
       </div>
-      <img class="home-desktop-child14" alt="" src="polygon-1.svg" />
+      <!-- <img class="home-desktop-child14" alt="" src="polygon-1.svg" /> -->
 
       <div class="rectangle-parent59" id="groupContainer">
         <div class="group-child66"></div>
@@ -955,6 +968,22 @@ body {
     </div>
 
     <script>
+      var pause = document.querySelector('.pause');
+      var play = document.querySelector('.play');
+      var btn = document.querySelector('#app');
+
+      btn.addEventListener('click', () => {
+          if( play.classList.contains("active") )
+          {
+              play.classList.remove("active");
+              pause.classList.add("active");
+          }
+          else
+          {
+              pause.classList.remove("active");
+              play.classList.add("active");
+          }
+      })
       var groupContainer = document.getElementById("groupContainer");
       if (groupContainer) {
         groupContainer.addEventListener("click", function (e) {

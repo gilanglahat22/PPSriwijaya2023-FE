@@ -26,6 +26,8 @@
         body {
         margin: 0;
         line-height: normal;
+        width: 100%;
+        height: 100%;
         }
 
         .popup-overlay {
@@ -156,7 +158,7 @@
         top: 0;
         left: 0;
         background-color: var(--color-maroon);
-        width: 1440px;
+        width: 100%;
         height: 156px;
         }
         .feline-lab8 {
@@ -164,6 +166,7 @@
         }
         .copyright-2023-container8 {
         position: absolute;
+        text-align: center;
         top: 78px;
         left: calc(50% - 525px);
         font-weight: 600;
@@ -173,11 +176,14 @@
         }
         .rectangle-parent50 {
         position: absolute;
+        align-items: center;
+        text-align: center;
         top: 1117px;
         left: 0;
-        width: 1440px;
+        width: 100%;
         height: 156px;
         font-family: var(--font-montserrat);
+        color: #fff;
         }
         .home2 {
         position: relative;
@@ -275,6 +281,52 @@
         color: var(--color-white);
         font-family: var(--font-average);
         }
+        @media (max-width: 1441px){
+            .rectangle-parent50 {
+            width: 1441px;
+            }
+
+            .vouchers-desktop{
+            width: 1441px;
+            }
+        }
+        @media (max-width: 938px){
+            .vouchers-desktop{
+                height: 1441px;
+            }
+
+            .rectangle-parent50{
+                top: 1441px;
+            }
+        }
+        @media (max-width: 580px){
+            .vouchers-desktop{
+                height: 1641px;
+            }
+
+            .rectangle-parent50{
+                top: 1641px;
+            }
+        }
+        @media (max-width: 521px){
+            .vouchers-desktop{
+                height: 1800px;
+            }
+
+            .rectangle-parent50{
+                top: 1800px;
+            }
+        }
+
+        @media (max-width: 478px){
+            .vouchers-desktop{
+                height: 2317px;
+            }
+
+            .rectangle-parent50{
+                top: 2317px;
+            }
+        }
     </style>
   </head>
   <body>
@@ -291,13 +343,6 @@
       </div>
       <div class="tata-cara-pembelian">Tata Cara Pembelian Voucher</div>
       <div class="vouchers-desktop-child"></div>
-      <div class="rectangle-parent50">
-        <div class="group-child60"></div>
-        <div class="copyright-2023-container8">
-          Copyright © 2023 Pemilihan Putra Putri Sriwijaya 2023 Powered by
-          <span class="feline-lab8">Feline Lab.</span>
-        </div>
-      </div>
       <div class="home-container">
         <div class="home2" id="homeText">Home</div>
         <div class="about2" id="aboutText">About</div>
@@ -346,7 +391,13 @@
         </ul>
       </div>
     </div>
-
+    <div class="rectangle-parent50">
+        <div class="group-child60"></div>
+        <div class="copyright-2023-container8">
+          Copyright © 2023 Pemilihan Putra Putri Sriwijaya 2023 Powered by
+          <span class="feline-lab8">Feline Lab.</span>
+        </div>
+      </div>
     <script>
       var homeText = document.getElementById("homeText");
       if (homeText) {

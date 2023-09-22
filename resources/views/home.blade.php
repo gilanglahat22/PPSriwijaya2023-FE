@@ -972,42 +972,42 @@ body {
       var groupContainer = document.getElementById("groupContainer");
       if (groupContainer) {
         groupContainer.addEventListener("click", function (e) {
-          window.location.href = "./vote-desktop1.html";
+          window.location.href = "/vote";
         });
       }
       
       var groupContainer1 = document.getElementById("groupContainer1");
       if (groupContainer1) {
         groupContainer1.addEventListener("click", function (e) {
-          window.location.href = "./about-desktop.html";
+          window.location.href = "/about";
         });
       }
       
       var aboutText = document.getElementById("aboutText");
       if (aboutText) {
         aboutText.addEventListener("click", function (e) {
-          window.location.href = "./about-desktop.html";
+          window.location.href = "/about";
         });
       }
       
       var contactText = document.getElementById("contactText");
       if (contactText) {
         contactText.addEventListener("click", function (e) {
-          window.location.href = "./contact-desktop.html";
+          window.location.href = "/contact";
         });
       }
       
       var vouchersText = document.getElementById("vouchersText");
       if (vouchersText) {
         vouchersText.addEventListener("click", function (e) {
-          window.location.href = "./vouchers-desktop.html";
+          window.location.href = "/vouchers";
         });
       }
       
       var groupContainer2 = document.getElementById("groupContainer2");
       if (groupContainer2) {
         groupContainer2.addEventListener("click", function (e) {
-          window.location.href = "./vote-desktop1.html";
+          window.location.href = "/vote1";
         });
       }
       </script>

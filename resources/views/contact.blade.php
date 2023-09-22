@@ -457,7 +457,7 @@
       var homeText = document.getElementById("homeText");
       if (homeText) {
         homeText.addEventListener("click", function (e) {
-          window.location.href = "./home";
+          window.location.href = "./";
         });
       }
       

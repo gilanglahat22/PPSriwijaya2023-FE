@@ -25,6 +25,14 @@ Route::get('/vote', function () {
     return view('vote');
 });
 
+Route::get('/vote1', function () {
+    return view('vote1');
+});
+
+Route::get('/vouchers', function () {
+    return view('vouchers');
+});
+
 Route::get('/contact', function () {
     return view('contact');
 });

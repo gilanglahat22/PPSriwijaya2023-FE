@@ -24,6 +24,8 @@
         body {
         margin: 0;
         line-height: normal;
+        width: 100%;
+        height: 100%;
         }
 
         .popup-overlay {
@@ -250,8 +252,9 @@
         top: 0;
         left: 0;
         background-color: var(--color-maroon);
-        width: 1440px;
+        width: 100%;
         height: 156px;
+        text-align: center;
         }
         .feline-lab7 {
         text-decoration: underline;
@@ -264,14 +267,18 @@
         display: inline-block;
         width: 1044px;
         height: 23.94px;
+        text-align: center;
         }
         .rectangle-parent24 {
         position: absolute;
+        text-align: center;
+        align-items: center;
         top: 2684px;
         left: 0;
-        width: 1440px;
+        width: 100%;
         height: 156px;
         font-family: var(--font-montserrat);
+        color: #fff;
         }
         .vote-desktop-child2 {
         position: absolute;
@@ -624,6 +631,15 @@
         color: var(--color-white);
         font-family: var(--font-alata);
         }
+        @media (max-width: 1441px){
+            .rectangle-parent24 {
+                width: 1441px;
+            }
+
+            .vote-desktop1{
+                width: 1441px;
+            }
+        }
     </style>
   </head>
   <body>
@@ -661,13 +677,6 @@
         <div class="rectangle-parent23">
           <div class="group-child33"></div>
           <div class="vote2">Vote</div>
-        </div>
-      </div>
-      <div class="rectangle-parent24">
-        <div class="group-child34"></div>
-        <div class="copyright-2023-container7">
-          Copyright © 2023 Pemilihan Putra Putri Sriwijaya 2023 Powered by
-          <span class="feline-lab7">Feline Lab.</span>
         </div>
       </div>
       <div class="vote-desktop-child2"></div>
@@ -884,6 +893,14 @@
           <div class="kirim1">Kirim</div>
         </div>
       </div>
+    </div>
+
+    <div class="rectangle-parent24">
+        <div class="group-child34"></div>
+        <div class="copyright-2023-container7">
+            Copyright © 2023 Pemilihan Putra Putri Sriwijaya 2023 Powered by
+            <span class="feline-lab7">Feline Lab.</span>
+        </div>
     </div>
 
     <script>

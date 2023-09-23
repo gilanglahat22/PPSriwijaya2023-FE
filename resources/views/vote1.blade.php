@@ -167,7 +167,7 @@
         .putri3 {
         position: absolute;
         top: 735.91px;
-        left: calc(50% - 528.69px);
+        left: calc(50% - 440.69px);
         font-size: var(--font-size-37xl);
         color: var(--color-burlywood-200);
         display: inline-block;
@@ -519,7 +519,7 @@
         .div11 {
         top: 971px;
         position: relative;
-        left: -14%;
+        left: -12%;
         font-size: var(--font-size-45xl);
         width: 478px;
         height: 84px;
@@ -1222,31 +1222,6 @@
     </div>
 
     <script>
-      var groupContainer3 = document.getElementById("groupContainer3");
-      if (groupContainer3) {
-        groupContainer3.addEventListener("click", function () {
-          var popup = document.getElementById("popUpKode");
-          if (!popup) return;
-          var popupStyle = popup.style;
-          if (popupStyle) {
-            popupStyle.display = "flex";
-            popupStyle.zIndex = 100;
-            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
-            popupStyle.alignItems = "center";
-            popupStyle.justifyContent = "center";
-          }
-          popup.setAttribute("closable", "");
-      
-          var onClick =
-            popup.onClick ||
-            function (e) {
-              if (e.target === popup && popup.hasAttribute("closable")) {
-                popupStyle.display = "none";
-              }
-            };
-          popup.addEventListener("click", onClick);
-        });
-      }
 
       $.ajax({
         type: "GET",
@@ -1268,9 +1243,9 @@
           var data2 = datas[1]['persentase'];
           var data3 = datas[2]['persentase'];
           var nameP1 = datas[0]['name'], nameP2 = datas[1]['name'], nameP3 = datas[2]['name'];
-          var width1 = 630*data1/100;
-          var width2 = 630*data2/100;
-          var width3 = 630*data3/100;
+          var width1 = 600*data1/100;
+          var width2 = 600*data2/100;
+          var width3 = 600*data3/100;
           outputNamaHTML = '<div>'+data1.toFixed(2)+'%</div>';
           outputNamaHTML += '<div>'+data2.toFixed(2)+'%</div>';
           outputNamaHTML += '<div>'+data3.toFixed(2)+'%</div>';
@@ -1302,9 +1277,9 @@
           var data2 = datas[1]['persentase'];
           var data3 = datas[2]['persentase'];
           var nameP1 = datas[0]['name'], nameP2 = datas[1]['name'], nameP3 = datas[2]['name'];
-          var width1 = 630*data1/100;
-          var width2 = 630*data2/100;
-          var width3 = 630*data3/100;
+          var width1 = 600*data1/100;
+          var width2 = 600*data2/100;
+          var width3 = 600*data3/100;
           outputNamaHTML = '<div class="nama12">'+data1.toFixed(2)+'%</div>';
           outputNamaHTML += '<div class="nama12">'+data2.toFixed(2)+'%</div>';
           outputNamaHTML += '<div class="nama12">'+data3.toFixed(2)+'%</div>';
@@ -1315,6 +1290,32 @@
           document.getElementById("name_putris").innerHTML = outputNamaHTML;
         }
       });
+
+      var groupContainer3 = document.getElementById("groupContainer3");
+      if (groupContainer3) {
+        groupContainer3.addEventListener("click", function () {
+          var popup = document.getElementById("popUpKode");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
 
       var homeText = document.getElementById("homeText");
       if (homeText) {

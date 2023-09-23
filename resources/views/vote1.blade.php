@@ -151,7 +151,7 @@
         .nama-parent2 {
         position: absolute;
         top: 330px;
-        left: 502px;
+        left: 507px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -358,15 +358,15 @@
         left: 4px;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
+        /* align-items: flex-start;
+        justify-content: flex-start; */
         gap: var(--gap-smi);
         }
         .group-child36,
         .line-container {
         position: absolute;
         top: 315px;
-        left: 576px;
+        left: 585px;
         width: 616px;
         height: 401px;
         }
@@ -518,22 +518,24 @@
         .d20h20m1,
         .div11 {
         top: 971px;
-        left: 175px;
+        position: relative;
+        left: -14%;
         font-size: var(--font-size-45xl);
         width: 478px;
         height: 84px;
         }
         .div11 {
-        left: 906px;
+        position: relative;
+        left: 3%;
         width: 219px;
         }
         .gain-up-11 {
-        position: absolute;
-        top: 989px;
-        left: 1094px;
-        width: 46px;
-        height: 52px;
-        object-fit: cover;
+          position: relative;
+          top: 971px;
+          left: 3%;
+          width: 46px;
+          height: 52px;
+          object-fit: cover;
         }
         .vote-desktop1 {
         position: relative;
@@ -668,24 +670,6 @@
           text-align: center;
           gap: var(--gap-base);
         }
-        @media (max-width: 1441px){
-            .rectangle-parent24 {
-                width: 1441px;
-            }
-
-            .vote-desktop1{
-                width: 1441px;
-            }
-        }
-        /* @media (max-width: 439px){
-            .rectangle-parent24 {
-                height: 2840px;
-            }
-
-            .vote-desktop1{
-                height: 2840px;
-            }
-        } */
 
         .container {
           max-width: 1200px;
@@ -914,6 +898,24 @@
           top: -10px;
           bottom: -10px;
         }
+        @media (max-width: 1441px){
+            .rectangle-parent24 {
+                width: 1441px;
+            }
+
+            .vote-desktop1{
+                width: 1441px;
+            }
+        }
+        @media (max-width: 439px){
+            .rectangle-parent24 {
+                top: 3100px;
+            }
+
+            .vote-desktop1{
+                height: 3100px;
+            }
+        }
     </style>
   </head>
   <body>
@@ -929,16 +931,8 @@
         <p class="sriwijaya8">SRIWIJAYA</p>
       </div>
       <div class="vote-desktop-item"></div>
-      <div class="nama-parent1">
-        <div class="nama12">nama</div>
-        <div class="nama12">nama</div>
-        <div class="nama12">nama</div>
-      </div>
-      <div class="nama-parent2">
-        <div class="nama12">nama</div>
-        <div class="nama12">nama</div>
-        <div class="nama12">nama</div>
-      </div>
+      <div class="nama-parent1" id="name_putras"></div>
+      <div class="nama-parent2" id="name_putris"></div>
       <div class="putri3">Putri</div>
       <div class="putra3">Putra</div>
       <div class="vote-desktop-inner"></div>
@@ -963,17 +957,8 @@
 
       <div class="line-container">
         <div class="group-child35"></div>
-        <div class="rectangle-parent25">
-          <div class="frame-child16"></div>
-          <div class="frame-child17"></div>
-          <div class="frame-child18"></div>
-        </div>
-        <div class="vector-parent">
-          <img class="frame-child19" alt="" src="rectangle-273.svg" />
-
-          <div class="frame-child20"></div>
-          <div class="frame-child21"></div>
-        </div>
+        <div class="rectangle-parent25" id="rectangle_putri_statistics"></div>
+        <div class="vector-parent" id="rectangle_putra_statistics"></div>
       </div>
       <div class="putra4">Putra</div>
       <div class="putri4">Putri</div>
@@ -1271,6 +1256,7 @@
           var datas = result;
           // document.getElementById('test123').textContent = datas[0]['name'];
           var outputHTML = "";
+          var outputNamaHTML = "";
           for (let i = 0; i < datas.length; i++){
             outputHTML += '<div class="container-image" id="groupContainer3">';
             outputHTML += '<img class="image-item" id="groupContainer3" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+'/>';
@@ -1278,6 +1264,21 @@
           }
           // console.log(outputHTML);
           document.getElementById("rectangle_putras").innerHTML = outputHTML;
+          var data1 = datas[0]['persentase'];
+          var data2 = datas[1]['persentase'];
+          var data3 = datas[2]['persentase'];
+          var nameP1 = datas[0]['name'], nameP2 = datas[1]['name'], nameP3 = datas[2]['name'];
+          var width1 = 630*data1/100;
+          var width2 = 630*data2/100;
+          var width3 = 630*data3/100;
+          outputNamaHTML = '<div>'+data1.toFixed(2)+'%</div>';
+          outputNamaHTML += '<div>'+data2.toFixed(2)+'%</div>';
+          outputNamaHTML += '<div>'+data3.toFixed(2)+'%</div>';
+          outputHTML = '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width1+'px; height: 42px;"><div style="position: relative; left: '+(width1+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP1+'</div></div>';
+          outputHTML += '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width2+'px; height: 42px;"><div style="position: relative; left: '+(width2+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP2+'</div></div>';
+          outputHTML += '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width3+'px; height: 42px;"><div style="position: relative; left: '+(width3+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP3+'</div></div>';
+          document.getElementById("rectangle_putra_statistics").innerHTML = outputHTML;
+          document.getElementById("name_putras").innerHTML = outputNamaHTML;
         }
       });
 
@@ -1289,6 +1290,7 @@
           var datas = result;
           // document.getElementById('test123').textContent = datas[0]['name'];
           var outputHTML = "";
+          var outputNamaHTML = "";
           for (let i = 0; i < datas.length; i++){
             outputHTML += '<div class="container-image" id="groupContainer3">';
             outputHTML += '<img class="image-item-2" id="groupContainer3" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+'/>';
@@ -1296,6 +1298,21 @@
           }
           // console.log(outputHTML);
           document.getElementById("rectangle_putris").innerHTML = outputHTML;
+          var data1 = datas[0]['persentase'];
+          var data2 = datas[1]['persentase'];
+          var data3 = datas[2]['persentase'];
+          var nameP1 = datas[0]['name'], nameP2 = datas[1]['name'], nameP3 = datas[2]['name'];
+          var width1 = 630*data1/100;
+          var width2 = 630*data2/100;
+          var width3 = 630*data3/100;
+          outputNamaHTML = '<div class="nama12">'+data1.toFixed(2)+'%</div>';
+          outputNamaHTML += '<div class="nama12">'+data2.toFixed(2)+'%</div>';
+          outputNamaHTML += '<div class="nama12">'+data3.toFixed(2)+'%</div>';
+          outputHTML = '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width1+'px; height: 42px;"><div style="position: relative; left: '+(width1+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP1+'</div></div>';
+          outputHTML += '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width2+'px; height: 42px;"><div style="position: relative; left: '+(width2+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP2+'</div></div>';
+          outputHTML += '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width3+'px; height: 42px;"><div style="position: relative; left: '+(width3+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP3+'</div></div>';
+          document.getElementById("rectangle_putri_statistics").innerHTML = outputHTML;
+          document.getElementById("name_putris").innerHTML = outputNamaHTML;
         }
       });
 

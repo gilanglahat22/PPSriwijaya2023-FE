@@ -239,6 +239,7 @@
         background-color: var(--color-whitesmoke);
         width: 499px;
         height: 165px;
+        text-align: flex-start;
         }
         .submit1 {
         position: absolute;
@@ -383,6 +384,76 @@
         color: var(--color-white);
         font-family: var(--font-abril-fatface);
         }
+
+        .popup-overlay {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        inset: 0;
+        }
+
+        .pop-up-kode1 {
+        position: relative;
+        width: 1249px;
+        height: 838px;
+        max-width: 90%;
+        max-height: 90%;
+        overflow: auto;
+        text-align: center;
+        font-size: var(--font-size-17xl);
+        color: var(--color-white);
+        font-family: var(--font-alata);
+        }
+
+        .masukkan-kode-voucher1 {
+        position: absolute;
+        top: 183px;
+        left: calc(50% - 346.5px);
+        display: inline-block;
+        width: 694px;
+        height: 68px;
+        }
+
+        .rectangle-parent18 {
+        position: absolute;
+        top: 408px;
+        left: 474px;
+        width: 290px;
+        height: 68px;
+        color: var(--color-black);
+        }
+
+        .kirim1 {
+        position: absolute;
+        top: 7px;
+        left: 45px;
+        display: inline-block;
+        width: 199px;
+        height: 33px;
+        }
+
+        .group-child28 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: var(--br-37xl-5);
+        background-color: var(--color-gainsboro);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+        width: 290px;
+        height: 68px;
+        }
+
+        .pop-up-kode-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: var(--br-3xs);
+        background: linear-gradient(180deg, #b22424, #340202);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+        width: 1219px;
+        height: 838px;
+        }
+
         @media (max-width: 1441px){
             .rectangle-parent52{
                 width: 1441px;
@@ -468,19 +539,19 @@
         <div class="frame-parent6">
           <div class="name-group">
             <div class="get-in-touch1">Name</div>
-            <div class="frame-child34"></div>
+            <input class="frame-child34"></input>
           </div>
           <div class="name-group">
             <div class="get-in-touch1">Email</div>
-            <div class="frame-child34"></div>
+            <input class="frame-child34"></input>
           </div>
           <div class="name-group">
             <div class="get-in-touch1">Message</div>
-            <div class="frame-child36"></div>
+            <input class="frame-child36"></input>
           </div>
-          <div class="submit-container">
+          <a class="submit-container" id="letsgo">
             <div class="submit1">Submit</div>
-          </div>
+          </a>
         </div>
       </div>
       <div class="home-parent1">
@@ -494,6 +565,20 @@
         </div>
       </div>
     </div>
+    
+    <div id="popUpBerhasil" class="popup-overlay" style="display: none">
+      <div class="pop-up-kode1">
+        <div class="pop-up-kode-inner"></div>
+        <div class="masukkan-kode-voucher1">
+          Pesan berhasil dikirim
+        </div>
+        <a class="rectangle-parent18" href="/contact">
+          <div class="group-child28"></div>
+          <div class="kirim1">Kembali</div>
+        </a>
+      </div>
+    </div>
+
     <div class="rectangle-parent52">
         <div class="group-child62"></div>
         <div class="copyright-2023-container9">
@@ -514,6 +599,30 @@
       if (aboutText) {
         aboutText.addEventListener("click", function (e) {
           window.location.href = "./about";
+        });
+      }
+
+      var grContainer3 = document.getElementById("letsgo");
+      if(grContainer3) {
+        grContainer3.addEventListener("click", function () {
+          var popup = document.getElementById("popUpBerhasil");
+          if(!popup) return;
+          var popupStyle = popup.style;
+          if(popupStyle){
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+          var onClick = popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+            popup.addEventListener("click", onClick);
         });
       }
       

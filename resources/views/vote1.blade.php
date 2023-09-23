@@ -721,7 +721,7 @@
               src="rectangle-2902@2x.png"
             />
 
-            <div class="ahmad-yani">Mustofa A.</div>
+            <div class="ahmad-yani">28 Ajeng Dwi Ratu Qaida Maharani</div>
           </div>
         </div>
         <div class="rectangle-parent28">

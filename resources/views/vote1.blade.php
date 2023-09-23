@@ -20,6 +20,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <style>
         body {
         margin: 0;
@@ -369,18 +371,26 @@
         height: 401px;
         }
         .group-child36 {
+        position: relative;
         top: 0;
         left: 0;
         border-radius: var(--br-8xs);
         background-color: var(--color-gainsboro);
         width: 369.16px;
-        height: 440px;
+        /* height: 1040px; */
+        /* background-color: #000;
+        padding-bottom: 500px; */
+        /* padding-bottom: 150px;
+        padding-top: 100px; */
         }
         .frame-child22,
         .group-child37 {
         border-radius: var(--br-8xs);
-        width: 300px;
-        height: 300px;
+        width: 295px;
+        height: 392px;
+        padding-left: 3px;
+        /* padding-top: 25px; */
+        /* padding-bottom: 25px; */
         }
         .group-child37 {
         position: absolute;
@@ -393,13 +403,17 @@
         }
         .rectangle-parent27 {
         position: absolute;
-        top: 37px;
+        top: 10px;
         left: 35px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+        text-align: center;
         gap: var(--gap-base);
+        /* background-color: #000;
+        height: 5000px;
+        padding-bottom: 1500px; */
         }
         .rectangle-parent26 {
         position: absolute;
@@ -431,6 +445,21 @@
         height: 65px;
         flex-shrink: 0;
         }
+        .asal_daerah{
+          position: relative;
+          display: inline-block;
+          width: 300px;
+          height: 65px;
+          flex-shrink: 0;
+        }
+        .persentase{
+          position: relative;
+          display: inline-block;
+          width: 300px;
+          height: 65px;
+          flex-shrink: 0;
+        }
+
         .rectangle-parent34,
         .rectangle-parent36 {
         position: absolute;
@@ -631,6 +660,14 @@
         color: var(--color-white);
         font-family: var(--font-alata);
         }
+        .rectangle-parent-putras{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          text-align: center;
+          gap: var(--gap-base);
+        }
         @media (max-width: 1441px){
             .rectangle-parent24 {
                 width: 1441px;
@@ -649,6 +686,234 @@
                 height: 2840px;
             }
         } */
+
+        .container {
+          max-width: 1200px;
+          width: 95%;
+          position: absolute;
+          /* left: 50px; */
+          align-items: center;
+          place-items: center;
+          text-align: center;
+          left: 49.7%;
+          transform: translate(-50%, -50%);
+          /* margin-left: 20%;
+          margin-right: 20%; */
+          top: 1690px;
+        }
+
+        .container-2 {
+          max-width: 1200px;
+          width: 95%;
+          position: absolute;
+          /* left: 50px; */
+          align-items: center;
+          place-items: center;
+          text-align: center;
+          left: 49.7%;
+          transform: translate(-50%, -50%);
+          /* margin-left: 20%;
+          margin-right: 20%; */
+          top: 2360px;
+        }
+
+        .container-image {
+          background-color: var(--color-gainsboro);
+          width: 300px;
+          height: 400px;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-bottom: 20px;
+          padding-top: 20px;
+          border-radius: var(--br-8xs);
+        }
+        .slider-wrapper {
+          position: relative;
+        }
+        .slider-wrapper .slide-button {
+          position: absolute;
+          top: 50%;
+          outline: none;
+          border: none;
+          height: 50px;
+          width: 50px;
+          z-index: 5;
+          color: #fff;
+          display: flex;
+          cursor: pointer;
+          font-size: 2.2rem;
+          background: #000;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          transform: translateY(-50%);
+        }
+        .slider-wrapper .slide-button:hover {
+          background: #404040;
+        }
+        .slider-wrapper .slide-button#prev-slide {
+          left: -25px;
+          display: none;
+        }
+        .slider-wrapper .slide-button#next-slide {
+          right: -25px;
+        }
+
+        .slider-wrapper .slide-button#prev-slide {
+          left: -25px;
+          display: none;
+        }
+        .slider-wrapper .slide-button#next-slide {
+          right: -25px;
+        }
+        .slider-wrapper .image-list {
+          display: grid;
+          grid-template-columns: repeat(17, 1fr);
+          gap: 49px;
+          font-size: 0;
+          list-style: none;
+          margin-bottom: 30px;
+          overflow-x: auto;
+          scrollbar-width: none;
+        }
+        .slider-wrapper .image-list::-webkit-scrollbar {
+          display: none;
+        }
+        .slider-wrapper .image-list .image-item {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: var(--br-8xs);
+        }
+        
+        /* Batas */
+        .slider-wrapper-2 {
+          position: relative;
+        }
+        .slider-wrapper-2 .slide-button-2 {
+          position: absolute;
+          top: 50%;
+          outline: none;
+          border: none;
+          height: 50px;
+          width: 50px;
+          z-index: 5;
+          color: #fff;
+          display: flex;
+          cursor: pointer;
+          font-size: 2.2rem;
+          background: #000;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          transform: translateY(-50%);
+        }
+        .slider-wrapper-2 .slide-button-2:hover {
+          background: #404040;
+        }
+        .slider-wrapper-2 .slide-button-2#prev-slide-2 {
+          left: -25px;
+          display: none;
+        }
+        .slider-wrapper-2 .slide-button-2#next-slide-2 {
+          right: -25px;
+        }
+
+        .slider-wrapper-2 .slide-button-2#prev-slide-2 {
+          left: -25px;
+          display: none;
+        }
+        .slider-wrapper-2 .slide-button-2#next-slide-2 {
+          right: -25px;
+        }
+        .slider-wrapper-2 .image-list-2 {
+          display: grid;
+          grid-template-columns: repeat(17, 1fr);
+          gap: 49px;
+          font-size: 0;
+          list-style: none;
+          margin-bottom: 30px;
+          overflow-x: auto;
+          scrollbar-width: none;
+        }
+        .slider-wrapper-2 .image-list-2::-webkit-scrollbar {
+          display: none;
+        }
+        .slider-wrapper-2 .image-list-2 .image-item-2 {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: var(--br-8xs);
+        }
+
+        .container .slider-scrollbar .container-2 .slider-scrollbar-2 {
+          /* position: absolute; */
+          height: 10px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          /* top: 1000px; */
+        }
+        .slider-scrollbar .scrollbar-track .slider-scrollbar-2 .scrollbar-track-2{
+          /* background: #ccc; */
+          width: 100%;
+          height: 2px;
+          display: flex;
+          align-items: center;
+          border-radius: 4px;
+          position: relative;
+        }
+        .slider-scrollbar:hover .scrollbar-track .slider-scrollbar-2:hover .scrollbar-track-2 {
+          height: 4px;
+        }
+        .slider-scrollbar .scrollbar-thumb {
+          position: absolute;
+          /* background: #000; */
+          top: 0;
+          bottom: 0;
+          width: 50%;
+          height: 100%;
+          cursor: grab;
+          border-radius: inherit;
+        }
+        .slider-scrollbar .scrollbar-thumb:active {
+          cursor: grabbing;
+          height: 8px;
+          top: -2px;
+        }
+        .slider-scrollbar .scrollbar-thumb::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: -10px;
+          bottom: -10px;
+        }
+
+        /* Batas */
+        .slider-scrollbar-2 .scrollbar-thumb-2 {
+          position: absolute;
+          /* background: #000; */
+          top: 0;
+          bottom: 0;
+          width: 50%;
+          height: 100%;
+          cursor: grab;
+          border-radius: inherit;
+        }
+        .slider-scrollbar-2 .scrollbar-thumb-2:active {
+          cursor: grabbing;
+          height: 8px;
+          top: -2px;
+        }
+        .slider-scrollbar-2 .scrollbar-thumb-2::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: -10px;
+          bottom: -10px;
+        }
     </style>
   </head>
   <body>
@@ -710,7 +975,66 @@
           <div class="frame-child21"></div>
         </div>
       </div>
-      <div class="slider-1">
+      <div class="putra4">Putra</div>
+      <div class="putri4">Putri</div>
+      {{-- <div class="slider-1" id="rectangle_putras">
+        <div class="paslon-putras-containers" id="rectangle_putras"></div>
+      </div>
+      <div class="slider-2" id="rectangle_putris">
+        <div class="paslon-putris-containers" id="rectangle_putris"></div>
+      </div> --}}
+
+      <div class="container">
+        <div class="slider-wrapper">
+          <button id="prev-slide" class="slide-button material-symbols-rounded">
+          chevron_left
+          </button>
+          <ul class="image-list" id="rectangle_putras">
+          </ul>
+          <button id="next-slide" class="slide-button material-symbols-rounded">
+          chevron_right
+          </button>
+        </div>
+        <div class="slider-scrollbar">
+          <div class="scrollbar-track">
+            <div class="scrollbar-thumb"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-2">
+        <div class="slider-wrapper-2">
+          <button id="prev-slide-2" class="slide-button-2 material-symbols-rounded">
+          chevron_left
+          </button>
+          <ul class="image-list-2" id="rectangle_putris">
+          </ul>
+          <button id="next-slide-2" class="slide-button-2 material-symbols-rounded">
+          chevron_right
+          </button>
+        </div>
+        <div class="slider-scrollbar-2">
+          <div class="scrollbar-track-2">
+            <div class="scrollbar-thumb-2"></div>
+          </div>
+        </div>
+      </div>
+
+      {{-- <div class="rectangle-parent28">
+          <div class="group-child36"></div>
+          <div class="group-child37"></div>
+          <div class="rectangle-parent27">
+            <img
+              class="frame-child22"
+              alt=""
+              id=""
+            />
+
+            <div class="ahmad-yani" id="name_"+i></div>
+          </div>
+        </div> --}}
+      {{-- <div class="rectangle-parent30" id="rectangle_p"></div> --}}
+      {{-- <div class="slider-1" id="rectangle_p">
         <div class="rectangle-parent26" id="groupContainer3">
           <div class="group-child36"></div>
           <div class="group-child37"></div>
@@ -721,7 +1045,7 @@
               src="rectangle-2902@2x.png"
             />
 
-            <div class="ahmad-yani">28 Ajeng Dwi Ratu Qaida Maharani</div>
+            <div class="ahmad-yani">{{getDataPaslonPutras()}}</div>
           </div>
         </div>
         <div class="rectangle-parent28">
@@ -871,7 +1195,7 @@
           </div>
         </div>
       </div>
-      <div class="putri4">Putri</div>
+      <div class="putri4">Putri</div>--}}
       <div class="d20h20m1">20D:20H:20M</div>
       <div class="div11">800</div>
       <img class="gain-up-11" alt="" src="gain-up-1@2x.png" />
@@ -913,6 +1237,68 @@
     </div>
 
     <script>
+      var groupContainer3 = document.getElementById("groupContainer3");
+      if (groupContainer3) {
+        groupContainer3.addEventListener("click", function () {
+          var popup = document.getElementById("popUpKode");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+
+      $.ajax({
+        type: "GET",
+        url: "https://officialputraputrisriwijaya23.online/api/paslon_putras",
+        data: {},
+        success:function(result){
+          var datas = result;
+          // document.getElementById('test123').textContent = datas[0]['name'];
+          var outputHTML = "";
+          for (let i = 0; i < datas.length; i++){
+            outputHTML += '<div class="container-image" id="groupContainer3">';
+            outputHTML += '<img class="image-item" id="groupContainer3" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+'/>';
+            outputHTML += '</div>';
+          }
+          // console.log(outputHTML);
+          document.getElementById("rectangle_putras").innerHTML = outputHTML;
+        }
+      });
+
+      $.ajax({
+        type: "GET",
+        url: "https://officialputraputrisriwijaya23.online/api/paslon_putris",
+        data: {},
+        success:function(result){
+          var datas = result;
+          // document.getElementById('test123').textContent = datas[0]['name'];
+          var outputHTML = "";
+          for (let i = 0; i < datas.length; i++){
+            outputHTML += '<div class="container-image" id="groupContainer3">';
+            outputHTML += '<img class="image-item-2" id="groupContainer3" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+'/>';
+            outputHTML += '</div>';
+          }
+          // console.log(outputHTML);
+          document.getElementById("rectangle_putris").innerHTML = outputHTML;
+        }
+      });
+
       var homeText = document.getElementById("homeText");
       if (homeText) {
         homeText.addEventListener("click", function (e) {
@@ -947,32 +1333,128 @@
           window.location.href = "./search_vote";
         });
       }
-      
-      var groupContainer3 = document.getElementById("groupContainer3");
-      if (groupContainer3) {
-        groupContainer3.addEventListener("click", function () {
-          var popup = document.getElementById("popUpKode");
-          if (!popup) return;
-          var popupStyle = popup.style;
-          if (popupStyle) {
-            popupStyle.display = "flex";
-            popupStyle.zIndex = 100;
-            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
-            popupStyle.alignItems = "center";
-            popupStyle.justifyContent = "center";
-          }
-          popup.setAttribute("closable", "");
-      
-          var onClick =
-            popup.onClick ||
-            function (e) {
-              if (e.target === popup && popup.hasAttribute("closable")) {
-                popupStyle.display = "none";
+
+      const initSlider = () => {
+          const imageList = document.querySelector(".slider-wrapper .image-list");
+          const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+          const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
+          const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+          const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+          
+          // Handle scrollbar thumb drag
+          scrollbarThumb.addEventListener("mousedown", (e) => {
+              const startX = e.clientX;
+              const thumbPosition = scrollbarThumb.offsetLeft;
+              const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+              
+              // Update thumb position on mouse move
+              const handleMouseMove = (e) => {
+                  const deltaX = e.clientX - startX;
+                  const newThumbPosition = thumbPosition + deltaX;
+                  // Ensure the scrollbar thumb stays within bounds
+                  const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+                  const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+                  
+                  scrollbarThumb.style.left = `${boundedPosition}px`;
+                  imageList.scrollLeft = scrollPosition;
               }
-            };
-          popup.addEventListener("click", onClick);
-        });
+              // Remove event listeners on mouse up
+              const handleMouseUp = () => {
+                  document.removeEventListener("mousemove", handleMouseMove);
+                  document.removeEventListener("mouseup", handleMouseUp);
+              }
+              // Add event listeners for drag interaction
+              document.addEventListener("mousemove", handleMouseMove);
+              document.addEventListener("mouseup", handleMouseUp);
+          });
+          // Slide images according to the slide button clicks
+          slideButtons.forEach(button => {
+              button.addEventListener("click", () => {
+                  const direction = button.id === "prev-slide" ? -1 : 1;
+                  const scrollAmount = imageList.clientWidth * direction;
+                  imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+              });
+          });
+          // Show or hide slide buttons based on scroll position
+          const handleSlideButtons = () => {
+              slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+              slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+          }
+          // Update scrollbar thumb position based on image scroll
+          const updateScrollThumbPosition = () => {
+              const scrollPosition = imageList.scrollLeft;
+              const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+              scrollbarThumb.style.left = `${thumbPosition}px`;
+          }
+          // Call these two functions when image list scrolls
+          imageList.addEventListener("scroll", () => {
+              updateScrollThumbPosition();
+              handleSlideButtons();
+          });
       }
+      window.addEventListener("resize", initSlider);
+      window.addEventListener("load", initSlider);
+
+      const initSlider_2 = () => {
+          const imageList = document.querySelector(".slider-wrapper-2 .image-list-2");
+          const slideButtons = document.querySelectorAll(".slider-wrapper-2 .slide-button-2");
+          const sliderScrollbar = document.querySelector(".container-2 .slider-scrollbar-2");
+          const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb-2");
+          const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+          
+          // Handle scrollbar thumb drag
+          scrollbarThumb.addEventListener("mousedown", (e) => {
+              const startX = e.clientX;
+              const thumbPosition = scrollbarThumb.offsetLeft;
+              const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+              
+              // Update thumb position on mouse move
+              const handleMouseMove = (e) => {
+                  const deltaX = e.clientX - startX;
+                  const newThumbPosition = thumbPosition + deltaX;
+                  // Ensure the scrollbar thumb stays within bounds
+                  const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+                  const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+                  
+                  scrollbarThumb.style.left = `${boundedPosition}px`;
+                  imageList.scrollLeft = scrollPosition;
+              }
+              // Remove event listeners on mouse up
+              const handleMouseUp = () => {
+                  document.removeEventListener("mousemove", handleMouseMove);
+                  document.removeEventListener("mouseup", handleMouseUp);
+              }
+              // Add event listeners for drag interaction
+              document.addEventListener("mousemove", handleMouseMove);
+              document.addEventListener("mouseup", handleMouseUp);
+          });
+          // Slide images according to the slide button clicks
+          slideButtons.forEach(button => {
+              button.addEventListener("click", () => {
+                  const direction = button.id === "prev-slide-2" ? -1 : 1;
+                  const scrollAmount = imageList.clientWidth * direction;
+                  imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+              });
+          });
+          // Show or hide slide buttons based on scroll position
+          const handleSlideButtons = () => {
+              slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+              slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+          }
+          // Update scrollbar thumb position based on image scroll
+          const updateScrollThumbPosition = () => {
+              const scrollPosition = imageList.scrollLeft;
+              const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+              scrollbarThumb.style.left = `${thumbPosition}px`;
+          }
+          // Call these two functions when image list scrolls
+          imageList.addEventListener("scroll", () => {
+              updateScrollThumbPosition();
+              handleSlideButtons();
+          });
+      }
+      window.addEventListener("resize", initSlider_2);
+      window.addEventListener("load", initSlider_2);
       </script>
   </body>
 </html>

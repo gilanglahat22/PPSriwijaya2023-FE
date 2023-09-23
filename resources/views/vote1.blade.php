@@ -640,6 +640,15 @@
                 width: 1441px;
             }
         }
+        /* @media (max-width: 439px){
+            .rectangle-parent24 {
+                height: 2840px;
+            }
+
+            .vote-desktop1{
+                height: 2840px;
+            }
+        } */
     </style>
   </head>
   <body>

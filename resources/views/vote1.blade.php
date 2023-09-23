@@ -166,7 +166,7 @@
         .putra3,
         .putri3 {
         position: absolute;
-        top: 735.91px;
+        top: 605.91px;
         left: calc(50% - 440.69px);
         font-size: var(--font-size-37xl);
         color: var(--color-burlywood-200);
@@ -483,7 +483,7 @@
         }
         .putra4 {
         position: absolute;
-        top: 1335px;
+        top: 1235px;
         left: calc(50% - 195px);
         font-size: var(--font-size-37xl);
         color: var(--color-burlywood-200);
@@ -683,7 +683,7 @@
           transform: translate(-50%, -50%);
           /* margin-left: 20%;
           margin-right: 20%; */
-          top: 1690px;
+          top: 1590px;
         }
 
         .container-2 {
@@ -947,13 +947,6 @@
           <div class="vote2">Vote</div>
         </div>
       </div>
-      <div class="vote-desktop-child2"></div>
-      <img
-        class="search-1-icon1"
-        alt=""
-        src="search-1@2x.png"
-        id="search1Icon"
-      />
 
       <div class="line-container">
         <div class="group-child35"></div>
@@ -962,12 +955,6 @@
       </div>
       <div class="putra4">Putra</div>
       <div class="putri4">Putri</div>
-      {{-- <div class="slider-1" id="rectangle_putras">
-        <div class="paslon-putras-containers" id="rectangle_putras"></div>
-      </div>
-      <div class="slider-2" id="rectangle_putris">
-        <div class="paslon-putris-containers" id="rectangle_putris"></div>
-      </div> --}}
 
       <div class="container">
         <div class="slider-wrapper">
@@ -1005,184 +992,8 @@
         </div>
       </div>
 
-      {{-- <div class="rectangle-parent28">
-          <div class="group-child36"></div>
-          <div class="group-child37"></div>
-          <div class="rectangle-parent27">
-            <img
-              class="frame-child22"
-              alt=""
-              id=""
-            />
-
-            <div class="ahmad-yani" id="name_"+i></div>
-          </div>
-        </div> --}}
-      {{-- <div class="rectangle-parent30" id="rectangle_p"></div> --}}
-      {{-- <div class="slider-1" id="rectangle_p">
-        <div class="rectangle-parent26" id="groupContainer3">
-          <div class="group-child36"></div>
-          <div class="group-child37"></div>
-          <div class="rectangle-parent27">
-            <img
-              class="frame-child22"
-              alt=""
-              src="rectangle-2902@2x.png"
-            />
-
-            <div class="ahmad-yani">{{getDataPaslonPutras()}}</div>
-          </div>
-        </div>
-        <div class="rectangle-parent28">
-          <div class="group-child36"></div>
-          <div class="group-child37"></div>
-          <div class="rectangle-parent27">
-            <img
-              class="frame-child22"
-              alt=""
-              src="rectangle-2901@2x.png"
-            />
-
-            <div class="ahmad-yani">Imron</div>
-          </div>
-        </div>
-        <div class="rectangle-parent30">
-          <div class="group-child36"></div>
-          <div class="group-child37"></div>
-          <div class="rectangle-parent27">
-            <img
-              class="frame-child22"
-              alt=""
-              src="rectangle-2902@2x.png"
-            />
-
-            <div class="ahmad-yani">Abdul</div>
-          </div>
-        </div>
-        <div class="rectangle-parent32">
-          <div class="group-child36"></div>
-          <div class="group-child37"></div>
-          <div class="rectangle-parent27">
-            <img
-              class="frame-child22"
-              alt=""
-              src="rectangle-2903@2x.png"
-            />
-
-            <div class="ahmad-yani">brody</div>
-          </div>
-        </div>
-        <div class="rectangle-parent34">
-          <div class="group-child36"></div>
-          <div class="group-child37"></div>
-          <div class="rectangle-parent27">
-            <img
-              class="frame-child22"
-              alt=""
-              src="rectangle-2904@2x.png"
-            />
-
-            <div class="ahmad-yani">Ahmad yani</div>
-          </div>
-        </div>
-        <div class="rectangle-parent36">
-          <div class="group-child36"></div>
-          <div class="group-child37"></div>
-          <div class="rectangle-parent27">
-            <img
-              class="frame-child22"
-              alt=""
-              src="rectangle-2905@2x.png"
-            />
-
-            <div class="ahmad-yani">Yeyen</div>
-          </div>
-        </div>
-      </div>
-      <div class="putra4">Putra</div>
-      <div class="slider-2">
-        <div class="rectangle-parent26">
-          <div class="group-child36"></div>
-          <div class="group-child37"></div>
-          <div class="rectangle-parent27">
-            <img
-              class="frame-child22"
-              alt=""
-              src="rectangle-2902@2x.png"
-            />
-
-            <div class="ahmad-yani">Mustofa A.</div>
-          </div>
-        </div>
-        <div class="rectangle-parent28">
-          <div class="group-child36"></div>
-          <div class="group-child37"></div>
-          <div class="rectangle-parent27">
-            <img
-              class="frame-child22"
-              alt=""
-              src="rectangle-2901@2x.png"
-            />
-
-            <div class="ahmad-yani">Imron</div>
-          </div>
-        </div>
-        <div class="rectangle-parent30">
-          <div class="group-child36"></div>
-          <div class="group-child37"></div>
-          <div class="rectangle-parent27">
-            <img
-              class="frame-child22"
-              alt=""
-              src="rectangle-2902@2x.png"
-            />
-
-            <div class="ahmad-yani">Abdul</div>
-          </div>
-        </div>
-        <div class="rectangle-parent32">
-          <div class="group-child36"></div>
-          <div class="group-child37"></div>
-          <div class="rectangle-parent27">
-            <img
-              class="frame-child22"
-              alt=""
-              src="rectangle-2903@2x.png"
-            />
-
-            <div class="ahmad-yani">brody</div>
-          </div>
-        </div>
-        <div class="rectangle-parent34">
-          <div class="group-child36"></div>
-          <div class="group-child37"></div>
-          <div class="rectangle-parent27">
-            <img
-              class="frame-child22"
-              alt=""
-              src="rectangle-2904@2x.png"
-            />
-
-            <div class="ahmad-yani">Ahmad yani</div>
-          </div>
-        </div>
-        <div class="rectangle-parent36">
-          <div class="group-child36"></div>
-          <div class="group-child37"></div>
-          <div class="rectangle-parent27">
-            <img
-              class="frame-child22"
-              alt=""
-              src="rectangle-2905@2x.png"
-            />
-
-            <div class="ahmad-yani">Yeyen</div>
-          </div>
-        </div>
-      </div>
-      <div class="putri4">Putri</div>--}}
       <div class="d20h20m1">20D:20H:20M</div>
-      <div class="div11">800</div>
+      <div class="div11">10</div>
       <img class="gain-up-11" alt="" src="gain-up-1@2x.png" />
     </div>
 
@@ -1342,13 +1153,6 @@
       if (vouchersText) {
         vouchersText.addEventListener("click", function (e) {
           window.location.href = "./vouchers";
-        });
-      }
-      
-      var search1Icon = document.getElementById("search1Icon");
-      if (search1Icon) {
-        search1Icon.addEventListener("click", function (e) {
-          window.location.href = "./search_vote";
         });
       }
 

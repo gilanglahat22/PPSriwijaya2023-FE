@@ -166,7 +166,7 @@
         .putra3,
         .putri3 {
         position: absolute;
-        top: 605.91px;
+        top: 709.91px;
         left: calc(50% - 440.69px);
         font-size: var(--font-size-37xl);
         color: var(--color-burlywood-200);
@@ -526,13 +526,13 @@
         }
         .div11 {
         position: relative;
-        left: 3%;
+        left: 4%;
         width: 219px;
         }
         .gain-up-11 {
           position: relative;
           top: 971px;
-          left: 3%;
+          left: 1%;
           width: 46px;
           height: 52px;
           object-fit: cover;
@@ -1045,7 +1045,7 @@
           var outputNamaHTML = "";
           for (let i = 0; i < datas.length; i++){
             outputHTML += '<div class="container-image" id="groupContainer3">';
-            outputHTML += '<img class="image-item" id="groupContainer3" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+'/>';
+            outputHTML += '<img class="image-item" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+'/>';
             outputHTML += '</div>';
           }
           // console.log(outputHTML);
@@ -1079,7 +1079,7 @@
           var outputNamaHTML = "";
           for (let i = 0; i < datas.length; i++){
             outputHTML += '<div class="container-image" id="groupContainer3">';
-            outputHTML += '<img class="image-item-2" id="groupContainer3" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+'/>';
+            outputHTML += '<img class="image-item-2" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+'/>';
             outputHTML += '</div>';
           }
           // console.log(outputHTML);

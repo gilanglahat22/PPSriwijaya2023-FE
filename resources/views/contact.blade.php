@@ -33,6 +33,7 @@
         flex-direction: column;
         position: fixed;
         inset: 0;
+        overflow: hidden; /* Hide scrollbars */
         }
 
         :root {
@@ -390,6 +391,7 @@
         flex-direction: column;
         position: fixed;
         inset: 0;
+        overflow: hidden; /* Hide scrollbars */
         }
 
         .pop-up-kode1 {
@@ -403,6 +405,7 @@
         font-size: var(--font-size-17xl);
         color: var(--color-white);
         font-family: var(--font-alata);
+        overflow: hidden; /* Hide scrollbars */
         }
 
         .masukkan-kode-voucher1 {
@@ -416,7 +419,7 @@
 
         .rectangle-parent18 {
         position: absolute;
-        top: 408px;
+        top: 338px;
         left: 474px;
         width: 290px;
         height: 68px;
@@ -446,12 +449,13 @@
         .pop-up-kode-inner {
         position: absolute;
         top: 0;
-        left: 0;
-        border-radius: var(--br-3xs);
+        left: 40px;
+        border-radius: 3%;
         background: linear-gradient(180deg, #b22424, #340202);
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
-        width: 1219px;
-        height: 838px;
+        width: 1119px;
+        height: 598px;
+        overflow: hidden; /* Hide scrollbars */
         }
 
         @media (max-width: 1441px){

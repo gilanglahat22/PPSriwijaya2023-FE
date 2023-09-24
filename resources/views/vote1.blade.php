@@ -32,9 +32,15 @@
 
         .popup-overlay {
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         position: fixed;
         inset: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
         }
 
         :root {
@@ -651,11 +657,11 @@
         color: var(--color-black);
         }
         .pop-up-kode1 {
-        position: relative;
+        position: absolute;
         width: 1249px;
         height: 838px;
-        max-width: 90%;
-        max-height: 90%;
+        max-width: 100%;
+        max-height: 100%;
         overflow: auto;
         text-align: center;
         font-size: var(--font-size-17xl);
@@ -702,14 +708,27 @@
         }
 
         .container-image {
+          position: relative;
           background-color: var(--color-gainsboro);
           width: 300px;
           height: 400px;
           padding-left: 20px;
           padding-right: 20px;
           padding-bottom: 20px;
+          /* z-index: -1000; */
           padding-top: 20px;
           border-radius: var(--br-8xs);
+        }
+        .image_name {
+          position: absolute;
+          z-index: 9000;
+          color: #000;
+        }
+        .container-image:hover{
+          background-color: gray;
+        }
+        .image-item:hover{
+          background-color:rgba(0, 0, 0, 0.25)
         }
         .slider-wrapper {
           position: relative;
@@ -916,6 +935,23 @@
                 height: 3100px;
             }
         }
+        .btn{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          background-color: #555;
+          color: white;
+          font-size: 16px;
+          padding: 12px 24px;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+        .btn:hover{
+          background-color: #000;
+        }
     </style>
   </head>
   <body>
@@ -942,7 +978,7 @@
         <div class="about1" id="aboutText">About</div>
         <div class="contact1" id="contactText">Contact</div>
         <div class="vouchers1" id="vouchersText">Vouchers</div>
-        <div class="rectangle-parent23">
+        <div class="rectangle-parent23" id="groupContainer3">
           <div class="group-child33"></div>
           <div class="vote2">Vote</div>
         </div>
@@ -997,33 +1033,6 @@
       <img class="gain-up-11" alt="" src="gain-up-1@2x.png" />
     </div>
 
-    <div id="popUpKode" class="popup-overlay" style="display: none">
-      <div class="pop-up-kode1">
-        <div class="pop-up-kode-inner"></div>
-        <div class="masukkan-kode-voucher1">
-          Masukkan Kode Voucher dibawah ini
-        </div>
-        <div class="rectangle-parent17">
-          <div class="frame-child9"></div>
-          <div class="frame-child9"></div>
-          <div class="frame-child9"></div>
-          <div class="frame-child9"></div>
-          <div class="frame-child9"></div>
-          <div class="frame-child9"></div>
-        </div>
-        <div class="pop-up-kode-child1"></div>
-        <div class="vote-mustofa1">VOTE - Mustofa A.</div>
-        <div class="belum-punya-kode-container1">
-          <p class="belum-punya-kode1">Belum punya kode voucher?</p>
-          <p class="ikuti-tata-cara1">Ikuti tata cara pembelian</p>
-        </div>
-        <div class="rectangle-parent18">
-          <div class="group-child28"></div>
-          <div class="kirim1">Kirim</div>
-        </div>
-      </div>
-    </div>
-
     <div class="rectangle-parent24">
         <div class="group-child34"></div>
         <div class="copyright-2023-container7">
@@ -1032,7 +1041,49 @@
         </div>
     </div>
 
+    <div id="keyP"></div>
+
     <script>
+
+      var tempId = "";
+      var tempName = "";
+      var tempHTML = "";
+      function toggleElementVisibility(name, keyP) {
+        console.log(name);
+        console.log(keyP);
+          tempHTML = '<div id="popUpKode" class="popup-overlay" style="display: none">';
+          tempHTML += '<div class="pop-up-kode1">';
+          tempHTML += '<div class="pop-up-kode-inner"></div>';
+          tempHTML += '<div class="masukkan-kode-voucher1">';
+          tempHTML += 'Masukkan Kode Voucher dibawah ini</div>';
+          tempHTML += '<div class="rectangle-parent17">';
+          tempHTML += '<input class="frame-child9" maxLength="1"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1"></input></div>';
+          tempHTML += '<div class="pop-up-kode-child1"></div>';
+          tempHTML += '<div class="vote-mustofa1">VOTE - '+name+'</div>';
+          tempHTML += '<div class="belum-punya-kode-container1">';
+          tempHTML += '<p class="belum-punya-kode1">Belum punya kode voucher?</p>';
+          tempHTML += '<p class="ikuti-tata-cara1">Ikuti tata cara pembelian</p></div>';
+          tempHTML += '<div class="rectangle-parent18">';
+          tempHTML += '<div class="group-child28"></div>';
+          tempHTML += '<div class="kirim1">Kirim</div></div></div></div>';
+          document.getElementById("keyP").innerHTML = tempHTML;
+          const elementToToggle = document.getElementById(tempId);
+          
+          const currentDisplayStyle = window.getComputedStyle(elementToToggle).display;
+          
+          if (currentDisplayStyle === "none") {
+              // document.getElementById("image_item").disabled = true;
+              elementToToggle.style.display = "block"; // Show the element
+          } else {
+              elementToToggle.style.display = "none"; // Hide the element
+          }
+      }
+
 
       $.ajax({
         type: "GET",
@@ -1040,16 +1091,24 @@
         data: {},
         success:function(result){
           var datas = result;
-          // document.getElementById('test123').textContent = datas[0]['name'];
           var outputHTML = "";
           var outputNamaHTML = "";
+          var popUpL = "";
+          var outputKeyPHTML = "";
           for (let i = 0; i < datas.length; i++){
-            outputHTML += '<div class="container-image" id="groupContainer3">';
-            outputHTML += '<img class="image-item" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+'/>';
+            var keyP = "groupContainerL"+(i+1);
+            tempId = "popUpKode";
+            tempName = datas[i]['name'];
+            // outputKeyPHTML = '<div id="'+keyP+'"></div>';
+            outputHTML += '<div class="container-image">';
+            outputHTML += '<img onclick="toggleElementVisibility(\'' + datas[i]['name'] + '\', \'' + keyP + '\')" class="image-item" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+' id="image_item"'+'/>';
+            outputHTML += '<div class="image_name">'+datas[i]['name']+'</div>';
+            // console.log(datas[i]['name']);
             outputHTML += '</div>';
           }
-          // console.log(outputHTML);
+    
           document.getElementById("rectangle_putras").innerHTML = outputHTML;
+          // document.getElementById("keyP").innerHTML = outputKeyPHTML;
           var data1 = datas[0]['persentase'];
           var data2 = datas[1]['persentase'];
           var data3 = datas[2]['persentase'];
@@ -1077,13 +1136,39 @@
           // document.getElementById('test123').textContent = datas[0]['name'];
           var outputHTML = "";
           var outputNamaHTML = "";
+          var tempHTML = "";
           for (let i = 0; i < datas.length; i++){
+            var keyP = "groupContainerP"+(i+1);
             outputHTML += '<div class="container-image" id="groupContainer3">';
             outputHTML += '<img class="image-item-2" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+'/>';
             outputHTML += '</div>';
           }
-          // console.log(outputHTML);
+
           document.getElementById("rectangle_putris").innerHTML = outputHTML;
+          // for(let i = 0; i<datas.length; i++){
+          //   var keyP = "groupContainerP"+(i+1);
+          //   tempHTML = '<div id="popUpKode" class="popup-overlay" style="display: none">';
+          //   tempHTML += '<div class="pop-up-kode1">';
+          //   tempHTML += '<div class="pop-up-kode-inner"></div>';
+          //   tempHTML += '<div class="masukkan-kode-voucher1">';
+          //   tempHTML += 'Masukkan Kode Voucher dibawah ini</div>';
+          //   tempHTML += '<div class="rectangle-parent17">';
+          //   tempHTML += '<div class="frame-child9"></div>';
+          //   tempHTML += '<div class="frame-child9"></div>';
+          //   tempHTML += '<div class="frame-child9"></div>';
+          //   tempHTML += '<div class="frame-child9"></div>';
+          //   tempHTML += '<div class="frame-child9"></div>';
+          //   tempHTML += '<div class="frame-child9"></div></div>';
+          //   tempHTML += '<div class="pop-up-kode-child1"></div>';
+          //   tempHTML += '<div class="vote-mustofa1">VOTE - '+datas[i]['name']+'</div>';
+          //   tempHTML += '<div class="belum-punya-kode-container1">';
+          //   tempHTML += '<p class="belum-punya-kode1">Belum punya kode voucher?</p>';
+          //   tempHTML += '<p class="ikuti-tata-cara1">Ikuti tata cara pembelian</p></div>';
+          //   tempHTML += '<div class="rectangle-parent18">';
+          //   tempHTML += '<div class="group-child28"></div>';
+          //   tempHTML += '<div class="kirim1">Kirim</div></div></div></div>';
+          //   document.getElementById(keyP).innerHTML = tempHTML;
+          // }
           var data1 = datas[0]['persentase'];
           var data2 = datas[1]['persentase'];
           var data3 = datas[2]['persentase'];

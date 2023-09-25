@@ -31,16 +31,20 @@
         }
 
         .popup-overlay {
-        display: flex;
-        /* flex-direction: column; */
-        position: fixed;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        top: 0;
-        left: 0;
+          display: flex;
+          /* flex-direction: column; */
+          position: fixed;
+          inset: 0;
+          /* width: 100%;
+          height: 100%; */
+          align-items: center;
+          place-items: center;
+          text-align: center;
+          left: 100px;
+          top: 25%;
+          /* left: 100px;
+          /* top: calc(50%-100px);
+          left: calc(50%-100px); */
         }
 
         :root {
@@ -562,13 +566,15 @@
         }
         .pop-up-kode-inner {
         position: absolute;
-        top: 0;
-        left: 0;
+        /* top: 0;
+        left: 0; */
         border-radius: var(--br-3xs);
         background: linear-gradient(180deg, #b22424, #340202);
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
         width: 1249px;
         height: 838px;
+        align-items: center;
+        text-align: center;
         }
         .masukkan-kode-voucher1 {
         position: absolute;
@@ -1179,107 +1185,108 @@ article{
     </style>
   </head>
   <body>
-    <div class="vote-desktop1">
-      <img
-        class="logo-ypps-1-1-27"
-        alt=""
-        src="logo-ypps-1-1-2@2x.png"
-      />
+    <div id="all_contents">
+      <div class="vote-desktop1">
+        <img
+          class="logo-ypps-1-1-27"
+          alt=""
+          src="logo-ypps-1-1-2@2x.png"
+        />
 
-      <div class="putra-putri-sriwijaya-container7">
-        <p class="putra-putri11">PUTRA PUTRI</p>
-        <p class="sriwijaya8">SRIWIJAYA</p>
-      </div>
-      <div class="vote-desktop-item"></div>
-      <div class="nama-parent1" id="name_putras"></div>
-      <div class="nama-parent2" id="name_putris"></div>
-      <div class="putri3">Putri</div>
-      <div class="putra3">Putra</div>
-      <div class="vote-desktop-inner">
-      <div class="d20h20m1">20D:20H:20M</div>
-      </div>
-      <div class="vote-desktop-child1">
-      <div class="div11">10</div>
-      <img class="gain-up-11" alt="" src="gain-up-1@2x.png" />
-      </div>
-      <div class="home-group">
-        <div class="home1" id="homeText">Home</div>
-        <div class="about1" id="aboutText">About</div>
-        <div class="contact1" id="contactText">Contact</div>
-        <div class="vouchers1" id="vouchersText">Vouchers</div>
-        <div class="rectangle-parent23" id="groupContainer3">
-          <div class="group-child33"></div>
-          <div class="vote2">Vote</div>
+        <div class="putra-putri-sriwijaya-container7">
+          <p class="putra-putri11">PUTRA PUTRI</p>
+          <p class="sriwijaya8">SRIWIJAYA</p>
         </div>
-      </div>
-
-    <div class="slider-wrapper">  
-      <section class="container">
-        <div class="marquee-wrapper" style="user-select: none;">
-            <div class="marquee-content scrollingX" id="rectangle_putras"></div>
+        <div class="vote-desktop-item"></div>
+        <div class="nama-parent1" id="name_putras"></div>
+        <div class="nama-parent2" id="name_putris"></div>
+        <div class="putri3">Putri</div>
+        <div class="putra3">Putra</div>
+        <div class="vote-desktop-inner">
+        <div class="d20h20m1">20D:20H:20M</div>
         </div>
-      </section>
-    </div>
-
-      <section class="container-2">
-        <div class="marquee-wrapper" style="user-select: none;">
-            <div class="marquee-content scrollingX" id="rectangle_putris"></div>
+        <div class="vote-desktop-child1">
+        <div class="div11">10</div>
+        <img class="gain-up-11" alt="" src="gain-up-1@2x.png" />
         </div>
-      </section>
-
-      <div class="line-container">
-        <div class="group-child35"></div>
-        <div class="rectangle-parent25" id="rectangle_putri_statistics"></div>
-        <div class="vector-parent" id="rectangle_putra_statistics"></div>
-      </div>
-      <div class="putra4">Putra</div>
-      <div class="putri4">Putri</div>
-
-      {{-- <div class="container">
-        <div class="slider-wrapper">
-          <button id="prev-slide" class="slide-button material-symbols-rounded">
-          chevron_left
-          </button>
-          <ul class="image-list" id="rectangle_putras"></ul>
-          <ul class="name-list" id="putra_names"></ul>
-          <button id="next-slide" class="slide-button material-symbols-rounded">
-          chevron_right
-          </button>
-        </div>
-        <div class="slider-scrollbar">
-          <div class="scrollbar-track">
-            <div class="scrollbar-thumb"></div>
+        <div class="home-group">
+          <div class="home1" id="homeText">Home</div>
+          <div class="about1" id="aboutText">About</div>
+          <div class="contact1" id="contactText">Contact</div>
+          <div class="vouchers1" id="vouchersText">Vouchers</div>
+          <div class="rectangle-parent23" id="groupContainer3">
+            <div class="group-child33"></div>
+            <div class="vote2">Vote</div>
           </div>
         </div>
-      </div> --}}
 
-      {{-- <div class="container-2">
-        <div class="slider-wrapper-2">
-          <button id="prev-slide-2" class="slide-button-2 material-symbols-rounded">
-          chevron_left
-          </button>
-          <ul class="image-list-2" id="rectangle_putris">
-          </ul>
-          <button id="next-slide-2" class="slide-button-2 material-symbols-rounded">
-          chevron_right
-          </button>
-        </div>
-        <div class="slider-scrollbar-2">
-          <div class="scrollbar-track-2">
-            <div class="scrollbar-thumb-2"></div>
+      <div class="slider-wrapper">  
+        <section class="container">
+          <div class="marquee-wrapper" style="user-select: none;">
+              <div class="marquee-content scrollingX" id="rectangle_putras"></div>
           </div>
-        </div>
-      </div> --}}
-    </div>
+        </section>
+      </div>
 
-    <div class="rectangle-parent24">
-        <div class="group-child34"></div>
-        <div class="copyright-2023-container7">
-            Copyright © 2023 Pemilihan Putra Putri Sriwijaya 2023 Powered by
-            <span class="feline-lab7">Feline Lab.</span>
-        </div>
-    </div>
+        <section class="container-2">
+          <div class="marquee-wrapper" style="user-select: none;">
+              <div class="marquee-content scrollingX" id="rectangle_putris"></div>
+          </div>
+        </section>
 
+        <div class="line-container">
+          <div class="group-child35"></div>
+          <div class="rectangle-parent25" id="rectangle_putri_statistics"></div>
+          <div class="vector-parent" id="rectangle_putra_statistics"></div>
+        </div>
+        <div class="putra4">Putra</div>
+        <div class="putri4">Putri</div>
+
+        {{-- <div class="container">
+          <div class="slider-wrapper">
+            <button id="prev-slide" class="slide-button material-symbols-rounded">
+            chevron_left
+            </button>
+            <ul class="image-list" id="rectangle_putras"></ul>
+            <ul class="name-list" id="putra_names"></ul>
+            <button id="next-slide" class="slide-button material-symbols-rounded">
+            chevron_right
+            </button>
+          </div>
+          <div class="slider-scrollbar">
+            <div class="scrollbar-track">
+              <div class="scrollbar-thumb"></div>
+            </div>
+          </div>
+        </div> --}}
+
+        {{-- <div class="container-2">
+          <div class="slider-wrapper-2">
+            <button id="prev-slide-2" class="slide-button-2 material-symbols-rounded">
+            chevron_left
+            </button>
+            <ul class="image-list-2" id="rectangle_putris">
+            </ul>
+            <button id="next-slide-2" class="slide-button-2 material-symbols-rounded">
+            chevron_right
+            </button>
+          </div>
+          <div class="slider-scrollbar-2">
+            <div class="scrollbar-track-2">
+              <div class="scrollbar-thumb-2"></div>
+            </div>
+          </div>
+        </div> --}}
+      </div>
+
+      <div class="rectangle-parent24">
+          <div class="group-child34"></div>
+          <div class="copyright-2023-container7">
+              Copyright © 2023 Pemilihan Putra Putri Sriwijaya 2023 Powered by
+              <span class="feline-lab7">Feline Lab.</span>
+          </div>
+      </div>
+    </div>
     <div id="keyP"></div>
 
     <script>
@@ -1310,15 +1317,17 @@ article{
           tempHTML += '<div class="kirim1">Kirim</div></div></div></div>';
           document.getElementById("keyP").innerHTML = tempHTML;
           const elementToToggle = document.getElementById("popUpKode");
-          
+          const allElements = document.getElementById("all_contents");
           const currentDisplayStyle = window.getComputedStyle(elementToToggle).display;
           
           if (currentDisplayStyle === "none") {
               // document.getElementById("image_item").disabled = true;
               elementToToggle.style.display = "block"; // Show the element
-          } else {
+              allElements.style.filter = "blur(3px)";
+            } else {
               elementToToggle.style.display = "none"; // Hide the element
-          }
+              allElements.style.filter = "blur(0px)";
+            }
       }
 
 

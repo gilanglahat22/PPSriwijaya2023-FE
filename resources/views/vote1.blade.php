@@ -523,22 +523,23 @@
         }
         .d20h20m1,
         .div11 {
-        top: 971px;
+        top: 43px;
         position: relative;
-        left: -12%;
+        align-items: center;
+        left: 0%;
         font-size: var(--font-size-45xl);
         width: 478px;
         height: 84px;
         }
         .div11 {
         position: relative;
-        left: 4%;
+        left: -5%;
         width: 219px;
         }
         .gain-up-11 {
           position: relative;
-          top: 971px;
-          left: 1%;
+          top: -16.8px;
+          left: 54%;
           width: 46px;
           height: 52px;
           object-fit: cover;
@@ -1198,8 +1199,13 @@ article{
       <div class="nama-parent2" id="name_putris"></div>
       <div class="putri3">Putri</div>
       <div class="putra3">Putra</div>
-      <div class="vote-desktop-inner"></div>
-      <div class="vote-desktop-child1"></div>
+      <div class="vote-desktop-inner">
+      <div class="d20h20m1">20D:20H:20M</div>
+      </div>
+      <div class="vote-desktop-child1">
+      <div class="div11">10</div>
+      <img class="gain-up-11" alt="" src="gain-up-1@2x.png" />
+      </div>
       <div class="home-group">
         <div class="home1" id="homeText">Home</div>
         <div class="about1" id="aboutText">About</div>
@@ -1266,10 +1272,6 @@ article{
           </div>
         </div>
       </div> --}}
-
-      {{-- <div class="d20h20m1">20D:20H:20M</div>
-      <div class="div11">10</div>
-      <img class="gain-up-11" alt="" src="gain-up-1@2x.png" /> --}}
     </div>
 
     <div class="rectangle-parent24">

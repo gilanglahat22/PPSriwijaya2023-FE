@@ -211,6 +211,7 @@
         width: 65px;
         height: 33px;
         flex-shrink: 0;
+        z-index: 1000;
         cursor: pointer;
         }
         .about1,
@@ -592,6 +593,10 @@
         box-sizing: border-box;
         width: 145px;
         height: 145px;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+        font-size: 58px;
         }
         .rectangle-parent17 {
         position: absolute;
@@ -1185,8 +1190,7 @@ article{
     </style>
   </head>
   <body>
-    <div id="all_contents">
-      <div class="vote-desktop1">
+      <div class="vote-desktop1" id="all_contents">
         <img
           class="logo-ypps-1-1-27"
           alt=""
@@ -1210,11 +1214,11 @@ article{
         <img class="gain-up-11" alt="" src="gain-up-1@2x.png" />
         </div>
         <div class="home-group">
-          <div class="home1" id="homeText">Home</div>
-          <div class="about1" id="aboutText">About</div>
-          <div class="contact1" id="contactText">Contact</div>
-          <div class="vouchers1" id="vouchersText">Vouchers</div>
-          <div class="rectangle-parent23" id="groupContainer3">
+          <div class="home1" id="homeText" href="./home">Home</div>
+          <div class="about1" id="aboutText" href="./about">About</div>
+          <div class="contact1" id="contactText" href="./contact">Contact</div>
+          <div class="vouchers1" id="vouchersText" href="./vouchers">Vouchers</div>
+          <div class="rectangle-parent23" href="./votes">
             <div class="group-child33"></div>
             <div class="vote2">Vote</div>
           </div>
@@ -1241,42 +1245,6 @@ article{
         </div>
         <div class="putra4">Putra</div>
         <div class="putri4">Putri</div>
-
-        {{-- <div class="container">
-          <div class="slider-wrapper">
-            <button id="prev-slide" class="slide-button material-symbols-rounded">
-            chevron_left
-            </button>
-            <ul class="image-list" id="rectangle_putras"></ul>
-            <ul class="name-list" id="putra_names"></ul>
-            <button id="next-slide" class="slide-button material-symbols-rounded">
-            chevron_right
-            </button>
-          </div>
-          <div class="slider-scrollbar">
-            <div class="scrollbar-track">
-              <div class="scrollbar-thumb"></div>
-            </div>
-          </div>
-        </div> --}}
-
-        {{-- <div class="container-2">
-          <div class="slider-wrapper-2">
-            <button id="prev-slide-2" class="slide-button-2 material-symbols-rounded">
-            chevron_left
-            </button>
-            <ul class="image-list-2" id="rectangle_putris">
-            </ul>
-            <button id="next-slide-2" class="slide-button-2 material-symbols-rounded">
-            chevron_right
-            </button>
-          </div>
-          <div class="slider-scrollbar-2">
-            <div class="scrollbar-track-2">
-              <div class="scrollbar-thumb-2"></div>
-            </div>
-          </div>
-        </div> --}}
       </div>
 
       <div class="rectangle-parent24">
@@ -1286,7 +1254,6 @@ article{
               <span class="feline-lab7">Feline Lab.</span>
           </div>
       </div>
-    </div>
     <div id="keyP"></div>
 
     <script>
@@ -1301,20 +1268,20 @@ article{
           tempHTML += '<div class="masukkan-kode-voucher1">';
           tempHTML += 'Masukkan Kode Voucher dibawah ini</div>';
           tempHTML += '<div class="rectangle-parent17">';
-          tempHTML += '<input class="frame-child9" maxLength="1"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1"></input></div>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input1"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input2"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input3"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input4"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input5"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input6"></input></div>';
           tempHTML += '<div class="pop-up-kode-child1"></div>';
           tempHTML += '<div class="vote-mustofa1">VOTE - '+name+'</div>';
           tempHTML += '<div class="belum-punya-kode-container1">';
           tempHTML += '<p class="belum-punya-kode1">Belum punya kode voucher?</p>';
-          tempHTML += '<p class="ikuti-tata-cara1">Ikuti tata cara pembelian</p></div>';
+          tempHTML += '<a class="ikuti-tata-cara1" href="./vouchers">Ikuti tata cara pembelian</a></div>';
           tempHTML += '<div class="rectangle-parent18">';
           tempHTML += '<div class="group-child28"></div>';
-          tempHTML += '<div class="kirim1">Kirim</div></div></div></div>';
+          tempHTML += '<a class="kirim1" href="./votes">Kirim</button></a></div></div>';
           document.getElementById("keyP").innerHTML = tempHTML;
           const elementToToggle = document.getElementById("popUpKode");
           const allElements = document.getElementById("all_contents");
@@ -1374,6 +1341,19 @@ article{
           document.getElementById("name_putras").innerHTML = outputNamaHTML;
         }
       });
+
+      // $.ajax({
+      //   type: "POST",
+      //   url: "https://officialputraputrisriwijaya23.online/api/paslon_putras",
+      //   data: {
+      //     item_
+      //   },
+      //   success:function(result){
+      //     // Success
+      //   }
+      // });
+
+
 
       $.ajax({
         type: "GET",

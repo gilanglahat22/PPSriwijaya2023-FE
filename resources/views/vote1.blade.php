@@ -1168,10 +1168,6 @@ article{
   animation-play-state: paused;
 }
 
-/* .scrollingX{
-
-} */
-
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -1217,11 +1213,13 @@ article{
         </div>
       </div>
 
+    <div class="slider-wrapper">  
       <section class="container">
         <div class="marquee-wrapper" style="user-select: none;">
             <div class="marquee-content scrollingX" id="rectangle_putras"></div>
         </div>
       </section>
+    </div>
 
       <section class="container-2">
         <div class="marquee-wrapper" style="user-select: none;">
@@ -1289,9 +1287,7 @@ article{
       var tempId = "";
       var tempName = "";
       var tempHTML = "";
-      function toggleElementVisibility(name, keyP) {
-        console.log(name);
-        console.log(keyP);
+      function toggleElementVisibility(name) {
           tempHTML = '<div id="popUpKode" class="popup-overlay" style="display: none">';
           tempHTML += '<div class="pop-up-kode1">';
           tempHTML += '<div class="pop-up-kode-inner"></div>';
@@ -1313,7 +1309,7 @@ article{
           tempHTML += '<div class="group-child28"></div>';
           tempHTML += '<div class="kirim1">Kirim</div></div></div></div>';
           document.getElementById("keyP").innerHTML = tempHTML;
-          const elementToToggle = document.getElementById(tempId);
+          const elementToToggle = document.getElementById("popUpKode");
           
           const currentDisplayStyle = window.getComputedStyle(elementToToggle).display;
           
@@ -1337,20 +1333,12 @@ article{
           var popUpL = "";
           var outputKeyPHTML = "";
           for (let i = 0; i < datas.length; i++){
-            // var keyP = "groupContainerL"+(i+1);
-            // tempId = "popUpKode";
-            // tempName = datas[i]['name'];
-            // // outputKeyPHTML = '<div id="'+keyP+'"></div>';
-            // outputHTML += '<div class="container-image">';
-            // outputHTML += '<img onclick="toggleElementVisibility(\'' + datas[i]['name'] + '\', \'' + keyP + '\')" class="image-item" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+' id="image_item"'+'/>';
-            // outputHTML += '<div class="image_name">'+datas[i]['name']+'</div>';
-            // // console.log(datas[i]['name']);
-            // outputHTML += '</div>';
+            tempId = i;
             outputHTML += '<div class="card-testimonial">';
             outputHTML += '<article>';
             outputHTML += '<picture>';
             outputHTML += '<source media="(min-width: 718px)" srcset="'+datas[i]['path']+'">';
-            outputHTML += '<img src="'+datas[i]['path']+'" alt="sample-one.jpeg">';
+            outputHTML += '<img onclick="toggleElementVisibility(\'' + datas[i]['name'] + '\')" src="'+datas[i]['path']+'" alt="sample-one.jpeg">';
             outputHTML += '</picture>';
             outputHTML += '<h4>'+datas[i]['name']+'</h4>';
             outputHTML += '<article class="short-description">';
@@ -1360,7 +1348,6 @@ article{
           }
     
           document.getElementById("rectangle_putras").innerHTML = outputHTML;
-          // document.getElementById("keyP").innerHTML = outputKeyPHTML;
           var data1 = datas[0]['persentase'];
           var data2 = datas[1]['persentase'];
           var data3 = datas[2]['persentase'];
@@ -1368,9 +1355,9 @@ article{
           var width1 = 600*data1/100;
           var width2 = 600*data2/100;
           var width3 = 600*data3/100;
-          outputNamaHTML = '<div>'+data1.toFixed(2)+'%</div>';
-          outputNamaHTML += '<div>'+data2.toFixed(2)+'%</div>';
-          outputNamaHTML += '<div>'+data3.toFixed(2)+'%</div>';
+          outputNamaHTML = '<div class="nama12">'+data1.toFixed(2)+'%</div>';
+          outputNamaHTML += '<div class="nama12">'+data2.toFixed(2)+'%</div>';
+          outputNamaHTML += '<div class="nama12">'+data3.toFixed(2)+'%</div>';
           outputHTML = '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width1+'px; height: 42px;"><div style="position: relative; left: '+(width1+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP1+'</div></div>';
           outputHTML += '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width2+'px; height: 42px;"><div style="position: relative; left: '+(width2+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP2+'</div></div>';
           outputHTML += '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width3+'px; height: 42px;"><div style="position: relative; left: '+(width3+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP3+'</div></div>';
@@ -1390,11 +1377,8 @@ article{
           var outputNamaHTML = "";
           var tempHTML = "";
           for (let i = 0; i < datas.length; i++){
-            // var keyP = "groupContainerP"+(i+1);
-            // outputHTML += '<div class="container-image" id="groupContainer3">';
-            // outputHTML += '<img class="image-item-2" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+'/>';
-            // outputHTML += '</div>';
-            outputHTML += '<div class="card-testimonial">';
+            tempId = i;
+            outputHTML += '<div class="card-testimonial" onclick="toggleElementVisibility(\'' + datas[i]['name'] + '\')">';
             outputHTML += '<article>';
             outputHTML += '<picture>';
             outputHTML += '<source media="(min-width: 718px)" srcset="'+datas[i]['path']+'">';
@@ -1408,30 +1392,6 @@ article{
           }
 
           document.getElementById("rectangle_putris").innerHTML = outputHTML;
-          // for(let i = 0; i<datas.length; i++){
-          //   var keyP = "groupContainerP"+(i+1);
-          //   tempHTML = '<div id="popUpKode" class="popup-overlay" style="display: none">';
-          //   tempHTML += '<div class="pop-up-kode1">';
-          //   tempHTML += '<div class="pop-up-kode-inner"></div>';
-          //   tempHTML += '<div class="masukkan-kode-voucher1">';
-          //   tempHTML += 'Masukkan Kode Voucher dibawah ini</div>';
-          //   tempHTML += '<div class="rectangle-parent17">';
-          //   tempHTML += '<div class="frame-child9"></div>';
-          //   tempHTML += '<div class="frame-child9"></div>';
-          //   tempHTML += '<div class="frame-child9"></div>';
-          //   tempHTML += '<div class="frame-child9"></div>';
-          //   tempHTML += '<div class="frame-child9"></div>';
-          //   tempHTML += '<div class="frame-child9"></div></div>';
-          //   tempHTML += '<div class="pop-up-kode-child1"></div>';
-          //   tempHTML += '<div class="vote-mustofa1">VOTE - '+datas[i]['name']+'</div>';
-          //   tempHTML += '<div class="belum-punya-kode-container1">';
-          //   tempHTML += '<p class="belum-punya-kode1">Belum punya kode voucher?</p>';
-          //   tempHTML += '<p class="ikuti-tata-cara1">Ikuti tata cara pembelian</p></div>';
-          //   tempHTML += '<div class="rectangle-parent18">';
-          //   tempHTML += '<div class="group-child28"></div>';
-          //   tempHTML += '<div class="kirim1">Kirim</div></div></div></div>';
-          //   document.getElementById(keyP).innerHTML = tempHTML;
-          // }
           var data1 = datas[0]['persentase'];
           var data2 = datas[1]['persentase'];
           var data3 = datas[2]['persentase'];
@@ -1504,127 +1464,6 @@ article{
         });
       }
 
-      const initSlider = () => {
-          const imageList = document.querySelector(".slider-wrapper .image-list");
-          const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
-          const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
-          const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
-          const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-          
-          // Handle scrollbar thumb drag
-          scrollbarThumb.addEventListener("mousedown", (e) => {
-              const startX = e.clientX;
-              const thumbPosition = scrollbarThumb.offsetLeft;
-              const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
-              
-              // Update thumb position on mouse move
-              const handleMouseMove = (e) => {
-                  const deltaX = e.clientX - startX;
-                  const newThumbPosition = thumbPosition + deltaX;
-                  // Ensure the scrollbar thumb stays within bounds
-                  const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
-                  const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
-                  
-                  scrollbarThumb.style.left = `${boundedPosition}px`;
-                  imageList.scrollLeft = scrollPosition;
-              }
-              // Remove event listeners on mouse up
-              const handleMouseUp = () => {
-                  document.removeEventListener("mousemove", handleMouseMove);
-                  document.removeEventListener("mouseup", handleMouseUp);
-              }
-              // Add event listeners for drag interaction
-              document.addEventListener("mousemove", handleMouseMove);
-              document.addEventListener("mouseup", handleMouseUp);
-          });
-          // Slide images according to the slide button clicks
-          slideButtons.forEach(button => {
-              button.addEventListener("click", () => {
-                  const direction = button.id === "prev-slide" ? -1 : 1;
-                  const scrollAmount = imageList.clientWidth * direction;
-                  imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
-              });
-          });
-          // Show or hide slide buttons based on scroll position
-          const handleSlideButtons = () => {
-              slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
-              slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
-          }
-          // Update scrollbar thumb position based on image scroll
-          const updateScrollThumbPosition = () => {
-              const scrollPosition = imageList.scrollLeft;
-              const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-              scrollbarThumb.style.left = `${thumbPosition}px`;
-          }
-          // Call these two functions when image list scrolls
-          imageList.addEventListener("scroll", () => {
-              updateScrollThumbPosition();
-              handleSlideButtons();
-          });
-      }
-      window.addEventListener("resize", initSlider);
-      window.addEventListener("load", initSlider);
-
-      const initSlider_2 = () => {
-          const imageList = document.querySelector(".slider-wrapper-2 .image-list-2");
-          const slideButtons = document.querySelectorAll(".slider-wrapper-2 .slide-button-2");
-          const sliderScrollbar = document.querySelector(".container-2 .slider-scrollbar-2");
-          const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb-2");
-          const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-          
-          // Handle scrollbar thumb drag
-          scrollbarThumb.addEventListener("mousedown", (e) => {
-              const startX = e.clientX;
-              const thumbPosition = scrollbarThumb.offsetLeft;
-              const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
-              
-              // Update thumb position on mouse move
-              const handleMouseMove = (e) => {
-                  const deltaX = e.clientX - startX;
-                  const newThumbPosition = thumbPosition + deltaX;
-                  // Ensure the scrollbar thumb stays within bounds
-                  const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
-                  const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
-                  
-                  scrollbarThumb.style.left = `${boundedPosition}px`;
-                  imageList.scrollLeft = scrollPosition;
-              }
-              // Remove event listeners on mouse up
-              const handleMouseUp = () => {
-                  document.removeEventListener("mousemove", handleMouseMove);
-                  document.removeEventListener("mouseup", handleMouseUp);
-              }
-              // Add event listeners for drag interaction
-              document.addEventListener("mousemove", handleMouseMove);
-              document.addEventListener("mouseup", handleMouseUp);
-          });
-          // Slide images according to the slide button clicks
-          slideButtons.forEach(button => {
-              button.addEventListener("click", () => {
-                  const direction = button.id === "prev-slide-2" ? -1 : 1;
-                  const scrollAmount = imageList.clientWidth * direction;
-                  imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
-              });
-          });
-          // Show or hide slide buttons based on scroll position
-          const handleSlideButtons = () => {
-              slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
-              slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
-          }
-          // Update scrollbar thumb position based on image scroll
-          const updateScrollThumbPosition = () => {
-              const scrollPosition = imageList.scrollLeft;
-              const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-              scrollbarThumb.style.left = `${thumbPosition}px`;
-          }
-          // Call these two functions when image list scrolls
-          imageList.addEventListener("scroll", () => {
-              updateScrollThumbPosition();
-              handleSlideButtons();
-          });
-      }
-      window.addEventListener("resize", initSlider_2);
-      window.addEventListener("load", initSlider_2);
       </script>
   </body>
 </html>

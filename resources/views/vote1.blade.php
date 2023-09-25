@@ -281,7 +281,7 @@
         position: absolute;
         text-align: center;
         align-items: center;
-        top: 2684px;
+        top: 2940px;
         left: 0;
         width: 100%;
         height: 156px;
@@ -552,7 +552,7 @@
             #ddcaca 94.79%
         );
         width: 100%;
-        height: 2840px;
+        height: 2940px;
         overflow: hidden;
         text-align: center;
         font-size: var(--font-size-5xl);
@@ -678,33 +678,31 @@
         }
 
         .container {
-          max-width: 1200px;
-          width: 95%;
+          /* max-width: 1200px; */
           position: absolute;
           /* left: 50px; */
           align-items: center;
           place-items: center;
           text-align: center;
-          left: 49.7%;
-          transform: translate(-50%, -50%);
+          /* left: 20%; */
+          /* transform: translate(-50%, -50%); */
           /* margin-left: 20%;
           margin-right: 20%; */
-          top: 1590px;
+          /* background-color: #000; */
+          top: 1280px;
+          /* margin-left: 200px; */
         }
 
         .container-2 {
-          max-width: 1200px;
-          width: 95%;
           position: absolute;
           /* left: 50px; */
           align-items: center;
           place-items: center;
           text-align: center;
-          left: 49.7%;
-          transform: translate(-50%, -50%);
           /* margin-left: 20%;
           margin-right: 20%; */
-          top: 2360px;
+          top: 2030px;
+          border-radius: 1rem;
         }
 
         .container-image {
@@ -788,7 +786,7 @@
           object-fit: cover;
           border-radius: var(--br-8xs);
         }
-        
+
         /* Batas */
         .slider-wrapper-2 {
           position: relative;
@@ -952,6 +950,235 @@
         .btn:hover{
           background-color: #000;
         }
+
+        h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  color: var(--color-burlywood-200);
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: beige;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: black;
+}
+
+h5,
+h6 {
+  font-weight: 400;
+  color: black;
+}
+
+.container {
+  position: relative;
+  width: 76%;
+  margin-inline: auto;
+  padding-block: 2rem;
+}
+
+.container-2 {
+  width: 76%;
+  margin-inline: auto;
+  padding-block: 2rem;
+  align-items: center;
+  left: 12.4%;
+  border-radius: 1rem;
+}
+
+p {
+  font-size: 1.125rem;
+  margin-bottom: 1.2rem;
+  line-height: 2em;
+}
+
+article.sample-col-para {
+  margin-inline: auto;
+  -moz-column-width: 350px;
+       column-width: 350px;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  -moz-column-rule: 1px solid #5b5b5d;
+       column-rule: 1px solid #5b5b5d;
+}
+article.sample-col-para h1 {
+  font-size: 56px;
+  margin-bottom: 1rem;
+  line-height: 1.2em;
+}
+article.sample-col-para h3 {
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+article.sample-col-para img {
+  width: 200px;
+  height: 200px;
+  float: right;
+  margin-left: 1.2rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  shape-outside: circle();
+  border: 5px solid rgb(164, 67, 31);
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.marquee-wrapper {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+.marquee-wrapper .marquee-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 1rem;
+  cursor: grab;
+}
+.marquee-wrapper .marquee-content .card-testimonial {
+  max-width: 400px;
+  background-color: var(--color-gainsboro);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: #f5f5f5;
+}
+.marquee-wrapper .marquee-content .card-testimonial article picture {
+  position: relative;
+  min-width: 200px;
+}
+.marquee-wrapper .marquee-content .card-testimonial article picture img {
+  width: 100%;
+  height: 340px;
+  border-radius: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 15%;
+     object-position: 50% 15%;
+}
+.marquee-wrapper .marquee-content .card-testimonial article h4 {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-block: 1rem;
+}
+.marquee-wrapper .marquee-content .card-testimonial article article.short-description p {
+  font-family: var(--ff-heading);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 1.2rem;
+}
+
+.marquee-wrapper{
+  width: 100%;
+}
+
+article{
+  width: 300px;
+}
+
+.card-testimonial {
+  margin-top: 45px;
+}
+@media (max-width: 1024px) {
+  .marquee-wrapper {
+    overflow: auto;
+  }
+}
+
+.scrollingX {
+  animation: scroll 45s linear infinite;
+}
+
+.marquee-wrapper:hover .scrollingX {
+  animation-play-state: paused;
+}
+
+/* .scrollingX{
+
+} */
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 1rem));
+  }
+}/*# sourceMappingURL=styles.css.map */
     </style>
   </head>
   <body>
@@ -984,6 +1211,18 @@
         </div>
       </div>
 
+      <section class="container">
+        <div class="marquee-wrapper" style="user-select: none;">
+            <div class="marquee-content scrollingX" id="rectangle_putras"></div>
+        </div>
+      </section>
+
+      <section class="container-2">
+        <div class="marquee-wrapper" style="user-select: none;">
+            <div class="marquee-content scrollingX" id="rectangle_putris"></div>
+        </div>
+      </section>
+
       <div class="line-container">
         <div class="group-child35"></div>
         <div class="rectangle-parent25" id="rectangle_putri_statistics"></div>
@@ -992,13 +1231,13 @@
       <div class="putra4">Putra</div>
       <div class="putri4">Putri</div>
 
-      <div class="container">
+      {{-- <div class="container">
         <div class="slider-wrapper">
           <button id="prev-slide" class="slide-button material-symbols-rounded">
           chevron_left
           </button>
-          <ul class="image-list" id="rectangle_putras">
-          </ul>
+          <ul class="image-list" id="rectangle_putras"></ul>
+          <ul class="name-list" id="putra_names"></ul>
           <button id="next-slide" class="slide-button material-symbols-rounded">
           chevron_right
           </button>
@@ -1008,9 +1247,9 @@
             <div class="scrollbar-thumb"></div>
           </div>
         </div>
-      </div>
+      </div> --}}
 
-      <div class="container-2">
+      {{-- <div class="container-2">
         <div class="slider-wrapper-2">
           <button id="prev-slide-2" class="slide-button-2 material-symbols-rounded">
           chevron_left
@@ -1026,11 +1265,11 @@
             <div class="scrollbar-thumb-2"></div>
           </div>
         </div>
-      </div>
+      </div> --}}
 
-      <div class="d20h20m1">20D:20H:20M</div>
+      {{-- <div class="d20h20m1">20D:20H:20M</div>
       <div class="div11">10</div>
-      <img class="gain-up-11" alt="" src="gain-up-1@2x.png" />
+      <img class="gain-up-11" alt="" src="gain-up-1@2x.png" /> --}}
     </div>
 
     <div class="rectangle-parent24">
@@ -1096,15 +1335,26 @@
           var popUpL = "";
           var outputKeyPHTML = "";
           for (let i = 0; i < datas.length; i++){
-            var keyP = "groupContainerL"+(i+1);
-            tempId = "popUpKode";
-            tempName = datas[i]['name'];
-            // outputKeyPHTML = '<div id="'+keyP+'"></div>';
-            outputHTML += '<div class="container-image">';
-            outputHTML += '<img onclick="toggleElementVisibility(\'' + datas[i]['name'] + '\', \'' + keyP + '\')" class="image-item" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+' id="image_item"'+'/>';
-            outputHTML += '<div class="image_name">'+datas[i]['name']+'</div>';
-            // console.log(datas[i]['name']);
-            outputHTML += '</div>';
+            // var keyP = "groupContainerL"+(i+1);
+            // tempId = "popUpKode";
+            // tempName = datas[i]['name'];
+            // // outputKeyPHTML = '<div id="'+keyP+'"></div>';
+            // outputHTML += '<div class="container-image">';
+            // outputHTML += '<img onclick="toggleElementVisibility(\'' + datas[i]['name'] + '\', \'' + keyP + '\')" class="image-item" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+' id="image_item"'+'/>';
+            // outputHTML += '<div class="image_name">'+datas[i]['name']+'</div>';
+            // // console.log(datas[i]['name']);
+            // outputHTML += '</div>';
+            outputHTML += '<div class="card-testimonial">';
+            outputHTML += '<article>';
+            outputHTML += '<picture>';
+            outputHTML += '<source media="(min-width: 718px)" srcset="'+datas[i]['path']+'">';
+            outputHTML += '<img src="'+datas[i]['path']+'" alt="sample-one.jpeg">';
+            outputHTML += '</picture>';
+            outputHTML += '<h4>'+datas[i]['name']+'</h4>';
+            outputHTML += '<article class="short-description">';
+            outputHTML += '<h4>'+datas[i]['asal_daerah']+'</h4>';
+            outputHTML += '<h4>'+datas[i]['persentase'].toFixed(2)+' %'+'</h4>';
+            outputHTML += '</article></article></div>';
           }
     
           document.getElementById("rectangle_putras").innerHTML = outputHTML;
@@ -1138,10 +1388,21 @@
           var outputNamaHTML = "";
           var tempHTML = "";
           for (let i = 0; i < datas.length; i++){
-            var keyP = "groupContainerP"+(i+1);
-            outputHTML += '<div class="container-image" id="groupContainer3">';
-            outputHTML += '<img class="image-item-2" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+'/>';
-            outputHTML += '</div>';
+            // var keyP = "groupContainerP"+(i+1);
+            // outputHTML += '<div class="container-image" id="groupContainer3">';
+            // outputHTML += '<img class="image-item-2" src="'+datas[i]['path']+'" alt="img-"'+(i+1)+'/>';
+            // outputHTML += '</div>';
+            outputHTML += '<div class="card-testimonial">';
+            outputHTML += '<article>';
+            outputHTML += '<picture>';
+            outputHTML += '<source media="(min-width: 718px)" srcset="'+datas[i]['path']+'">';
+            outputHTML += '<img src="'+datas[i]['path']+'" alt="sample-one.jpeg">';
+            outputHTML += '</picture>';
+            outputHTML += '<h4>'+datas[i]['name']+'</h4>';
+            outputHTML += '<article class="short-description">';
+            outputHTML += '<h4>'+datas[i]['asal_daerah']+'</h4>';
+            outputHTML += '<h4>'+datas[i]['persentase'].toFixed(2)+' %'+'</h4>';
+            outputHTML += '</article></article></div>';
           }
 
           document.getElementById("rectangle_putris").innerHTML = outputHTML;

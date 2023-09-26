@@ -1270,7 +1270,7 @@ article{
     <script>
       var tempId = 1, tempName = "",tempCount = 0, tempPath="",tempPersentase=0.0,tempAsalDaerah="",tempHTML = "";
       var isFinished1 = false,isFinished2=false,isFinished3=false,isBerhasil=false,messageVote="";
-      const URLAPI = "https://officialputraputrisriwijaya23.online/";
+      const URLAPI = "https://officialputraputrisriwijaya23.online";
       function submitForm(kelamin) {
         var form = document.getElementById('popUpKode');
         if (form) {

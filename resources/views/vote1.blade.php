@@ -592,8 +592,8 @@
         background-color: var(--color-gainsboro);
         border: 2px solid var(--color-pink);
         box-sizing: border-box;
-        width: 145px;
-        height: 145px;
+        width: 124px;
+        height: 124px;
         text-align: center;
         align-items: center;
         justify-items: center;
@@ -661,6 +661,11 @@
         display: inline-block;
         width: 199px;
         height: 33px;
+        text-decoration: none;
+        color:rgba(0, 0, 0, 0.25);
+        }
+        .kirim1:hover{
+          color: black;
         }
         .rectangle-parent18 {
         position: absolute;
@@ -1340,7 +1345,7 @@ article{
           tempHTML += '</div>';
           tempHTML += '<div class="rectangle-parent18">';
           tempHTML += '<div class="group-child28"></div>';
-          tempHTML += '<button onclick="submitForm()" type="submit" class="kirim1">Kirim</button>';
+          tempHTML += '<a onclick="submitForm()" type="submit" class="kirim1" href="./votes">Kirim</a>';
           tempHTML += '</div>';
           tempHTML += '</div>';
           tempHTML += '</form>';

@@ -21,6 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap"
     />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <style>
         body {
@@ -607,6 +608,7 @@
         align-items: flex-end;
         justify-content: flex-start;
         gap: var(--gap-mini);
+        width: 100%;
         }
         .pop-up-kode-child1 {
         position: absolute;
@@ -1257,35 +1259,95 @@ article{
     <div id="keyP"></div>
 
     <script>
-
-      var tempId = "";
-      var tempName = "";
+      var tempId = 1, tempName = "",tempCount = 0, tempPath="",tempPersentase=0.0,tempAsalDaerah="";
       var tempHTML = "";
-      function toggleElementVisibility(name) {
-          tempHTML = '<div id="popUpKode" class="popup-overlay" style="display: none">';
+
+      function submitForm() {
+        var form = document.getElementById('popUpKode');
+        if (form) {
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            $.ajax({
+              type: 'GET',
+              url: 'https://officialputraputrisriwijaya23.online/api/vouchers',
+              data: {},
+              success: function (result) {
+                var datas = result;
+                var kodeVoucher = '';
+                var nominal = 0;
+                for (let i = 1; i <= 8; i++) {
+                  kodeVoucher += document.getElementById('input' + i).value;
+                }
+                console.log(kodeVoucher);
+                for (let i = 0; i < datas.length; i++) {
+                  if (kodeVoucher === datas[i]['kode_voucher']) {
+                    if (!datas[i]['is_used']) {
+                      datas[i]['is_used'] = 1;
+                      nominal = datas[i]['nominal'];
+                      $.ajax({
+                        type: 'PUT',
+                        url: 'https://officialputraputrisriwijaya23.online/api/paslon_putras/'+tempId+'?count_vote=' + nominal,
+                        dataType: 'json',
+                        body: JSON.stringify({
+                          count_vote: tempCount + nominal,
+                        }),
+                        success: function (response) {},
+                      });
+                      $.ajax({
+                        type: 'PUT',
+                        url: 'https://officialputraputrisriwijaya23.online/api/vouchers/'+datas[i]['id']+'?is_used=' + datas[i]['is_used'],
+                        dataType: 'json',
+                        body: JSON.stringify({
+                          is_used: datas[i]['is_used'],
+                        }),
+                        success: function (response) {},
+                      });
+                    } else {
+                      // Kode telah digunakan
+                      return;
+                    }
+                    break;
+                  }
+                }
+                tempCount += nominal;
+                console.log('kode berhasil');
+              },
+            });
+          });
+        }
+      }
+
+      function toggleElementVisibility(id,name,countVote,path,persentase,asalDaerah) {
+          tempId = id,tempName=name,tempCount=countVote,tempPath=path,tempPersentase=persentase,tempAsalDaerah=asalDaerah;
+          tempHTML = '<form id="popUpKode" class="popup-overlay" style="display: none">';
           tempHTML += '<div class="pop-up-kode1">';
           tempHTML += '<div class="pop-up-kode-inner"></div>';
-          tempHTML += '<div class="masukkan-kode-voucher1">';
-          tempHTML += 'Masukkan Kode Voucher dibawah ini</div>';
+          tempHTML += '<div class="masukkan-kode-voucher1">Masukkan Kode Voucher dibawah ini</div>';
           tempHTML += '<div class="rectangle-parent17">';
           tempHTML += '<input class="frame-child9" maxLength="1" id="input1"></input>';
           tempHTML += '<input class="frame-child9" maxLength="1" id="input2"></input>';
           tempHTML += '<input class="frame-child9" maxLength="1" id="input3"></input>';
           tempHTML += '<input class="frame-child9" maxLength="1" id="input4"></input>';
           tempHTML += '<input class="frame-child9" maxLength="1" id="input5"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1" id="input6"></input></div>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input6"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input7"></input>';
+          tempHTML += '</div>';
           tempHTML += '<div class="pop-up-kode-child1"></div>';
           tempHTML += '<div class="vote-mustofa1">VOTE - '+name+'</div>';
           tempHTML += '<div class="belum-punya-kode-container1">';
           tempHTML += '<p class="belum-punya-kode1">Belum punya kode voucher?</p>';
-          tempHTML += '<a class="ikuti-tata-cara1" href="./vouchers">Ikuti tata cara pembelian</a></div>';
+          tempHTML += '<a class="ikuti-tata-cara1" href="./vouchers">Ikuti tata cara pembelian</a>';
+          tempHTML += '</div>';
           tempHTML += '<div class="rectangle-parent18">';
           tempHTML += '<div class="group-child28"></div>';
-          tempHTML += '<a class="kirim1" href="./votes">Kirim</button></a></div></div>';
+          tempHTML += '<button onclick="submitForm()" type="submit" class="kirim1">Kirim</button>';
+          tempHTML += '</div>';
+          tempHTML += '</div>';
+          tempHTML += '</form>';
           document.getElementById("keyP").innerHTML = tempHTML;
           const elementToToggle = document.getElementById("popUpKode");
           const allElements = document.getElementById("all_contents");
-          const currentDisplayStyle = window.getComputedStyle(elementToToggle).display;
+          const currentDisplayStyle = window.getComputedStyle(elementToToggle).display;  
           
           if (currentDisplayStyle === "none") {
               // document.getElementById("image_item").disabled = true;
@@ -1297,107 +1359,53 @@ article{
             }
       }
 
-
-      $.ajax({
-        type: "GET",
-        url: "https://officialputraputrisriwijaya23.online/api/paslon_putras",
-        data: {},
-        success:function(result){
-          var datas = result;
-          var outputHTML = "";
-          var outputNamaHTML = "";
-          var popUpL = "";
-          var outputKeyPHTML = "";
-          for (let i = 0; i < datas.length; i++){
-            tempId = i;
-            outputHTML += '<div class="card-testimonial">';
-            outputHTML += '<article>';
-            outputHTML += '<picture>';
-            outputHTML += '<source media="(min-width: 718px)" srcset="'+datas[i]['path']+'">';
-            outputHTML += '<img onclick="toggleElementVisibility(\'' + datas[i]['name'] + '\')" src="'+datas[i]['path']+'" alt="sample-one.jpeg">';
-            outputHTML += '</picture>';
-            outputHTML += '<h4>'+datas[i]['name']+'</h4>';
-            outputHTML += '<article class="short-description">';
-            outputHTML += '<h4>'+datas[i]['asal_daerah']+'</h4>';
-            outputHTML += '<h4>'+datas[i]['persentase'].toFixed(2)+' %'+'</h4>';
-            outputHTML += '</article></article></div>';
+      function insertContainerImages(idPriaOrWanita, statisticId, nameId, urlAPI) {
+        $.ajax({
+          type: "GET",
+          url: urlAPI,
+          data: {},
+          success:function(result){
+            var datas = result;
+            var outputHTML = "";
+            var outputNamaHTML = "";
+            for (let i = 0; i < datas.length; i++){
+              outputHTML += '<div class="card-testimonial">';
+              outputHTML += '<article>';
+              outputHTML += '<picture>';
+              outputHTML += '<source media="(min-width: 718px)" srcset="'+datas[i]['path']+'">';
+              outputHTML += '<img onclick="toggleElementVisibility(\'' + datas[i]['id'] + '\', \'' + datas[i]['name'] + '\',\'' + datas[i]['count_vote'] + '\', \'' + datas[i]['path'] + '\', \'' + datas[i]['persentase'] + '\', \'' + datas[i]['asal_daerah'] + '\')" src="'+datas[i]['path']+'" alt="sample-one.jpeg">';
+              outputHTML += '</picture>';
+              outputHTML += '<h4>'+datas[i]['name']+'</h4>';
+              outputHTML += '<article class="short-description">';
+              outputHTML += '<h4>'+datas[i]['asal_daerah']+'</h4>';
+              outputHTML += '<h4>'+datas[i]['persentase'].toFixed(2)+' %'+'</h4>';
+              outputHTML += '</article></article></div>';
+            }
+      
+            document.getElementById(idPriaOrWanita).innerHTML = outputHTML;
+            var data1 = datas[0]['persentase'];
+            var data2 = datas[1]['persentase'];
+            var data3 = datas[2]['persentase'];
+            var nameP1 = datas[0]['name'], nameP2 = datas[1]['name'], nameP3 = datas[2]['name'];
+            var width1 = 600*data1/100;
+            var width2 = 600*data2/100;
+            var width3 = 600*data3/100;
+            outputNamaHTML = '<div class="nama12">'+data1.toFixed(2)+'%</div>';
+            outputNamaHTML += '<div class="nama12">'+data2.toFixed(2)+'%</div>';
+            outputNamaHTML += '<div class="nama12">'+data3.toFixed(2)+'%</div>';
+            outputHTML = '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width1+'px; height: 42px;"><div style="position: relative; left: '+(width1+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP1+'</div></div>';
+            outputHTML += '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width2+'px; height: 42px;"><div style="position: relative; left: '+(width2+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP2+'</div></div>';
+            outputHTML += '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width3+'px; height: 42px;"><div style="position: relative; left: '+(width3+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP3+'</div></div>';
+            document.getElementById(statisticId).innerHTML = outputHTML;
+            document.getElementById(nameId).innerHTML = outputNamaHTML;
           }
-    
-          document.getElementById("rectangle_putras").innerHTML = outputHTML;
-          var data1 = datas[0]['persentase'];
-          var data2 = datas[1]['persentase'];
-          var data3 = datas[2]['persentase'];
-          var nameP1 = datas[0]['name'], nameP2 = datas[1]['name'], nameP3 = datas[2]['name'];
-          var width1 = 600*data1/100;
-          var width2 = 600*data2/100;
-          var width3 = 600*data3/100;
-          outputNamaHTML = '<div class="nama12">'+data1.toFixed(2)+'%</div>';
-          outputNamaHTML += '<div class="nama12">'+data2.toFixed(2)+'%</div>';
-          outputNamaHTML += '<div class="nama12">'+data3.toFixed(2)+'%</div>';
-          outputHTML = '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width1+'px; height: 42px;"><div style="position: relative; left: '+(width1+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP1+'</div></div>';
-          outputHTML += '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width2+'px; height: 42px;"><div style="position: relative; left: '+(width2+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP2+'</div></div>';
-          outputHTML += '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width3+'px; height: 42px;"><div style="position: relative; left: '+(width3+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP3+'</div></div>';
-          document.getElementById("rectangle_putra_statistics").innerHTML = outputHTML;
-          document.getElementById("name_putras").innerHTML = outputNamaHTML;
-        }
-      });
+        });
+      }
 
-      // $.ajax({
-      //   type: "POST",
-      //   url: "https://officialputraputrisriwijaya23.online/api/paslon_putras",
-      //   data: {
-      //     item_
-      //   },
-      //   success:function(result){
-      //     // Success
-      //   }
-      // });
+      insertContainerImages("rectangle_putras","rectangle_putra_statistics","name_putras","https://officialputraputrisriwijaya23.online/api/paslon_putras");
+      insertContainerImages("rectangle_putris","rectangle_putri_statistics","name_putris","https://officialputraputrisriwijaya23.online/api/paslon_putris");
 
-
-
-      $.ajax({
-        type: "GET",
-        url: "https://officialputraputrisriwijaya23.online/api/paslon_putris",
-        data: {},
-        success:function(result){
-          var datas = result;
-          // document.getElementById('test123').textContent = datas[0]['name'];
-          var outputHTML = "";
-          var outputNamaHTML = "";
-          var tempHTML = "";
-          for (let i = 0; i < datas.length; i++){
-            tempId = i;
-            outputHTML += '<div class="card-testimonial" onclick="toggleElementVisibility(\'' + datas[i]['name'] + '\')">';
-            outputHTML += '<article>';
-            outputHTML += '<picture>';
-            outputHTML += '<source media="(min-width: 718px)" srcset="'+datas[i]['path']+'">';
-            outputHTML += '<img src="'+datas[i]['path']+'" alt="sample-one.jpeg">';
-            outputHTML += '</picture>';
-            outputHTML += '<h4>'+datas[i]['name']+'</h4>';
-            outputHTML += '<article class="short-description">';
-            outputHTML += '<h4>'+datas[i]['asal_daerah']+'</h4>';
-            outputHTML += '<h4>'+datas[i]['persentase'].toFixed(2)+' %'+'</h4>';
-            outputHTML += '</article></article></div>';
-          }
-
-          document.getElementById("rectangle_putris").innerHTML = outputHTML;
-          var data1 = datas[0]['persentase'];
-          var data2 = datas[1]['persentase'];
-          var data3 = datas[2]['persentase'];
-          var nameP1 = datas[0]['name'], nameP2 = datas[1]['name'], nameP3 = datas[2]['name'];
-          var width1 = 600*data1/100;
-          var width2 = 600*data2/100;
-          var width3 = 600*data3/100;
-          outputNamaHTML = '<div class="nama12">'+data1.toFixed(2)+'%</div>';
-          outputNamaHTML += '<div class="nama12">'+data2.toFixed(2)+'%</div>';
-          outputNamaHTML += '<div class="nama12">'+data3.toFixed(2)+'%</div>';
-          outputHTML = '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width1+'px; height: 42px;"><div style="position: relative; left: '+(width1+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP1+'</div></div>';
-          outputHTML += '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width2+'px; height: 42px;"><div style="position: relative; left: '+(width2+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP2+'</div></div>';
-          outputHTML += '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width3+'px; height: 42px;"><div style="position: relative; left: '+(width3+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP3+'</div></div>';
-          document.getElementById("rectangle_putri_statistics").innerHTML = outputHTML;
-          document.getElementById("name_putris").innerHTML = outputNamaHTML;
-        }
-      });
+      var datas;
 
       var groupContainer3 = document.getElementById("groupContainer3");
       if (groupContainer3) {

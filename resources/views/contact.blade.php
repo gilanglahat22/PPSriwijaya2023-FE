@@ -359,31 +359,31 @@
         cursor: pointer;
         }
         .home-parent1 {
-        position: absolute;
-        top: 52px;
-        left: 813px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: flex-start;
-        gap: var(--gap-18xl);
-        font-family: var(--font-alata);
+          position: absolute;
+          top: 52px;
+          left: 813px;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: flex-start;
+          gap: var(--gap-18xl);
+          font-family: var(--font-alata);
         }
         .contact-desktop {
-        position: relative;
-        background: linear-gradient(
-            180deg,
-            #9b2a06 14.06%,
-            #b05f5f 63.54%,
-            #ddcaca 94.79%
-        );
-        width: 100%;
-        height: 1335px;
-        overflow: hidden;
-        text-align: center;
-        font-size: var(--font-size-5xl);
-        color: var(--color-white);
-        font-family: var(--font-abril-fatface);
+          position: relative;
+          background: linear-gradient(
+              180deg,
+              #9b2a06 14.06%,
+              #b05f5f 63.54%,
+              #ddcaca 94.79%
+          );
+          width: 100%;
+          height: 1335px;
+          overflow: hidden;
+          text-align: center;
+          font-size: var(--font-size-5xl);
+          color: var(--color-white);
+          font-family: var(--font-abril-fatface);
         }
 
         .popup-overlay {

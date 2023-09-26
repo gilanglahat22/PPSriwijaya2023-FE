@@ -1182,14 +1182,6 @@ article{
   }
 }
 
-.scrollingX {
-  animation: scroll 45s linear infinite;
-}
-
-.marquee-wrapper:hover .scrollingX {
-  animation-play-state: paused;
-}
-
 @keyframes scroll {
   from {
     transform: translateX(0);

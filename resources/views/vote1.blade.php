@@ -1169,6 +1169,10 @@ article{
   width: 300px;
 }
 
+.messageStyle{
+  color: #000;
+}
+
 .card-testimonial {
   margin-top: 45px;
 }
@@ -1266,7 +1270,7 @@ article{
     <script>
       var tempId = 1, tempName = "",tempCount = 0, tempPath="",tempPersentase=0.0,tempAsalDaerah="",tempHTML = "";
       var isFinished1 = false,isFinished2=false,isFinished3=false,isBerhasil=false,messageVote="";
-
+      const URLAPI = "https://officialputraputrisriwijaya23.online/";
       function submitForm(kelamin) {
         var form = document.getElementById('popUpKode');
         if (form) {
@@ -1274,7 +1278,7 @@ article{
             e.preventDefault();
             $.ajax({
               type: 'GET',
-              url: 'https://officialputraputrisriwijaya23.online/api/vouchers',
+              url: URLAPI+'/api/vouchers',
               data: {},
               success: function (result) {
                 var datas = result;
@@ -1291,7 +1295,7 @@ article{
                       console.log(tempCount);
                       $.ajax({
                         type: 'PUT',
-                        url: 'https://officialputraputrisriwijaya23.online/api/'+kelamin+'/'+tempId+'?count_vote=' + tempCount,
+                        url: URLAPI+'/api/'+kelamin+'/'+tempId+'?count_vote=' + tempCount,
                         dataType: 'json',
                         success: function (response) {
                           if(response) isFinished1 = true;
@@ -1303,7 +1307,7 @@ article{
                       });
                       $.ajax({
                         type: 'DELETE',
-                        url: 'https://officialputraputrisriwijaya23.online/api/vouchers/'+datas[i]['id'],
+                        url: URLAPI+'/api/vouchers/'+datas[i]['id'],
                         dataType: 'json',
                         success: function (response) {
                           if(response) isFinished2 = true;
@@ -1315,7 +1319,7 @@ article{
                       });
                       $.ajax({
                         type: 'POST',
-                        url: 'https://officialputraputrisriwijaya23.online/api/voucher_archives/'+datas[i]['id']+'?kode_voucher=' + datas[i]['kode_voucher']+'&nominal='+nominal,
+                        url: URLAPI+'/api/voucher_archives?kode_voucher=' + datas[i]['kode_voucher']+'&nominal='+nominal,
                         dataType: 'json',
                         success: function (response) {
                           if(response) isFinished3 = true;
@@ -1329,16 +1333,17 @@ article{
                   }
                 }
                 console.log('kode berhasil');
-                if(!isBerhasil){
-                  document.getElementById("messageVote").textContent = "Kode Voucher Tidak Valid";
-                }else{
-                  document.getElementById("popUpKode").style.display = "none";
-                  document.getElementById("all_contents").style.filter = "blur(0px)";
-                  alert("Voucher berhasil dimasukkan, Selamat! "+tempName+" telah mendapatkan "+nominal+"baru.");
-                }
               },
             });
           });
+        }
+        if(!isBerhasil){
+          alert("Kode Voucher Tidak Valid");
+          document.getElementById("messageVote").textContent = "Kode Voucher Tidak Valid";
+        }else{
+          document.getElementById("popUpKode").style.display = "none";
+          document.getElementById("all_contents").style.filter = "blur(0px)";
+          alert("Voucher berhasil dimasukkan, Selamat! "+tempName+" telah mendapatkan "+nominal+"baru.");
         }
       }
 
@@ -1357,7 +1362,7 @@ article{
           tempHTML += '<input class="frame-child9" maxLength="1" id="input6"></input>';
           tempHTML += '<input class="frame-child9" maxLength="1" id="input7"></input>';
           tempHTML += '</div>';
-          tempHTML += '<div id="messageVote"></div>';
+          tempHTML += '<div class="messageStyle" id="messageVote"></div>';
           tempHTML += '<div class="pop-up-kode-child1"></div>';
           tempHTML += '<div class="vote-mustofa1">VOTE - '+name+'</div>';
           tempHTML += '<div class="belum-punya-kode-container1">';
@@ -1388,7 +1393,7 @@ article{
       function insertContainerImages(idPriaOrWanita, statisticId, nameId, kelamin) {
         $.ajax({
           type: "GET",
-          url: 'https://officialputraputrisriwijaya23.online/api/'+kelamin,
+          url: URLAPI+'/api/'+kelamin,
           data: {},
           success:function(result){
             var datas = result;

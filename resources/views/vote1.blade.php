@@ -687,14 +687,14 @@
         color: var(--color-white);
         font-family: var(--font-alata);
         }
-        .rectangle-parent-putras{
+        /* .rectangle-parent-putras{
           display: flex;
           flex-direction: column;
           align-items: flex-start;
           justify-content: flex-start;
           text-align: center;
           gap: var(--gap-base);
-        }
+        } */
 
         .container {
           /* max-width: 1200px; */
@@ -1264,10 +1264,10 @@ article{
     <div id="keyP"></div>
 
     <script>
-      var tempId = 1, tempName = "",tempCount = 0, tempPath="",tempPersentase=0.0,tempAsalDaerah="";
-      var tempHTML = "";
+      var tempId = 1, tempName = "",tempCount = 0, tempPath="",tempPersentase=0.0,tempAsalDaerah="",tempHTML = "";
+      var isFinished1 = false,isFinished2=false,isFinished3=false,isBerhasil=false,messageVote="";
 
-      function submitForm() {
+      function submitForm(kelamin) {
         var form = document.getElementById('popUpKode');
         if (form) {
           form.addEventListener('submit', function (e) {
@@ -1280,50 +1280,70 @@ article{
                 var datas = result;
                 var kodeVoucher = '';
                 var nominal = 0;
-                for (let i = 1; i <= 8; i++) {
+                for (let i = 1; i <= 7; i++) {
                   kodeVoucher += document.getElementById('input' + i).value;
                 }
                 console.log(kodeVoucher);
                 for (let i = 0; i < datas.length; i++) {
                   if (kodeVoucher === datas[i]['kode_voucher']) {
-                    if (!datas[i]['is_used']) {
-                      datas[i]['is_used'] = 1;
                       nominal = datas[i]['nominal'];
+                      tempCount += Number(nominal);
+                      console.log(tempCount);
                       $.ajax({
                         type: 'PUT',
-                        url: 'https://officialputraputrisriwijaya23.online/api/paslon_putras/'+tempId+'?count_vote=' + nominal,
+                        url: 'https://officialputraputrisriwijaya23.online/api/'+kelamin+'/'+tempId+'?count_vote=' + tempCount,
                         dataType: 'json',
-                        body: JSON.stringify({
-                          count_vote: tempCount + nominal,
-                        }),
-                        success: function (response) {},
+                        success: function (response) {
+                          if(response) isFinished1 = true;
+                          if(isFinished1&isFinished2&isFinished3){
+                            isBerhasil = true;
+                            location.reload();
+                          }
+                        },
                       });
                       $.ajax({
-                        type: 'PUT',
-                        url: 'https://officialputraputrisriwijaya23.online/api/vouchers/'+datas[i]['id']+'?is_used=' + datas[i]['is_used'],
+                        type: 'DELETE',
+                        url: 'https://officialputraputrisriwijaya23.online/api/vouchers/'+datas[i]['id'],
                         dataType: 'json',
-                        body: JSON.stringify({
-                          is_used: datas[i]['is_used'],
-                        }),
-                        success: function (response) {},
+                        success: function (response) {
+                          if(response) isFinished2 = true;
+                          if(isFinished1&isFinished2&isFinished3){
+                            isBerhasil = true;
+                            location.reload();
+                          }
+                        },
                       });
-                    } else {
-                      // Kode telah digunakan
-                      return;
-                    }
+                      $.ajax({
+                        type: 'POST',
+                        url: 'https://officialputraputrisriwijaya23.online/api/voucher_archives/'+datas[i]['id']+'?kode_voucher=' + datas[i]['kode_voucher']+'&nominal='+nominal,
+                        dataType: 'json',
+                        success: function (response) {
+                          if(response) isFinished3 = true;
+                          if(isFinished1&isFinished2&isFinished3){
+                            isBerhasil = true;
+                            location.reload();
+                          }
+                        },
+                      });
                     break;
                   }
                 }
-                tempCount += nominal;
                 console.log('kode berhasil');
+                if(!isBerhasil){
+                  document.getElementById("messageVote").textContent = "Kode Voucher Tidak Valid";
+                }else{
+                  document.getElementById("popUpKode").style.display = "none";
+                  document.getElementById("all_contents").style.filter = "blur(0px)";
+                  alert("Voucher berhasil dimasukkan, Selamat! "+tempName+" telah mendapatkan "+nominal+"baru.");
+                }
               },
             });
           });
         }
       }
 
-      function toggleElementVisibility(id,name,countVote,path,persentase,asalDaerah) {
-          tempId = id,tempName=name,tempCount=countVote,tempPath=path,tempPersentase=persentase,tempAsalDaerah=asalDaerah;
+      function toggleElementVisibility(id,name,countVote,path,persentase,asalDaerah,kelamin) {
+          tempId = id,tempName=name,tempCount=Number(countVote),tempPath=path,tempPersentase=persentase,tempAsalDaerah=asalDaerah;
           tempHTML = '<form id="popUpKode" class="popup-overlay" style="display: none">';
           tempHTML += '<div class="pop-up-kode1">';
           tempHTML += '<div class="pop-up-kode-inner"></div>';
@@ -1337,6 +1357,7 @@ article{
           tempHTML += '<input class="frame-child9" maxLength="1" id="input6"></input>';
           tempHTML += '<input class="frame-child9" maxLength="1" id="input7"></input>';
           tempHTML += '</div>';
+          tempHTML += '<div id="messageVote"></div>';
           tempHTML += '<div class="pop-up-kode-child1"></div>';
           tempHTML += '<div class="vote-mustofa1">VOTE - '+name+'</div>';
           tempHTML += '<div class="belum-punya-kode-container1">';
@@ -1345,7 +1366,7 @@ article{
           tempHTML += '</div>';
           tempHTML += '<div class="rectangle-parent18">';
           tempHTML += '<div class="group-child28"></div>';
-          tempHTML += '<a onclick="submitForm()" type="submit" class="kirim1" href="./votes">Kirim</a>';
+          tempHTML += '<button onclick="submitForm(\'' + kelamin + '\')" type="submit" class="kirim1">Kirim</button>';
           tempHTML += '</div>';
           tempHTML += '</div>';
           tempHTML += '</form>';
@@ -1362,12 +1383,12 @@ article{
               elementToToggle.style.display = "none"; // Hide the element
               allElements.style.filter = "blur(0px)";
             }
-      }
+        }
 
-      function insertContainerImages(idPriaOrWanita, statisticId, nameId, urlAPI) {
+      function insertContainerImages(idPriaOrWanita, statisticId, nameId, kelamin) {
         $.ajax({
           type: "GET",
-          url: urlAPI,
+          url: 'https://officialputraputrisriwijaya23.online/api/'+kelamin,
           data: {},
           success:function(result){
             var datas = result;
@@ -1378,7 +1399,7 @@ article{
               outputHTML += '<article>';
               outputHTML += '<picture>';
               outputHTML += '<source media="(min-width: 718px)" srcset="'+datas[i]['path']+'">';
-              outputHTML += '<img onclick="toggleElementVisibility(\'' + datas[i]['id'] + '\', \'' + datas[i]['name'] + '\',\'' + datas[i]['count_vote'] + '\', \'' + datas[i]['path'] + '\', \'' + datas[i]['persentase'] + '\', \'' + datas[i]['asal_daerah'] + '\')" src="'+datas[i]['path']+'" alt="sample-one.jpeg">';
+              outputHTML += '<img onclick="toggleElementVisibility(\'' + datas[i]['id'] + '\', \'' + datas[i]['name'] + '\',\'' + datas[i]['count_vote'] + '\', \'' + datas[i]['path'] + '\', \'' + datas[i]['persentase'] + '\', \'' + datas[i]['asal_daerah'] + '\', \'' + kelamin + '\')" src="'+datas[i]['path']+'" alt="sample-one.jpeg">';
               outputHTML += '</picture>';
               outputHTML += '<h4>'+datas[i]['name']+'</h4>';
               outputHTML += '<article class="short-description">';
@@ -1407,8 +1428,8 @@ article{
         });
       }
 
-      insertContainerImages("rectangle_putras","rectangle_putra_statistics","name_putras","https://officialputraputrisriwijaya23.online/api/paslon_putras");
-      insertContainerImages("rectangle_putris","rectangle_putri_statistics","name_putris","https://officialputraputrisriwijaya23.online/api/paslon_putris");
+      insertContainerImages("rectangle_putras","rectangle_putra_statistics","name_putras","paslon_putras");
+      insertContainerImages("rectangle_putris","rectangle_putri_statistics","name_putris","paslon_putris");
 
       var datas;
 

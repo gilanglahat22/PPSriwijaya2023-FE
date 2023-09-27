@@ -1207,6 +1207,17 @@ article{
     max-width: 540px;
   }
 }
+
+@media (max-width: 450px){
+  .body{
+    transform: scaleX(0.5);
+  }
+
+  .copyright-2023-container7{
+    font-size: 26px;
+  }
+
+}
 /*# sourceMappingURL=styles.css.map */
     </style>
   </head>

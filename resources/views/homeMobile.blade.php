@@ -569,7 +569,7 @@ body {
     name: "HomeAndroid",
     methods: {
       onGroupButtonClick() {
-        this.$router.push("/vote");
+        this.$router.push("/votes");
       },
     },
   });

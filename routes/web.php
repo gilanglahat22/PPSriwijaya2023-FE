@@ -15,7 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    // $width = session('screenWidth');
+    // if($width<480){
+    //     return view('homeMobile');
+    // }else{
+    //     return view('home');
+    // }
+    return view('homeMobile');
 });
 
 Route::get('/about', function () {

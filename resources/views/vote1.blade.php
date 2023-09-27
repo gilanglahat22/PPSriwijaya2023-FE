@@ -644,15 +644,30 @@
         width: 945px;
         height: 154px;
         }
+        .button-redirect{
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
         .group-child28 {
         position: absolute;
         top: 0;
         left: 0;
         border-radius: var(--br-37xl-5);
-        background-color: var(--color-gainsboro);
+        background-color: #EEE8AA;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
         width: 290px;
         height: 68px;
+        }
+        .group-child29{
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: var(--br-37xl-5);
+          background-color: white;
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+          width: 290px;
+          height: 68px;
         }
         .kirim1 {
         position: absolute;
@@ -670,10 +685,18 @@
         .rectangle-parent18 {
         position: absolute;
         top: 638px;
-        left: 474px;
+        left: 664px;
         width: 290px;
         height: 68px;
-        color: var(--color-black);
+        color: #EEE8AA;
+        }
+        .rectangle-parent19{
+          position: absolute;
+          top: 638px;
+          left: 300px;
+          width: 290px;
+          height: 68px;
+          color: black;
         }
         .pop-up-kode1 {
         position: absolute;
@@ -1208,6 +1231,21 @@ article{
   }
 }
 
+.close-button {
+  position: absolute;
+  top: 7px;
+  left: 45px;
+  display: inline-block;
+  width: 199px;
+  height: 33px;
+  text-decoration: none;
+  color:rgba(0, 0, 0, 0.25);
+}
+
+.close-button:hover{
+  color: red;
+}
+
 /* @media (max-width: 450px){
   body{
     scale: 1;
@@ -1222,7 +1260,6 @@ article{
     </style>
   </head>
   <body>
-    <div id="all_contents2" onclick="closePopUp()">
       <div class="vote-desktop1" id="all_contents">
         <img
           class="logo-ypps-1-1-27"
@@ -1287,7 +1324,6 @@ article{
               <span class="feline-lab7">Feline Lab.</span>
           </div>
       </div>
-    </div>
     <div id="keyP"></div>
     <script>
       var tempId = 1, tempName = "",tempCount = 0, tempPath="",tempPersentase=0.0,tempAsalDaerah="",tempHTML = "";
@@ -1369,16 +1405,6 @@ article{
         }
       }
 
-      function closePopUp(){
-        document.getElementById("all_contents2").addEventListener('click', function(e){
-          location.reload();
-          // const elementToToggle = document.getElementById("popUpKode");
-          // const allElements = document.getElementById("all_contents");
-          // elementToToggle.style.display = "none"; // Hide the element
-          // allElements.style.filter = "blur(0px)";
-        })
-      }
-
       function toggleElementVisibility(id,name,countVote,path,persentase,asalDaerah,kelamin) {
           tempId = id,tempName=name,tempCount=Number(countVote),tempPath=path,tempPersentase=persentase,tempAsalDaerah=asalDaerah;
           tempHTML = '<form id="popUpKode" class="popup-overlay" style="display: none">';
@@ -1401,9 +1427,16 @@ article{
           tempHTML += '<p class="belum-punya-kode1">Belum punya kode voucher?</p>';
           tempHTML += '<a class="ikuti-tata-cara1" href="./vouchers">Ikuti tata cara pembelian</a>';
           tempHTML += '</div>';
+          tempHTML += '<div class="button-redirect">';
+          tempHTML += '<div class="rectangle-parent19">';
+          tempHTML += '<div class="group-child29"></div>';
+          tempHTML += '<a type="button" class="close-button" onclick="closeForm()">Kembali</button>';
+          tempHTML += '</div>';
+          tempHTML += '</div>';
           tempHTML += '<div class="rectangle-parent18">';
           tempHTML += '<div class="group-child28"></div>';
-          tempHTML += '<button onclick="submitForm(\'' + kelamin + '\')" type="submit" class="kirim1">Kirim</button>';
+          tempHTML += '<a onclick="submitForm(\'' + kelamin + '\')" type="submit" class="kirim1">Kirim</a>';
+          tempHTML += '</div>';
           tempHTML += '</div>';
           tempHTML += '</div>';
           tempHTML += '</form>';
@@ -1421,6 +1454,10 @@ article{
               allElements.style.filter = "blur(0px)";
             }
         }
+
+      function closeForm(){
+          location.reload();
+      }
 
       function insertContainerImages(idPriaOrWanita, statisticId, nameId, kelamin) {
         $.ajax({

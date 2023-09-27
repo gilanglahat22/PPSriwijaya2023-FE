@@ -23,7 +23,6 @@ use Illuminate\Support\Facades\Facade\Cookie;
 
 use hisorange\BrowserDetect\Parser;
 
-$result = $browser->detect();
 Route::get('/', function () {
     $browser = new Parser(null, null, [
         'cache' => [

@@ -3,6 +3,8 @@
 use App\Http\Controllers\VoteController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Facade\Cookie;
+// use Browser;
+// use hisorange\BrowserDetect\Parser as Browser;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,14 +21,22 @@ use Illuminate\Support\Facades\Facade\Cookie;
 // $width = $screen[0];
 // $height = $screen[0];
 
+use hisorange\BrowserDetect\Parser;
+
+$result = $browser->detect();
 Route::get('/', function () {
-    // $width = session('screenWidth');
-    // if($width<480){
-    //     return view('homeMobile');
-    // }else{
-    //     return view('home');
-    // }
-    return view('homeMobile');
+    $browser = new Parser(null, null, [
+        'cache' => [
+            'interval' => 86400 // This will override the default configuration.
+        ]
+    ]);
+    $result = $browser->detect();
+    $isMobile = $result->isDesktop();
+    if($isMobile){
+        return view('homeMobile');
+    }else{
+        return view('home');
+    }
 });
 
 Route::get('/about', function () {

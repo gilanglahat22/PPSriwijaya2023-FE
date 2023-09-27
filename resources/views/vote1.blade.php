@@ -671,13 +671,16 @@
         }
         .kirim1 {
         position: absolute;
-        top: 7px;
-        left: 45px;
+        top: 0px;
+        left: 0px;
         display: inline-block;
-        width: 199px;
-        height: 33px;
+        width: 100%;
+        height: 100%;
         text-decoration: none;
         color:rgba(0, 0, 0, 0.25);
+        border-radius: var(--br-37xl-5);
+        background-color: #EEE8AA;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
         }
         .kirim1:hover{
           color: black;
@@ -1329,7 +1332,7 @@ article{
       var tempId = 1, tempName = "",tempCount = 0, tempPath="",tempPersentase=0.0,tempAsalDaerah="",tempHTML = "";
       var isFinished1 = false,isFinished2=false,isFinished3=false,isFinished4=false,isBerhasil=false,messageVote="",nominal=0;
       var kodeVoucher="",nominal=0,idVoucher=0;
-      const URLAPI = "https://officialputraputrisriwijaya23.online";
+      const URLAPI = "http://127.0.0.1:8001";
 
       async function isBerhasilProses1() {
         // Create a new Promise object.
@@ -1434,6 +1437,17 @@ article{
               }
             });
           });
+          tempVal = await tempVal;
+          if(tempVal){
+            alert("Voucher berhasil dimasukkan, Selamat! "+tempName+" telah mendapatkan "+nominal+" baru.");
+            location.reload();
+          }else{
+            alert("Kode Voucher Tidak Valid");
+            location.reload();
+          }
+        }else{
+          alert("Kode Voucher Tidak Valid");
+          location.reload();
         }
         return await ret;
       }
@@ -1444,14 +1458,7 @@ article{
         if (form) {
           form.addEventListener('submit', function (e) {
             e.preventDefault();
-            var flag = isBerhasilProses4(kelamin);
-            if(flag){
-              alert("Voucher berhasil dimasukkan, Selamat! "+tempName+" telah mendapatkan "+nominal+" baru.");
-              location.reload();
-            }else{
-              alert("Kode Voucher Tidak Valid");
-              location.reload();
-            }
+            isBerhasilProses4(kelamin);
           });
         }
       }
@@ -1479,14 +1486,14 @@ article{
           tempHTML += '<a class="ikuti-tata-cara1" href="./vouchers">Ikuti tata cara pembelian</a>';
           tempHTML += '</div>';
           tempHTML += '<div class="button-redirect">';
-          tempHTML += '<div class="rectangle-parent19">';
+          tempHTML += '<div type="button" class="rectangle-parent19" onclick="closeForm()">';
           tempHTML += '<div class="group-child29"></div>';
-          tempHTML += '<a type="button" class="close-button" onclick="closeForm()">Kembali</a>';
+          tempHTML += '<a class="close-button">Kembali</a>';
           tempHTML += '</div>';
           tempHTML += '</div>';
           tempHTML += '<div class="rectangle-parent18">';
           tempHTML += '<div class="group-child28"></div>';
-          tempHTML += '<a onclick="submitForm(\'' + kelamin + '\')" type="submit" class="kirim1">Kirim</a>';
+          tempHTML += '<button class="kirim1"  onclick="submitForm(\'' + kelamin + '\')" type="submit">Kirim</button>';
           tempHTML += '</div>';
           tempHTML += '</div>';
           tempHTML += '</div>';

@@ -1327,81 +1327,132 @@ article{
     <div id="keyP"></div>
     <script>
       var tempId = 1, tempName = "",tempCount = 0, tempPath="",tempPersentase=0.0,tempAsalDaerah="",tempHTML = "";
-      var isFinished1 = false,isFinished2=false,isFinished3=false,isBerhasil=false,messageVote="";
+      var isFinished1 = false,isFinished2=false,isFinished3=false,isFinished4=false,isBerhasil=false,messageVote="",nominal=0;
+      var kodeVoucher="",nominal=0,idVoucher=0;
       const URLAPI = "https://officialputraputrisriwijaya23.online";
-      function submitForm(kelamin) {
-        var form = document.getElementById('popUpKode');
-        if (form) {
-          form.addEventListener('submit', function (e) {
-            e.preventDefault();
+
+      async function isBerhasilProses1() {
+        // Create a new Promise object.
+        var tempRet = new Promise(function(resolve, reject) {
+          // Make an AJAX request to the API.
+          $.ajax({
+            type: "GET",
+            url: URLAPI + "/api/vouchers",
+            data: {},
+            success: function(datas) {
+              // Iterate over the voucher data.
+              for (let i = 1; i <= 7; i++) {
+                kodeVoucher += document.getElementById("input" + i).value;
+              }
+              var tempFlag = false;
+              for (let i = 0; i < datas.length; i++) {
+                // If the voucher code matches a voucher in the data,
+                // resolve the Promise with `true`.
+                if (kodeVoucher === datas[i]["kode_voucher"]) {
+                  console.log(datas[i]["nominal"]);
+                  console.log(datas[i]['kode_voucher']);
+                  console.log(datas[i]['id']);
+                  nominal = datas[i]["nominal"];
+                  idVoucher = datas[i]["id"];
+                  tempCount += Number(nominal);
+                  console.log("Debug di atas");
+                  tempFlag = true;
+                  break;
+                }
+              }
+              if(tempFlag){
+                resolve(true)
+              }else{
+                resolve(false);
+              }
+            },
+            error: function(datas) {
+              resolve(false);
+            }
+          });
+        });
+
+        // Wait for the Promise to resolve and return the result.
+        return await tempRet;
+      }
+
+      async function isBerhasilProses2(kelamin){
+        var ret = await isBerhasilProses1();
+        if(ret){
+          alert("Voucher berhasil dimasukkan, Selamat! "+tempName+" telah mendapatkan "+nominal+" baru.");
+          location.reload();
+          let tempVal = new Promise(function(resolve,reject){
             $.ajax({
-              type: 'GET',
-              url: URLAPI+'/api/vouchers',
-              data: {},
-              success: function (result) {
-                var datas = result;
-                var kodeVoucher = '';
-                var nominal = 0;
-                for (let i = 1; i <= 7; i++) {
-                  kodeVoucher += document.getElementById('input' + i).value;
-                }
-                console.log(kodeVoucher);
-                for (let i = 0; i < datas.length; i++) {
-                  if (kodeVoucher === datas[i]['kode_voucher']) {
-                      nominal = datas[i]['nominal'];
-                      tempCount += Number(nominal);
-                      console.log(tempCount);
-                      $.ajax({
-                        type: 'PUT',
-                        url: URLAPI+'/api/'+kelamin+'/'+tempId+'?count_vote=' + tempCount,
-                        dataType: 'json',
-                        success: function (response) {
-                          if(response) isFinished1 = true;
-                          if(isFinished1&isFinished2&isFinished3){
-                            isBerhasil = true;
-                            location.reload();
-                          }
-                        },
-                      });
-                      $.ajax({
-                        type: 'DELETE',
-                        url: URLAPI+'/api/vouchers/'+datas[i]['id'],
-                        dataType: 'json',
-                        success: function (response) {
-                          if(response) isFinished2 = true;
-                          if(isFinished1&isFinished2&isFinished3){
-                            isBerhasil = true;
-                            location.reload();
-                          }
-                        },
-                      });
-                      $.ajax({
-                        type: 'POST',
-                        url: URLAPI+'/api/voucher_archives?kode_voucher=' + datas[i]['kode_voucher']+'&nominal='+nominal,
-                        dataType: 'json',
-                        success: function (response) {
-                          if(response) isFinished3 = true;
-                          if(isFinished1&isFinished2&isFinished3){
-                            isBerhasil = true;
-                            location.reload();
-                          }
-                        },
-                      });
-                    break;
-                  }
-                }
-                console.log('kode berhasil');
+              type: 'PUT',
+              url: URLAPI+'/api/'+kelamin+'/'+tempId+'?count_vote=' + tempCount,
+              dataType: 'json',
+              success: function (response) {
+                resolve(true);
               },
+              error: function (response) {
+                resolve(false);
+              }
             });
           });
         }
-        if(!isBerhasil){
-          alert("Kode Voucher Tidak Valid");
-          document.getElementById("messageVote").textContent = "Kode Voucher Tidak Valid";
-        }else{
-          document.getElementById("popUpKode").style.display = "none";
-          document.getElementById("all_contents").style.filter = "blur(0px)";
-          alert("Voucher berhasil dimasukkan, Selamat! "+tempName+" telah mendapatkan "+nominal+"baru.");
+        return await ret;
+      }
+
+      async function isBerhasilProses3(kelamin){
+        var ret = await isBerhasilProses2(kelamin);
+        if(ret){
+          let tempVal = new Promise(function(resolve,reject){
+            $.ajax({
+              type: 'DELETE', 
+              url: URLAPI+'/api/vouchers/'+idVoucher,
+              dataType: 'json',
+              success: function (response) {
+                resolve(true);
+              },
+              error: function (response) {
+                resolve(false);
+              }
+            });
+          });
+        }
+        return await ret;
+      }
+
+      async function isBerhasilProses4(kelamin){
+        var ret = await isBerhasilProses3(kelamin);
+        if(ret){
+          let tempVal = new Promise(function(resolve,reject){
+            $.ajax({
+              type: 'POST', 
+              url: URLAPI+'/api/voucher_archives?kode_voucher=' + kodeVoucher+'&nominal='+nominal,
+              dataType: 'json',
+              success: function (response) {
+                resolve(true);
+              },
+              error: function (response) {
+                resolve(false);
+              }
+            });
+          });
+        }
+        return await ret;
+      }
+
+      function submitForm(kelamin) {
+        var form = document.getElementById('popUpKode');
+
+        if (form) {
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var flag = isBerhasilProses4(kelamin);
+            if(flag){
+              alert("Voucher berhasil dimasukkan, Selamat! "+tempName+" telah mendapatkan "+nominal+" baru.");
+              location.reload();
+            }else{
+              alert("Kode Voucher Tidak Valid");
+              location.reload();
+            }
+          });
         }
       }
 
@@ -1430,7 +1481,7 @@ article{
           tempHTML += '<div class="button-redirect">';
           tempHTML += '<div class="rectangle-parent19">';
           tempHTML += '<div class="group-child29"></div>';
-          tempHTML += '<a type="button" class="close-button" onclick="closeForm()">Kembali</button>';
+          tempHTML += '<a type="button" class="close-button" onclick="closeForm()">Kembali</a>';
           tempHTML += '</div>';
           tempHTML += '</div>';
           tempHTML += '<div class="rectangle-parent18">';

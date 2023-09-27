@@ -1332,7 +1332,7 @@ article{
       var tempId = 1, tempName = "",tempCount = 0, tempPath="",tempPersentase=0.0,tempAsalDaerah="",tempHTML = "";
       var isFinished1 = false,isFinished2=false,isFinished3=false,isFinished4=false,isBerhasil=false,messageVote="",nominal=0;
       var kodeVoucher="",nominal=0,idVoucher=0;
-      const URLAPI = "http://127.0.0.1:8001";
+      const URLAPI = "https://officialputraputrisriwijaya23.online";
 
       async function isBerhasilProses1() {
         // Create a new Promise object.

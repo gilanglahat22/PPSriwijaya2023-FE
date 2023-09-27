@@ -3,8 +3,7 @@
 use App\Http\Controllers\VoteController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Facade\Cookie;
-// use Browser;
-// use hisorange\BrowserDetect\Parser as Browser;
+use hisorange\BrowserDetect\Parser as Browser;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,21 +15,9 @@ use Illuminate\Support\Facades\Facade\Cookie;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-// $screen = Cookie::get('screen');
-// $screen = explode("x", $screen);
-// $width = $screen[0];
-// $height = $screen[0];
-
-use hisorange\BrowserDetect\Parser;
 
 Route::get('/', function () {
-    $browser = new Parser(null, null, [
-        'cache' => [
-            'interval' => 86400 // This will override the default configuration.
-        ]
-    ]);
-    $result = $browser->detect();
-    $isDesktop = $result->isDesktop();
+    $isDesktop = Browser::isDesktop();
     if(!$isDesktop){
         return view('homeMobile');
     }else{
@@ -39,10 +26,21 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('aboutMobile');
+    $isDesktop = Browser::isDesktop();
+    if(!$isDesktop){
+        return view('aboutMobile');
+    }else{
+        return view('about');
+    }
 });
 
 Route::get('/votes', function () {
+    // $isDesktop = Browser::isDesktop();
+    // if(!$isDesktop){
+    //     return view('aboutMobile');
+    // }else{
+    //     return view('about');
+    // }
     return view('vote1');
 });
 
@@ -51,5 +49,10 @@ Route::get('/vouchers', function () {
 });
 
 Route::get('/contact', function () {
-    return view('contactMobile');
+    $isDesktop = Browser::isDesktop();
+    if(!$isDesktop){
+        return view('contactMobile');
+    }else{
+        return view('contact');
+    }
 });

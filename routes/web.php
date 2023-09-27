@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\VoteController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Facade\Cookie;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+// $screen = Cookie::get('screen');
+// $screen = explode("x", $screen);
+// $width = $screen[0];
+// $height = $screen[0];
 
 Route::get('/', function () {
     // $width = session('screenWidth');
@@ -25,7 +30,7 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about');
+    return view('aboutMobile');
 });
 
 Route::get('/votes', function () {
@@ -37,5 +42,5 @@ Route::get('/vouchers', function () {
 });
 
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contactMobile');
 });

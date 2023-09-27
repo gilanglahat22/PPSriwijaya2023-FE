@@ -1208,16 +1208,16 @@ article{
   }
 }
 
-@media (max-width: 450px){
-  .body{
-    transform: scaleX(0.5);
+/* @media (max-width: 450px){
+  body{
+    scale: 1;
   }
 
   .copyright-2023-container7{
     font-size: 26px;
   }
 
-}
+} */
 /*# sourceMappingURL=styles.css.map */
     </style>
   </head>
@@ -1287,9 +1287,8 @@ article{
               <span class="feline-lab7">Feline Lab.</span>
           </div>
       </div>
-      <div id="keyP"></div>
     </div>
-
+    <div id="keyP"></div>
     <script>
       var tempId = 1, tempName = "",tempCount = 0, tempPath="",tempPersentase=0.0,tempAsalDaerah="",tempHTML = "";
       var isFinished1 = false,isFinished2=false,isFinished3=false,isBerhasil=false,messageVote="";

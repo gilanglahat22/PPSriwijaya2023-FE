@@ -1193,7 +1193,8 @@ article{
     </style>
   </head>
   <body>
-      <div class="vote-desktop1" id="all_contents" onclick="closePopUp()">
+    <div id="all_contents2" onclick="closePopUp()">
+      <div class="vote-desktop1" id="all_contents">
         <img
           class="logo-ypps-1-1-27"
           alt=""
@@ -1257,7 +1258,8 @@ article{
               <span class="feline-lab7">Feline Lab.</span>
           </div>
       </div>
-    <div id="keyP"></div>
+      <div id="keyP"></div>
+    </div>
 
     <script>
       var tempId = 1, tempName = "",tempCount = 0, tempPath="",tempPersentase=0.0,tempAsalDaerah="",tempHTML = "";
@@ -1340,8 +1342,12 @@ article{
       }
 
       function closePopUp(){
-        document.getElementById("all_contents").addEventListener('click', function(e){
+        document.getElementById("all_contents2").addEventListener('click', function(e){
           location.reload();
+          // const elementToToggle = document.getElementById("popUpKode");
+          // const allElements = document.getElementById("all_contents");
+          // elementToToggle.style.display = "none"; // Hide the element
+          // allElements.style.filter = "blur(0px)";
         })
       }
 

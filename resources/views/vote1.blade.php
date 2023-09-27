@@ -1193,7 +1193,7 @@ article{
     </style>
   </head>
   <body>
-      <div class="vote-desktop1" id="all_contents">
+      <div class="vote-desktop1" id="all_contents" onclick="closePopUp()">
         <img
           class="logo-ypps-1-1-27"
           alt=""
@@ -1337,6 +1337,12 @@ article{
           document.getElementById("all_contents").style.filter = "blur(0px)";
           alert("Voucher berhasil dimasukkan, Selamat! "+tempName+" telah mendapatkan "+nominal+"baru.");
         }
+      }
+
+      function closePopUp(){
+        document.getElementById("all_contents").addEventListener('click', function(e){
+          location.reload();
+        })
       }
 
       function toggleElementVisibility(id,name,countVote,path,persentase,asalDaerah,kelamin) {

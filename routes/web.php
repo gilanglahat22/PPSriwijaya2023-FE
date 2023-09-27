@@ -31,7 +31,7 @@ Route::get('/', function () {
     ]);
     $result = $browser->detect();
     $isDesktop = $result->isDesktop();
-    if($isDesktop){
+    if(!$isDesktop){
         return view('homeMobile');
     }else{
         return view('home');

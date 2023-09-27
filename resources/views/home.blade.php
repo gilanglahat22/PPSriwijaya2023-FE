@@ -798,6 +798,23 @@ body {
       width: 1441px;
     }
   }
+  .body {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .body {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 576px) {
+  .body {
+    max-width: 540px;
+  }
+}
     </style>
   </head>
   <body>

@@ -1189,7 +1189,25 @@ article{
   to {
     transform: translateX(calc(-100% - 1rem));
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+.body {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .body {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 576px) {
+  .body {
+    max-width: 540px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
     </style>
   </head>
   <body>

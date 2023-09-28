@@ -172,8 +172,8 @@ body {
     right: 9%;
     padding-top: 3%;
     padding-bottom: 2%;
-    margin-left: 2%;
-    margin-right: 2%;
+    /* margin-left: 2%; */
+    /* margin-right: 2%; */
     margin-bottom: 7%;
     border-radius: 3%;
     background: linear-gradient(180deg, #fff, #ee9090 36.98%);
@@ -239,9 +239,9 @@ body {
   }
   .ourSocialMedia {
     /* position: absolute; */
-    margin-top: 10%;
+    margin-top: 20%;
     font-size: 162%;
-    left: calc(50% - 167px);
+    /* left: calc(50% - 167px); */
     display: inline-block;
     width: 328px;
     height: 40px;
@@ -296,7 +296,7 @@ body {
     color: var(--color-burlywood-100);
   }
   .diselenggarakanOleh {
-    margin-top: 4%;
+    margin-top: 15%;
     font-size: 163%;
     left: calc(50% - 116px);
     display: inline-block;
@@ -345,7 +345,7 @@ body {
     gap: 3%;
   }
   .ayoDukungPilihanmu {
-    margin-top: 9%;
+    margin-top: 15%;
     font-size: 143%;
     margin-left: 5%;
     margin-right: 5%;
@@ -384,7 +384,7 @@ body {
     font-family: var(--font-montserrat);
   }
   .siapaPutraPutri {
-    margin-top: 0%;
+    margin-top: 20%;
     margin-bottom: 2%;
     font-size: 162%;
     margin-left: 5%;
@@ -470,7 +470,7 @@ body {
     margin-left: 0%;
     margin-right: 0%;
     margin-bottom: 0%;
-    height: 1680px;
+    height: 1780px;
     overflow: hidden;
     text-align: center;
     font-size: var(--font-size-base);
@@ -632,7 +632,7 @@ a{
         <img class="logoYpps111" alt="" src="/logo-ypps-1-1-1@2x.png" />
       </div>
       <div class="ayoDukungPilihanmu">
-        Ayo dukung pilihanmu
+        Ayo Dukung Peserta Favoritmu
       </div>
         <button class="rectangleGroup" onclick="onGroupButtonClick()">
           <div class="voteNow">Vote Now !</div>

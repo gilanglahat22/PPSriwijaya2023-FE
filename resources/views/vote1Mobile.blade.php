@@ -738,6 +738,7 @@
             box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
             font-size: 48%;
             margin-left: 5px;
+            cursor: pointer;
         }
         .kirim1:hover{
           color: black;
@@ -1301,6 +1302,7 @@ article{
     font-size: 48%;
     margin-left: 24%;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .close-button:hover{

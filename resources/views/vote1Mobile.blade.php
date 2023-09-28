@@ -148,15 +148,15 @@
         height: 60px;
         }
         .vote-desktop-item {
-        position: absolute;
-        top: 192px;
-        left: 0;
-        margin-left: 2%;
-        border-radius: var(--br-xl);
-        background: linear-gradient(180deg, #d21212 19.79%, #ee9090);
-        width: 96%;
-        height: 652px;
-        }
+            position: absolute;
+            top: 132px;
+            left: 0;
+            margin-left: 2%;
+            border-radius: var(--br-xl);
+            background: linear-gradient(180deg, #d21212 19.79%, #ee9090);
+            width: 96%;
+            height: 550px;
+                }
         .nama12 {
         position: relative;
         left: -50%;
@@ -181,7 +181,7 @@
         .putra3,
         .putri3 {
         position: absolute;
-        top: 709.91px;
+        top: 619.91px;
         left: 3%;
         font-size: 190%;
         color: var(--color-burlywood-200);
@@ -192,13 +192,13 @@
         transform-origin: 0 0;
         }
         .putra3 {
-        top: 490.91px;
+        top: 390.91px;
         }
         .vote-desktop-child1,
         .vote-desktop-inner {
         position: relative;
         /* display: inline-block; */
-        top: 937px;
+        top: 787px;
         margin-left: 10%;
         margin-right: 10%;
         /* left: 0; */
@@ -213,7 +213,7 @@
         text-align: center;
         }
         .vote-desktop-child1 {
-        top: 1010px;
+        top: 840px;
         left: 0%;
         }
         .about1,
@@ -319,7 +319,7 @@
         }
         .rectangle-parent24 {
             position: absolute;
-            top: 2950px;
+            top: 2940px;
             left: 0;
             width: 100%;
             font-family: var(--font-montserrat);
@@ -413,7 +413,7 @@
         .group-child36,
         .line-container {
         position: absolute;
-        top: 315px;
+        top: 215px;
         left: 6%;
         margin-left: 17%;
         width: 70%;
@@ -533,7 +533,7 @@
         }
         .putra4 {
             position: absolute;
-            top: 1350px;
+            top: 1240px;;
             left: calc(50% - 195px);
             font-size: var(--font-size-37xl);
             color: var(--color-burlywood-200);
@@ -558,7 +558,7 @@
         display: inline-block;
         }
         .putri4 {
-            top: 2127px;
+            top: 2007px;
             left: calc(50% - 195px);
             font-size: var(--font-size-37xl);
             color: var(--color-burlywood-200);
@@ -594,7 +594,7 @@
             position: relative;
             background: linear-gradient( 180deg, #9b2a06 14.06%, #b05f5f 63.54%, #ddcaca 94.79% );
             width: 100%;
-            height: 3170px;
+            height: 2940px;
             overflow: hidden;
             text-align: center;
             font-size: var(--font-size-5xl);
@@ -780,7 +780,7 @@
             align-items: center;
             place-items: center;
             text-align: center;
-            top: 1115px;
+            top: 995px;
         }
 
         .container-2 {
@@ -789,7 +789,7 @@
             align-items: center;
             place-items: center;
             text-align: center;
-            top: 1188px;
+            top: 1058px;
             border-radius: 1rem;
         }
 
@@ -1316,10 +1316,44 @@ article{
 
 } */
 /*# sourceMappingURL=styles.css.map */
-.home-parent3 {
+.logoYpps112Parent {
     position: absolute;
-    top: 115px;
-    margin-left: 0%;
+    top: 30px;
+    left: 9px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-4xs);
+    text-align: left;
+    font-size: var(--font-size-xs);
+    font-family: var(--font-average);
+    }
+    .logoYpps112 {
+        position: relative;
+        width: 33px;
+        height: 33px;
+        object-fit: cover;
+    }
+    .putraPutriSriwijayaContainer {
+        position: relative;
+        letter-spacing: 0.04em;
+        display: inline-block;
+        width: 111px;
+        height: 31px;
+        flex-shrink: 0;
+    }
+    .sriwijaya {
+        margin: 0;
+    }
+    .putraPutri {
+        margin-block-start: 0;
+        margin-block-end: 1px;
+    }
+    .home-parent3 {
+        position: absolute;
+    top: 26px;
+    margin-left: 11%;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -1327,7 +1361,7 @@ article{
     gap: var(--gap-18xl);
     font-size: var(--font-size-5xl);
     font-family: var(--font-alata);
-    scale: 50%;
+    scale: 43%;
     gap: 15px;
     width: 100%;
   }
@@ -1385,7 +1419,6 @@ article{
     height: 35px;
     cursor: pointer;
 }
-
 a{
   color: white;
 }
@@ -1403,16 +1436,13 @@ a{
           <div class="vote7">Vote</div>
         </a>
       </div>
-        <img
-          class="logo-ypps-1-1-27"
-          alt=""
-          src="logo-ypps-1-1-2@2x.png"
-        />
-
-        <div class="putra-putri-sriwijaya-container7">
-          <p class="putra-putri11">PUTRA PUTRI</p>
-          <p class="sriwijaya8">SRIWIJAYA</p>
-        </div>
+    <div class="logoYpps112Parent">
+      <img class="logoYpps112" alt="" src="/logo-ypps-1-1-2@2x.png" />
+      <div class="putraPutriSriwijayaContainer">
+        <p class="putraPutri">PUTRA PUTRI</p>
+        <p class="sriwijaya">SRIWIJAYA</p>
+      </div>
+    </div>
         <div class="vote-desktop-item"></div>
         <div class="nama-parent1" id="name_putras"></div>
         <div class="nama-parent2" id="name_putris"></div>

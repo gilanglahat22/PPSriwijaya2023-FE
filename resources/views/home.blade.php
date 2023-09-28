@@ -918,7 +918,7 @@ body {
       </div>
       <div class="diselenggarakan-oleh1">Diselenggarakan Oleh</div>
       <div class="ayo-dukung-pilihanmu1">
-        Ayo dukung pilihanmu untuk maju ke 6 besar
+        Ayo dukung pilihanmu
       </div>
       <div class="dinas-pariwisata-dan1">
         Dinas Pariwisata dan Kebudayaan Provinsi Sumatera Selatan

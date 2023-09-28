@@ -878,6 +878,7 @@
         /* Batas */
         .slider-wrapper-2 {
           position: relative;
+          height: 0px;
         }
         .slider-wrapper-2 .slide-button-2 {
           position: absolute;

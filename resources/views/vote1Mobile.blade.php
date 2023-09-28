@@ -30,28 +30,16 @@
         @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface:wght@400&display=swap");
 
         .popup-overlay {
-          /* display: flex; */
-          /* flex-direction: column; */
-          position: fixed;
-          inset: 0;
-          /* width: 100%;
-          height: 100%; */
-          align-items: center;
-          place-items: center;
-          text-align: center;
-          /* left: 100px; */
-          /* top: 20%; */
-          /* left: 100px;
-          /* top: calc(50%-100px);
-          left: calc(50%-100px); */
-          margin-top: 10%;
-          /* margin-bottom: 10%; */
-          margin-left: 5%;
-          height: 80;
-          width: 90%;
-          /* background-color: #000; */
-          /* background-color: #000; */
-          /* overflow: hidden; */
+            position: fixed;
+            inset: 0;
+            align-items: center;
+            place-items: center;
+            text-align: center;
+            margin-top: 70px;
+            /* margin-bottom: 10%; */
+            margin-left: 5%;
+            height: 500px;
+            width: 90%;
         }
 
         :root {
@@ -623,20 +611,22 @@
             background: linear-gradient(180deg, #b22424, #340202);
             box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
             width: 100%;
-            height: 70%;
+            height: 100%;
             align-items: center;
             text-align: center;
-            top: 55px;
+            margin-top: 0%;
         }
         .masukkan-kode-voucher1 {
             position: relative;
-            top: 208px;
+            top: 148px;
+            /* left: 0; */
             margin-left: 5%;
             display: flex;
             flex-direction: row;
             align-items: flex-end;
             justify-content: center;
             gap: var(--gap-mini);
+            /* background-color: black; */
             width: 90%;
             font-size: 70%;
         }
@@ -656,7 +646,7 @@
 
         .rectangle-parent17 {
             position: relative;
-            top: 233px;
+            top: 170px;
             /* left: 0; */
             margin-left: 5%;
             display: flex;
@@ -670,7 +660,7 @@
 
         .pop-up-kode-child1 {
             position: absolute;
-            top: 171.5px;
+            top: 110.5px;
             /* left: 5px; */
             /* margin-left: 5%; */
             border-top: 3px solid var(--color-silver);
@@ -680,7 +670,7 @@
         }
         .vote-mustofa1 {
             position: absolute;
-            top: 98px;
+            top: 38px;
             /* left: calc(50% - 297.5px); */
             left: 0;
             font-size: 70%;
@@ -689,20 +679,23 @@
             height: 68px;
         }
         .belum-punya-kode1 {
-        margin: 0;
+            margin: 0;
         }
         .ikuti-tata-cara1 {
-        margin: 0;
-        text-decoration: underline;
-        color: var(--color-blue);
+            margin: 0;
+            text-decoration: underline;
+            color: var(--color-blue);
+            font-size: 55%;
+            top: 10px;
+            /* margin-top: -100px; */
         }
         .belum-punya-kode-container1 {
-        position: absolute;
-        top: 483px;
-        left: 152px;
-        display: inline-block;
-        width: 945px;
-        height: 154px;
+            position: absolute;
+            top: 324px;
+            left: 0px;
+            display: inline-block;
+            width: 100%;
+            height: 60px;
         }
         .button-redirect{
           display: flex;
@@ -756,18 +749,14 @@
             color: black;
         }
         .pop-up-kode1 {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 98%;
-        /* max-width: 100%;
-        max-height: 100%;
-        overflow: auto; */
-        text-align: center;
-        font-size: var(--font-size-17xl);
-        color: var(--color-white);
-        font-family: var(--font-alata);
-        /* background-color: #000; */
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: var(--font-size-17xl);
+            color: var(--color-white);
+            font-family: var(--font-alata);
         }
         /* .rectangle-parent-putras{
           display: flex;
@@ -1159,9 +1148,9 @@ h6 {
 }
 
 p {
-  font-size: 1.125rem;
-  margin-bottom: 1.2rem;
-  line-height: 2em;
+    font-size: 1.125rem;
+    /* margin-bottom: 1.2rem; */
+    line-height: 0em;
 }
 
 article.sample-col-para {

@@ -1309,21 +1309,90 @@ article{
   color: black;
 }
 
-/* @media (max-width: 450px){
-  body{
-    scale: 1;
+.home-parent3 {
+    position: fixed;
+    top: 10px;
+    margin-left: 14%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: var(--gap-18xl);
+    font-size: var(--font-size-5xl);
+    font-family: var(--font-alata);
+    scale: 40%;
+    gap: 15px;
+    width: 100%;
   }
+  .about5,
+.contact5,
+.home5,
+.vouchers5 {
+    position: relative;
+    display: inline-block;
+    width: 65px;
+    height: 33px;
+    flex-shrink: 0;
+    text-decoration: none;
+}
 
-  .copyright-2023-container7{
-    font-size: 26px;
-  }
+.about5,
+.contact5,
+.vouchers5 {
+    width: 72px;
+    cursor: pointer;
+}
 
-} */
-/*# sourceMappingURL=styles.css.map */
+.contact5,
+.vouchers5 {
+    width: 89px;
+}
+
+.vouchers5 {
+    width: 101px;
+}
+.group-child68,
+.vote7 {
+    position: absolute;
+    top: 0;
+}
+
+.group-child68 {
+    left: 0;
+    border-radius: var(--br-8xs);
+    background-color: var(--color-maroon);
+    width: 110px;
+    height: 35px;
+}
+
+.vote7 {
+    left: 30px;
+    display: inline-block;
+    width: 51px;
+    height: 33px;
+}
+
+.rectangle-parent61 {
+    position: relative;
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+}
+a{
+  color: white;
+}
     </style>
   </head>
   <body>
-      <div class="vote-desktop1" id="all_contents">
+        <a class="home5" href="./">Home</a>
+        <a class="about5" id="aboutText" href="./about">About</a>
+        <a class="contact5" id="contactText" href="./contact">Contact</a>
+        <a class="vouchers5" id="vouchersText" href="./vouchers">Vouchers</a>
+        <a class="rectangle-parent61" id="groupContainer2" href="./votes">
+          <div class="group-child68"></div>
+          <div class="vote7">Vote</div>
+        </a>
+      </div>
         <img
           class="logo-ypps-1-1-27"
           alt=""
@@ -1689,6 +1758,47 @@ article{
             document.getElementById("input"+(i+1)).focus()
         }
     }
+    var groupContainer = document.getElementById("groupContainer");
+      if (groupContainer) {
+        groupContainer.addEventListener("click", function (e) {
+          window.location.href = "/votes";
+        });
+      }
+      
+      var groupContainer1 = document.getElementById("groupContainer1");
+      if (groupContainer1) {
+        groupContainer1.addEventListener("click", function (e) {
+          window.location.href = "/about";
+        });
+      }
+      
+      var aboutText = document.getElementById("aboutText");
+      if (aboutText) {
+        aboutText.addEventListener("click", function (e) {
+          window.location.href = "/about";
+        });
+      }
+      
+      var contactText = document.getElementById("contactText");
+      if (contactText) {
+        contactText.addEventListener("click", function (e) {
+          window.location.href = "/contact";
+        });
+      }
+      
+      var vouchersText = document.getElementById("vouchersText");
+      if (vouchersText) {
+        vouchersText.addEventListener("click", function (e) {
+          window.location.href = "/vouchers";
+        });
+      }
+      
+      var groupContainer2 = document.getElementById("groupContainer2");
+      if (groupContainer2) {
+        groupContainer2.addEventListener("click", function (e) {
+          window.location.href = "/votes";
+        });
+      }
       </script>
   </body>
 </html>

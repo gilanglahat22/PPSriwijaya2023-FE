@@ -182,9 +182,9 @@ body {
     font-family: var(--font-average);
   }
   .home-parent3 {
-    position: absolute;
-    top: 52px;
-    left: 813px;
+    position: fixed;
+    top: 10px;
+    margin-left: 14%;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -192,8 +192,11 @@ body {
     gap: var(--gap-18xl);
     font-size: var(--font-size-5xl);
     font-family: var(--font-alata);
-}
-.about5,
+    scale: 40%;
+    gap: 15px;
+    width: 100%;
+  }
+  .about5,
 .contact5,
 .home5,
 .vouchers5 {
@@ -202,19 +205,30 @@ body {
     width: 65px;
     height: 33px;
     flex-shrink: 0;
+    text-decoration: none;
 }
 
-.rectangle-parent61 {
-    position: relative;
-    width: 110px;
-    height: 35px;
+.about5,
+.contact5,
+.vouchers5 {
+    width: 72px;
     cursor: pointer;
+}
+
+.contact5,
+.vouchers5 {
+    width: 89px;
+}
+
+.vouchers5 {
+    width: 101px;
 }
 .group-child68,
 .vote7 {
     position: absolute;
     top: 0;
 }
+
 .group-child68 {
     left: 0;
     border-radius: var(--br-8xs);
@@ -229,10 +243,30 @@ body {
     width: 51px;
     height: 33px;
 }
+
+.rectangle-parent61 {
+    position: relative;
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+}
+a{
+  color: white;
+}
 </style>
 </head>
 <body>
   <div class="vouchersMobile">
+  <div class="home-parent3">
+        <a class="home5" href="./">Home</a>
+        <a class="about5" id="aboutText" href="./about">About</a>
+        <a class="contact5" id="contactText" href="./contact">Contact</a>
+        <a class="vouchers5" id="vouchersText" href="./vouchers">Vouchers</a>
+        <a class="rectangle-parent61" id="groupContainer2" href="./votes">
+          <div class="group-child68"></div>
+          <div class="vote7">Vote</div>
+        </a>
+      </div>
     <div class="logoYpps112Parent">
       <img class="logoYpps112" alt="" src="/logo-ypps-1-1-2@2x.png" />
       <div class="putraPutriSriwijayaContainer">
@@ -291,6 +325,47 @@ body {
   export default defineComponent({
     name: "vouchersMobile",
   });
+  var groupContainer = document.getElementById("groupContainer");
+      if (groupContainer) {
+        groupContainer.addEventListener("click", function (e) {
+          window.location.href = "/votes";
+        });
+      }
+      
+      var groupContainer1 = document.getElementById("groupContainer1");
+      if (groupContainer1) {
+        groupContainer1.addEventListener("click", function (e) {
+          window.location.href = "/about";
+        });
+      }
+      
+      var aboutText = document.getElementById("aboutText");
+      if (aboutText) {
+        aboutText.addEventListener("click", function (e) {
+          window.location.href = "/about";
+        });
+      }
+      
+      var contactText = document.getElementById("contactText");
+      if (contactText) {
+        contactText.addEventListener("click", function (e) {
+          window.location.href = "/contact";
+        });
+      }
+      
+      var vouchersText = document.getElementById("vouchersText");
+      if (vouchersText) {
+        vouchersText.addEventListener("click", function (e) {
+          window.location.href = "/vouchers";
+        });
+      }
+      
+      var groupContainer2 = document.getElementById("groupContainer2");
+      if (groupContainer2) {
+        groupContainer2.addEventListener("click", function (e) {
+          window.location.href = "/votes";
+        });
+      }
 </script>
 </body>
 </html>

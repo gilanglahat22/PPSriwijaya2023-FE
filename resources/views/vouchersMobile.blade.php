@@ -144,14 +144,14 @@ body {
     width: 237px;
     height: 25px;
   }
-  .voucersAndroidChild {
+  .vouchersMobileChild {
     position: absolute;
     top: 198px;
     left: calc(50% - 138px);
     border-radius: var(--br-8xs);
     background: linear-gradient(180deg, #d21212 19.79%, #ee9090);
     width: 276px;
-    height: 378px;
+    height: 483px;
   }
   .untukMelakukanPembelianVouc {
     margin-bottom: 0px;
@@ -170,7 +170,7 @@ body {
     width: 249px;
     height: 462px;
   }
-  .voucersAndroid {
+  .vouchersMobile {
     position: relative;
     background: linear-gradient(180deg, #9b2a06, #b05f5f 52.6%, #ddcaca);
     width: 100%;
@@ -181,10 +181,58 @@ body {
     color: var(--color-white);
     font-family: var(--font-average);
   }
+  .home-parent3 {
+    position: absolute;
+    top: 52px;
+    left: 813px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: var(--gap-18xl);
+    font-size: var(--font-size-5xl);
+    font-family: var(--font-alata);
+}
+.about5,
+.contact5,
+.home5,
+.vouchers5 {
+    position: relative;
+    display: inline-block;
+    width: 65px;
+    height: 33px;
+    flex-shrink: 0;
+}
+
+.rectangle-parent61 {
+    position: relative;
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+}
+.group-child68,
+.vote7 {
+    position: absolute;
+    top: 0;
+}
+.group-child68 {
+    left: 0;
+    border-radius: var(--br-8xs);
+    background-color: var(--color-maroon);
+    width: 110px;
+    height: 35px;
+}
+
+.vote7 {
+    left: 30px;
+    display: inline-block;
+    width: 51px;
+    height: 33px;
+}
 </style>
 </head>
 <body>
-  <div class="voucersAndroid">
+  <div class="vouchersMobile">
     <div class="logoYpps112Parent">
       <img class="logoYpps112" alt="" src="/logo-ypps-1-1-2@2x.png" />
       <div class="putraPutriSriwijayaContainer">
@@ -193,14 +241,14 @@ body {
       </div>
     </div>
     <div class="rectangleParent">
-      <div class="groupChild" />
+      <div class="groupChild"></div>
       <div class="copyright2023Container">
         Copyright © 2023 Pemilihan Putra Putri Sriwijaya 2023 Powered by
         <span class="felineLab">Feline Lab.</span>
       </div>
     </div>
     <div class="tataCaraPendaftaran">Tata Cara Pendaftaran</div>
-    <div class="voucersAndroidChild" />
+    <div class="vouchersMobileChild"></div>
     <div class="bukaWebsiteWwwibdmcomContainer">
       <p class="sriwijaya">&nbsp;</p>
       <ul class="bukaWebsiteWwwibdmcomLalu">
@@ -241,7 +289,7 @@ body {
   import { defineComponent  } from "vue";
 
   export default defineComponent({
-    name: "VoucersAndroid",
+    name: "vouchersMobile",
   });
 </script>
 </body>

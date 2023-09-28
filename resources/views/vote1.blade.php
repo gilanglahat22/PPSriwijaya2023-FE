@@ -1146,6 +1146,10 @@ article.sample-col-para img {
   overflow: hidden;
   gap: 1rem;
   border-radius: 1rem;
+  overflow-x: scroll;
+}
+.marquee-wrapper::-webkit-scrollbar {
+    display: none;
 }
 .marquee-wrapper .marquee-content {
   position: relative;
@@ -1250,6 +1254,20 @@ article{
 .close-button:hover{
   color: black;
 }
+
+.scrollingX {
+  overflow-x: auto;
+  
+}
+
+/* .scrollingX {
+  animation: scroll 45s linear infinite;
+}
+.marquee-wrapper:hover .scrollingX {
+  animation-play-state: paused;
+} */
+/* .scrollingX{
+} */
 
 /* @media (max-width: 450px){
   body{
@@ -1620,7 +1638,6 @@ article{
           window.location.href = "./vouchers";
         });
       }
-
       </script>
   </body>
 </html>

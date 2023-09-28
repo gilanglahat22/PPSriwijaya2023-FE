@@ -24,12 +24,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <style>
-        body {
-        margin: 0;
-        line-height: normal;
-        width: 100%;
-        height: 100%;
-        }
+        @import url("https://fonts.googleapis.com/css2?family=Alata:wght@400&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Average:wght@400&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface:wght@400&display=swap");
 
         .popup-overlay {
           display: flex;
@@ -120,6 +118,13 @@
         --br-xl: 20px;
         }
 
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            line-height: normal;
+        }
+
         .logo-ypps-1-1-27 {
         position: absolute;
         top: 22px;
@@ -149,14 +154,17 @@
         .vote-desktop-item {
         position: absolute;
         top: 192px;
-        left: calc(50% - 596px);
+        left: 0;
+        margin-left: 2%;
         border-radius: var(--br-xl);
         background: linear-gradient(180deg, #d21212 19.79%, #ee9090);
-        width: 1192px;
+        width: 96%;
         height: 652px;
         }
         .nama12 {
         position: relative;
+        left: -50%;
+        background-color: #000;
         }
         .nama-parent1,
         .nama-parent2 {
@@ -178,8 +186,8 @@
         .putri3 {
         position: absolute;
         top: 709.91px;
-        left: calc(50% - 440.69px);
-        font-size: var(--font-size-37xl);
+        left: 3%;
+        font-size: 190%;
         color: var(--color-burlywood-200);
         display: inline-block;
         width: 183.79px;
@@ -192,16 +200,25 @@
         }
         .vote-desktop-child1,
         .vote-desktop-inner {
-        position: absolute;
-        top: 917px;
-        left: calc(50% - 592px);
+        position: relative;
+        /* display: inline-block; */
+        top: 937px;
+        margin-left: 10%;
+        margin-right: 10%;
+        /* left: 0; */
         border-radius: var(--br-xl);
         background: linear-gradient(180deg, #d21212 19.79%, #ee9090);
-        width: 572px;
-        height: 193px;
+        width: 80%;
+        height: 130px;
+        justify-items: center;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
         }
         .vote-desktop-child1 {
-        left: calc(50% + 26px);
+        top: 1010px;
+        left: 0%;
         }
         .about1,
         .contact1,
@@ -262,38 +279,59 @@
         font-family: var(--font-alata);
         }
         .group-child34 {
-        position: absolute;
+        /* position: absolute;
         top: 0;
         left: 0;
         background-color: var(--color-maroon);
         width: 100%;
         height: 156px;
+        text-align: center; */
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: var(--color-maroon);
+        width: 100%;
+        height: 50px;
         text-align: center;
         align-items: center;
+        justify-content: center;
         }
-        .feline-lab7 {
+      rectangle-parent24  .feline-lab7 {
         text-decoration: underline;
         }
         .copyright-2023-container7 {
-        position: absolute;
+        /* position: absolute;
         top: 78px;
         left: calc(50% - 525px);
         font-weight: 600;
         display: inline-block;
         width: 1044px;
         height: 23.94px;
+        text-align: center; */
+        position: absolute;
+        top: 17px;
+        left: 0;
+        font-weight: 600;
+        display: inline-block;
+        /* background-color: var(--color-maroon); */
+        font-size: 50%;
+        width: 100%;
+        /* height: 23.94px; */
         text-align: center;
+        align-items: center;
+        justify-content: center;
         }
         .rectangle-parent24 {
         position: absolute;
-        text-align: center;
-        align-items: center;
         top: 2940px;
         left: 0;
         width: 100%;
-        height: 156px;
         font-family: var(--font-montserrat);
         color: #fff;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        /* background-color: var(--color-maroon); */
         }
         .vote-desktop-child2 {
         position: absolute;
@@ -379,9 +417,11 @@
         .line-container {
         position: absolute;
         top: 315px;
-        left: 585px;
-        width: 616px;
+        left: 6%;
+        margin-left: 17%;
+        width: 70%;
         height: 401px;
+        /* background-color: #000; */
         }
         .group-child36 {
         position: relative;
@@ -496,7 +536,7 @@
         }
         .putra4 {
         position: absolute;
-        top: 1235px;
+        top: 1432px;
         left: calc(50% - 195px);
         font-size: var(--font-size-37xl);
         color: var(--color-burlywood-200);
@@ -521,8 +561,8 @@
         display: inline-block;
         }
         .putri4 {
-        top: 1996px;
-        left: calc(50% - 191px);
+        top: 2200px;
+        left: calc(50% - 195px);
         font-size: var(--font-size-37xl);
         color: var(--color-burlywood-200);
         width: 390px;
@@ -530,23 +570,25 @@
         }
         .d20h20m1,
         .div11 {
-        top: 43px;
+        top: 38px;
         position: relative;
         align-items: center;
+        text-align: center;
         left: 0%;
-        font-size: var(--font-size-45xl);
-        width: 478px;
+        font-size: 150%;
+        margin-left: 0%;
+        /* width: 478px; */
         height: 84px;
         }
         .div11 {
         position: relative;
-        left: -5%;
+        left: -9%;
         width: 219px;
         }
         .gain-up-11 {
           position: relative;
-          top: -16.8px;
-          left: 54%;
+          top: -45.8px;
+          left: 52%;
           width: 46px;
           height: 52px;
           object-fit: cover;
@@ -724,19 +766,11 @@
         } */
 
         .container {
-          /* max-width: 1200px; */
           position: absolute;
-          /* left: 50px; */
           align-items: center;
           place-items: center;
           text-align: center;
-          /* left: 20%; */
-          /* transform: translate(-50%, -50%); */
-          /* margin-left: 20%;
-          margin-right: 20%; */
-          /* background-color: #000; */
-          top: 1280px;
-          /* margin-left: 200px; */
+          top: 1197px;
         }
 
         .container-2 {
@@ -747,7 +781,7 @@
           text-align: center;
           /* margin-left: 20%;
           margin-right: 20%; */
-          top: 2030px;
+          top: 1230px;
           border-radius: 1rem;
         }
 
@@ -961,7 +995,7 @@
           top: -10px;
           bottom: -10px;
         }
-        @media (max-width: 1441px){
+        /* @media (max-width: 1441px){
             .rectangle-parent24 {
                 width: 1441px;
             }
@@ -969,14 +1003,23 @@
             .vote-desktop1{
                 width: 1441px;
             }
-        }
-        @media (max-width: 439px){
+        } */
+        /* @media (max-width: 439px){
             .rectangle-parent24 {
                 top: 3100px;
             }
 
             .vote-desktop1{
                 height: 3100px;
+            }
+        } */
+        @media(max-width: 342px){
+            .vote-desktop1 {
+                width: 342px;
+            }
+            
+            .rectangle-parent24 {
+                width: 342px;
             }
         }
         .btn{
@@ -1082,18 +1125,24 @@ h6 {
 
 .container {
   position: relative;
-  width: 76%;
+  width: 320px;
   margin-inline: auto;
-  padding-block: 2rem;
+  padding-block: 3rem;
+  align-items: center;
 }
 
 .container-2 {
-  width: 76%;
+  /* width: 86%;
+  position: relative;
   margin-inline: auto;
-  padding-block: 2rem;
-  align-items: center;
-  left: 12.4%;
-  border-radius: 1rem;
+  padding-block: 2rem; */
+  /* align-items: center; */
+  /* left: 12.4%; */
+  /* border-radius: 1rem; */
+  position: relative;
+  width: 320px;
+  margin-inline: auto;
+  padding-block: 3em;
 }
 
 p {
@@ -1188,12 +1237,12 @@ article.sample-col-para img {
   margin-bottom: 1.2rem;
 }
 
-.marquee-wrapper{
-  width: 100%;
-}
+/* .marquee-wrapper{
+  width: 100vw;
+} */
 
 article{
-  width: 300px;
+  width: 289px;
 }
 
 .messageStyle{
@@ -1217,11 +1266,11 @@ article{
     transform: translateX(calc(-100% - 1rem));
   }
 }
-.body {
+/* .body {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-}
+} */
 
 @media (max-width: 768px) {
   .body {
@@ -1281,7 +1330,7 @@ article{
         <div class="putri3">Putri</div>
         <div class="putra3">Putra</div>
         <div class="vote-desktop-inner">
-        <div class="d20h20m1">20D:20H:20M</div>
+        <div class="d20h20m1">---</div>
         </div>
         <div class="vote-desktop-child1">
         <div class="div11">10</div>
@@ -1306,11 +1355,13 @@ article{
         </section>
       </div>
 
+      <div class="slider-wrapper-2">  
         <section class="container-2">
           <div class="marquee-wrapper" style="user-select: none;">
               <div class="marquee-content scrollingX" id="rectangle_putris"></div>
           </div>
         </section>
+      </div>
 
         <div class="line-container">
           <div class="group-child35"></div>
@@ -1534,10 +1585,10 @@ article{
               outputHTML += '<source media="(min-width: 718px)" srcset="'+datas[i]['path']+'">';
               outputHTML += '<img onclick="toggleElementVisibility(\'' + datas[i]['id'] + '\', \'' + datas[i]['name'] + '\',\'' + datas[i]['count_vote'] + '\', \'' + datas[i]['path'] + '\', \'' + datas[i]['persentase'] + '\', \'' + datas[i]['asal_daerah'] + '\', \'' + kelamin + '\')" src="'+datas[i]['path']+'" alt="sample-one.jpeg">';
               outputHTML += '</picture>';
-              outputHTML += '<h4>'+datas[i]['name']+'</h4>';
+              outputHTML += '<h4 style="font-family: var(--font-montserrat);">'+datas[i]['name']+'</h4>';
               outputHTML += '<article class="short-description">';
-              outputHTML += '<h4>'+datas[i]['asal_daerah']+'</h4>';
-              outputHTML += '<h4>'+datas[i]['persentase'].toFixed(2)+' %'+'</h4>';
+              outputHTML += '<h4 style="font-family: var(--font-montserrat);">'+datas[i]['asal_daerah']+'</h4>';
+              outputHTML += '<h4 style="font-family: var(--font-montserrat);">'+datas[i]['persentase'].toFixed(2)+' %'+'</h4>';
               outputHTML += '</article></article></div>';
             }
       
@@ -1546,15 +1597,15 @@ article{
             var data2 = datas[1]['persentase'];
             var data3 = datas[2]['persentase'];
             var nameP1 = datas[0]['name'], nameP2 = datas[1]['name'], nameP3 = datas[2]['name'];
-            var width1 = 600*data1/100;
-            var width2 = 600*data2/100;
-            var width3 = 600*data3/100;
-            outputNamaHTML = '<div class="nama12">'+data1.toFixed(2)+'%</div>';
-            outputNamaHTML += '<div class="nama12">'+data2.toFixed(2)+'%</div>';
-            outputNamaHTML += '<div class="nama12">'+data3.toFixed(2)+'%</div>';
-            outputHTML = '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width1+'px; height: 42px;"><div style="position: relative; left: '+(width1+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP1+'</div></div>';
-            outputHTML += '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width2+'px; height: 42px;"><div style="position: relative; left: '+(width2+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP2+'</div></div>';
-            outputHTML += '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width3+'px; height: 42px;"><div style="position: relative; left: '+(width3+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP3+'</div></div>';
+            var width1 = 95*data1/100;
+            var width2 = 95*data2/100;
+            var width3 = 95*data3/100;
+            // outputNamaHTML = '<div class="nama12">'+data1.toFixed(2)+'%</div>';
+            // outputNamaHTML += '<div class="nama12">'+data2.toFixed(2)+'%</div>';
+            // outputNamaHTML += '<div class="nama12">'+data3.toFixed(2)+'%</div>';
+            outputHTML = '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width1+'%; height: 42px;"><div style="position: relative; left: '+(0+10)+'%; width: 340px; font-size: 70%; padding-top: 3px; text-align: left;">'+nameP1+' '+' '+data1.toFixed(2)+'%</div></div>';
+            outputHTML += '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width2+'%; height: 42px;"><div style="position: relative; left: '+(0+10)+'%; width: 340px; font-size: 70%; padding-top: 3px; text-align: left;">'+nameP2+' '+' '+data2.toFixed(2)+'%</div></div>';
+            outputHTML += '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width3+'%; height: 42px;"><div style="position: relative; left: '+(0+10)+'%; width: 340px; font-size: 70%; padding-top: 3px; text-align: left;">'+nameP3+' '+' '+data3.toFixed(2)+'%</div></div>';
             document.getElementById(statisticId).innerHTML = outputHTML;
             document.getElementById(nameId).innerHTML = outputNamaHTML;
           }

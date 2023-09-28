@@ -41,7 +41,8 @@ Route::get('/votes', function () {
     // }else{
     //     return view('about');
     // }
-    return view('vote1');
+    // return view('vote1');
+    return view('vote1Mobile');
 });
 
 Route::get('/vouchers', function () {

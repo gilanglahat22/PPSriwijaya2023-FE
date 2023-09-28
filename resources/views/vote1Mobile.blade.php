@@ -1345,10 +1345,12 @@ article{
     }
     .sriwijaya {
         margin: 0;
+        font-size: 80%;
     }
     .putraPutri {
         margin-block-start: 0;
-        margin-block-end: 1px;
+    margin-block-end: 1px;
+    font-size: 80%;
     }
     .home-parent3 {
         position: absolute;

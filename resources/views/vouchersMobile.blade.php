@@ -184,57 +184,55 @@ body {
 </style>
 </head>
 <body>
-  <div :class="$style.voucersAndroid">
-    <div :class="$style.logoYpps112Parent">
-      <img :class="$style.logoYpps112" alt="" src="/logo-ypps-1-1-2@2x.png" />
-      <div :class="$style.putraPutriSriwijayaContainer">
-        <p :class="$style.putraPutri">PUTRA PUTRI</p>
-        <p :class="$style.sriwijaya">SRIWIJAYA</p>
+  <div class="voucersAndroid">
+    <div class="logoYpps112Parent">
+      <img class="logoYpps112" alt="" src="/logo-ypps-1-1-2@2x.png" />
+      <div class="putraPutriSriwijayaContainer">
+        <p class="putraPutri">PUTRA PUTRI</p>
+        <p class="sriwijaya">SRIWIJAYA</p>
       </div>
     </div>
-    <div :class="$style.rectangleParent">
-      <div :class="$style.groupChild" />
-      <div :class="$style.copyright2023Container">
+    <div class="rectangleParent">
+      <div class="groupChild" />
+      <div class="copyright2023Container">
         Copyright © 2023 Pemilihan Putra Putri Sriwijaya 2023 Powered by
-        <span :class="$style.felineLab">Feline Lab.</span>
+        <span class="felineLab">Feline Lab.</span>
       </div>
     </div>
-    <div :class="$style.tataCaraPendaftaran">Tata Cara Pendaftaran</div>
-    <div :class="$style.voucersAndroidChild" />
-    <div :class="$style.bukaWebsiteWwwibdmcomContainer">
-      <p :class="$style.sriwijaya">&nbsp;</p>
-      <ul :class="$style.bukaWebsiteWwwibdmcomLalu">
-        <li :class="$style.untukMelakukanPembelianVouc">
-          Buka website www.ibdm.com lalu pilih menu "Voucher"
+    <div class="tataCaraPendaftaran">Tata Cara Pendaftaran</div>
+    <div class="voucersAndroidChild" />
+    <div class="bukaWebsiteWwwibdmcomContainer">
+      <p class="sriwijaya">&nbsp;</p>
+      <ul class="bukaWebsiteWwwibdmcomLalu">
+      <li class="untukMelakukanPembelianVouc">
+        Buka website officialputraputrisriwijaya.com lalu pilih menu "Voucher"
         </li>
-        <li :class="$style.untukMelakukanPembelianVouc">
-          Untuk melakukan pembelian voucher hubungi nomor whatsapp berikut
-          08xxxxxxxx
+        <li class="untukMelakukanPembelianVouc">
+        Untuk melakukan pembelian voucher hubungi nomor whatsapp berikut 082269791295
         </li>
-        <li :class="$style.untukMelakukanPembelianVouc">
-          Pesan nominal voucher yang akan di beli, nominal voucher yang tersedia
-          (10k,25k,50k,100k,500k).
+        <li class="untukMelakukanPembelianVouc">
+        Pembelian voucher dapat dilakukan pada jam 08.00 - 22.00
         </li>
-        <li :class="$style.untukMelakukanPembelianVouc">
-          Upload Bukti pembayaran sesuai dengan nominal voucher yang di beli,
-          pembayaran dapat melalui ATM/Bank (No Rek BNI : 1104-01-007117-50-4
-          A.n --l)
+        <li class="untukMelakukanPembelianVouc">
+        Pesan nominal voucher yang akan di beli, nominal voucher yang tersedia 10k,25k,50k,100k,500k.
         </li>
-        <li :class="$style.untukMelakukanPembelianVouc">
-          Setelah verifikasi pembayaran admin selesai kode voucher akan
-          dikirimkan melalui whatsapp
+        <li class="untukMelakukanPembelianVouc">
+        Upload Bukti pembayaran sesuai dengan nominal voucher yang di beli, pembayaran dapat melalui Transfer Bank ( Nomor Rekening Sea Bank : 9012-4540-0031 A.N. Muhammad Daffa Nizar Bahari )
         </li>
-        <li :class="$style.untukMelakukanPembelianVouc">
-          Setelah mendapatkan voucher masuk ke halaman
-          <span :class="$style.felineLab">Vote</span> dengan cara mengklik
-          tombol vote diatas, kemudian cari Finalis Favorit kalian dan lakukan
-          Voting dengan cara memasukan kode voucher yang sudah dibeli.
+        <li class="untukMelakukanPembelianVouc">
+        Setelah verifikasi pembayaran admin selesai kode voucher akan dikirimkan melalui whatsapp 
         </li>
-        <li :class="$style.untukMelakukanPembelianVouc">
-          Bila berhasi akan mucul tulisan “Voting Berhasil”
+        <li class="untukMelakukanPembelianVouc">
+        Setelah mendapatkan voucher masuk ke halaman Vote dengan cara mengklik tombol vote diatas, kemudian cari Finalis Favorit kalian dan lakukan Voting dengan cara memasukan kode voucher yang sudah dibeli.
+        <span class="feline-lab8">Vote</span> dengan cara mengklik tombol
+        vote diatas, kemudian cari Finalis Favorit kalian dan lakukan Voting
+        dengan cara memasukan kode voucher yang sudah dibeli.
+        </li>
+        <li class="untukMelakukanPembelianVouc">
+        Bila berhasi akan mucul tulisan “Voting Berhasil”
         </li>
         <li>
-          Grafik hasil e-voting otomatis langsung terupdate secara otomatis
+        Grafik hasil e-voting otomatis langsung terupdate secara otomatis
         </li>
       </ul>
     </div>

@@ -314,7 +314,7 @@
         position: absolute;
         text-align: center;
         align-items: center;
-        top: 2940px;
+        top: 1044px;
         left: 0;
         width: 100%;
         height: 156px;
@@ -325,7 +325,7 @@
         position: relative;
         background: linear-gradient(180deg, #9b2a06, #b05f5f 52.6%, #ddcaca);
         width: 100%;
-        height: 1100px;
+        height: 1200px;
         overflow: hidden;
         text-align: center;
         font-size: var(--font-size-base);

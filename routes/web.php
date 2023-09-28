@@ -35,14 +35,12 @@ Route::get('/about', function () {
 });
 
 Route::get('/votes', function () {
-    // $isDesktop = Browser::isDesktop();
-    // if(!$isDesktop){
-    //     return view('aboutMobile');
-    // }else{
-    //     return view('about');
-    // }
-    // return view('vote1');
-    return view('vote1Mobile');
+    $isDesktop = Browser::isDesktop();
+    if(!$isDesktop){
+        return view('vote1Mobile');
+    }else{
+        return view('vote1');
+    }
 });
 
 Route::get('/vouchers', function () {

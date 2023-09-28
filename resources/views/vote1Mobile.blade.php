@@ -1800,7 +1800,12 @@ a{
         var ml = dom.maxLength;
         var lg = dom.value.length;
         if (lg >= ml && i<=6) {
-            document.getElementById("input"+(i+1)).focus()
+            dom.addEventListener('keyup', function() {
+                if (input1.value.length >= 1) {
+                    // document.getElementById("input"+(i+1)).select()
+                    document.getElementById("input"+(i+1)).focus()
+                }
+            });
         }
     }
       </script>

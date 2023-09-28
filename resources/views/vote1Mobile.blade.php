@@ -318,15 +318,16 @@
         justify-content: center;
         }
         .rectangle-parent24 {
-        position: absolute;
-        top: 2940px;
-        left: 0;
-        width: 100%;
-        font-family: var(--font-montserrat);
-        color: #fff;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
+            position: absolute;
+            top: 2950px;
+            left: 0;
+            width: 100%;
+            font-family: var(--font-montserrat);
+            color: #fff;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+    /* background-color: var(--color-maroon);
         /* background-color: var(--color-maroon); */
         }
         .vote-desktop-child2 {
@@ -590,20 +591,15 @@
           object-fit: cover;
         }
         .vote-desktop1 {
-        position: relative;
-        background: linear-gradient(
-            180deg,
-            #9b2a06 14.06%,
-            #b05f5f 63.54%,
-            #ddcaca 94.79%
-        );
-        width: 100%;
-        height: 2940px;
-        overflow: hidden;
-        text-align: center;
-        font-size: var(--font-size-5xl);
-        color: var(--color-white);
-        font-family: var(--font-abril-fatface);
+            position: relative;
+            background: linear-gradient( 180deg, #9b2a06 14.06%, #b05f5f 63.54%, #ddcaca 94.79% );
+            width: 100%;
+            height: 3170px;
+            overflow: hidden;
+            text-align: center;
+            font-size: var(--font-size-5xl);
+            color: var(--color-white);
+            font-family: var(--font-abril-fatface);
         }
         .pop-up-kode-inner {
             position: absolute;
@@ -1155,7 +1151,7 @@ h6 {
 p {
     font-size: 1.125rem;
     /* margin-bottom: 1.2rem; */
-    line-height: 0em;
+    line-height: 1.6em;
 }
 
 article.sample-col-para {
@@ -1309,10 +1305,21 @@ article{
   color: black;
 }
 
+/* @media (max-width: 450px){
+  body{
+    scale: 1;
+  }
+
+  .copyright-2023-container7{
+    font-size: 26px;
+  }
+
+} */
+/*# sourceMappingURL=styles.css.map */
 .home-parent3 {
-    position: fixed;
-    top: 10px;
-    margin-left: 14%;
+    position: absolute;
+    top: 115px;
+    margin-left: 0%;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -1320,7 +1327,7 @@ article{
     gap: var(--gap-18xl);
     font-size: var(--font-size-5xl);
     font-family: var(--font-alata);
-    scale: 40%;
+    scale: 50%;
     gap: 15px;
     width: 100%;
   }
@@ -1378,13 +1385,15 @@ article{
     height: 35px;
     cursor: pointer;
 }
+
 a{
   color: white;
 }
     </style>
   </head>
   <body>
-        <div class="home-parent3">
+      <div class="vote-desktop1" id="all_contents">
+      <div class="home-parent3">
         <a class="home5" href="./">Home</a>
         <a class="about5" id="aboutText" href="./about">About</a>
         <a class="contact5" id="contactText" href="./contact">Contact</a>
@@ -1393,7 +1402,6 @@ a{
           <div class="group-child68"></div>
           <div class="vote7">Vote</div>
         </a>
-        </div>
       </div>
         <img
           class="logo-ypps-1-1-27"
@@ -1760,47 +1768,6 @@ a{
             document.getElementById("input"+(i+1)).focus()
         }
     }
-    var groupContainer = document.getElementById("groupContainer");
-      if (groupContainer) {
-        groupContainer.addEventListener("click", function (e) {
-          window.location.href = "/votes";
-        });
-      }
-      
-      var groupContainer1 = document.getElementById("groupContainer1");
-      if (groupContainer1) {
-        groupContainer1.addEventListener("click", function (e) {
-          window.location.href = "/about";
-        });
-      }
-      
-      var aboutText = document.getElementById("aboutText");
-      if (aboutText) {
-        aboutText.addEventListener("click", function (e) {
-          window.location.href = "/about";
-        });
-      }
-      
-      var contactText = document.getElementById("contactText");
-      if (contactText) {
-        contactText.addEventListener("click", function (e) {
-          window.location.href = "/contact";
-        });
-      }
-      
-      var vouchersText = document.getElementById("vouchersText");
-      if (vouchersText) {
-        vouchersText.addEventListener("click", function (e) {
-          window.location.href = "/vouchers";
-        });
-      }
-      
-      var groupContainer2 = document.getElementById("groupContainer2");
-      if (groupContainer2) {
-        groupContainer2.addEventListener("click", function (e) {
-          window.location.href = "/votes";
-        });
-      }
       </script>
   </body>
 </html>

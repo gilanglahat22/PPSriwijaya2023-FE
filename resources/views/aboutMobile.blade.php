@@ -343,7 +343,7 @@
     }
   }
   .home-parent3 {
-    position: fixed;
+    position: absolute;
     top: 10px;
     margin-left: 14%;
     display: flex;

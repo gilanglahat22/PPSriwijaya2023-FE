@@ -1384,6 +1384,7 @@ a{
     </style>
   </head>
   <body>
+        <div class="home-parent3">
         <a class="home5" href="./">Home</a>
         <a class="about5" id="aboutText" href="./about">About</a>
         <a class="contact5" id="contactText" href="./contact">Contact</a>
@@ -1392,6 +1393,7 @@ a{
           <div class="group-child68"></div>
           <div class="vote7">Vote</div>
         </a>
+        </div>
       </div>
         <img
           class="logo-ypps-1-1-27"

@@ -642,13 +642,25 @@
             align-items: center;
             justify-items: center;
             font-size: 70%;
+            margin-right: -0.5rem;
+        }
+
+        .frame-child input{
+            border: #570303;
+            outline: none;
+            transition: all 0.1s;
+        }
+
+        .frame-child9 input:focus{
+            border: 2px solid #EEE8AA;
+            box-shadow: 0 0 2px 2px #9a0000;
         }
 
         .rectangle-parent17 {
             position: relative;
             top: 170px;
             /* left: 0; */
-            margin-left: 5%;
+            margin-left: 4%;
             display: flex;
             flex-direction: row;
             align-items: flex-end;
@@ -721,13 +733,13 @@
             /* left: 100%; */
             display: inline-block;
             width: 25%;
-            height: 80%;
+            height: 81%;
             text-decoration: none;
-            color: rgba(0, 0, 0, 0.25);
+            color: #e3e0dc;
             border-radius: var(--br-37xl-5);
-            background-color: #EEE8AA;
+            background-color: #7d491f;
             box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
-            font-size: 50%;
+            font-size: 48%;
             margin-left: 5px;
         }
         .kirim1:hover{
@@ -1294,8 +1306,8 @@ article{
     width: 25%;
     height: 100%;
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.25);
-    font-size: 49%;
+    color: #7d491f;
+    font-size: 48%;
     margin-left: 24%;
     margin-top: 5px;
 }
@@ -1527,13 +1539,13 @@ article{
           tempHTML += '<div class="pop-up-kode-inner"></div>';
           tempHTML += '<div class="masukkan-kode-voucher1">Masukkan Kode Voucher dibawah ini</div>';
           tempHTML += '<div class="rectangle-parent17">';
-          tempHTML += '<input class="frame-child9" maxLength="1" id="input1"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1" id="input2"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1" id="input3"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1" id="input4"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1" id="input5"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1" id="input6"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1" id="input7"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input1" onkeypress="onchechnge(1)"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input2" onkeypress="onchechnge(2)"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input3" onkeypress="onchechnge(3)"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input4" onkeypress="onchechnge(4)"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input5" onkeypress="onchechnge(5)"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input6" onkeypress="onchechnge(6)"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input7" onkeypress="onchechnge(7)"></input>';
           tempHTML += '</div>';
           tempHTML += '<div class="messageStyle" id="messageVote"></div>';
           tempHTML += '<div class="pop-up-kode-child1"></div>';
@@ -1676,6 +1688,14 @@ article{
         });
       }
 
+    function onchechnge(i){
+        var dom = document.getElementById("input"+i);
+        var ml = dom.maxLength;
+        var lg = dom.value.length;
+        if (lg >= ml && i<=6) {
+            document.getElementById("input"+(i+1)).focus()
+        }
+    }
       </script>
   </body>
 </html>

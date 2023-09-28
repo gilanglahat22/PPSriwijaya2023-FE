@@ -630,15 +630,13 @@
         }
         .masukkan-kode-voucher1 {
             position: relative;
-            top: 218px;
-            /* left: 0; */
+            top: 208px;
             margin-left: 5%;
             display: flex;
             flex-direction: row;
             align-items: flex-end;
             justify-content: center;
             gap: var(--gap-mini);
-            /* background-color: black; */
             width: 90%;
             font-size: 70%;
         }
@@ -658,7 +656,7 @@
 
         .rectangle-parent17 {
             position: relative;
-            top: 253px;
+            top: 233px;
             /* left: 0; */
             margin-left: 5%;
             display: flex;

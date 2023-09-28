@@ -30,7 +30,7 @@
         @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface:wght@400&display=swap");
 
         .popup-overlay {
-          display: flex;
+          /* display: flex; */
           /* flex-direction: column; */
           position: fixed;
           inset: 0;
@@ -39,11 +39,19 @@
           align-items: center;
           place-items: center;
           text-align: center;
-          left: 100px;
-          top: 25%;
+          /* left: 100px; */
+          /* top: 20%; */
           /* left: 100px;
           /* top: calc(50%-100px);
           left: calc(50%-100px); */
+          margin-top: 10%;
+          /* margin-bottom: 10%; */
+          margin-left: 5%;
+          height: 80;
+          width: 90%;
+          /* background-color: #000; */
+          /* background-color: #000; */
+          /* overflow: hidden; */
         }
 
         :root {
@@ -610,66 +618,77 @@
         font-family: var(--font-abril-fatface);
         }
         .pop-up-kode-inner {
-        position: absolute;
-        /* top: 0;
-        left: 0; */
-        border-radius: var(--br-3xs);
-        background: linear-gradient(180deg, #b22424, #340202);
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
-        width: 1249px;
-        height: 838px;
-        align-items: center;
-        text-align: center;
+            position: absolute;
+            border-radius: var(--br-3xs);
+            background: linear-gradient(180deg, #b22424, #340202);
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+            width: 100%;
+            height: 70%;
+            align-items: center;
+            text-align: center;
+            top: 55px;
         }
         .masukkan-kode-voucher1 {
-        position: absolute;
-        top: 183px;
-        left: calc(50% - 346.5px);
-        display: inline-block;
-        width: 694px;
-        height: 68px;
+            position: relative;
+            top: 218px;
+            /* left: 0; */
+            margin-left: 5%;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: center;
+            gap: var(--gap-mini);
+            /* background-color: black; */
+            width: 90%;
+            font-size: 70%;
         }
         .frame-child9 {
-        position: relative;
-        border-radius: var(--br-8xs);
-        background-color: var(--color-gainsboro);
-        border: 2px solid var(--color-pink);
-        box-sizing: border-box;
-        width: 124px;
-        height: 124px;
-        text-align: center;
-        align-items: center;
-        justify-items: center;
-        font-size: 58px;
+            position: relative;
+            border-radius: var(--br-8xs);
+            background-color: var(--color-gainsboro);
+            border: 2px solid var(--color-pink);
+            box-sizing: border-box;
+            width: 30%;
+            height: 20%;
+            text-align: center;
+            align-items: center;
+            justify-items: center;
+            font-size: 70%;
         }
+
         .rectangle-parent17 {
-        position: absolute;
-        top: 276px;
-        left: 152px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: flex-start;
-        gap: var(--gap-mini);
-        width: 100%;
+            position: relative;
+            top: 253px;
+            /* left: 0; */
+            margin-left: 5%;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: center;
+            gap: var(--gap-mini);
+            /* background-color: black; */
+            width: 90%;
         }
+
         .pop-up-kode-child1 {
-        position: absolute;
-        top: 83.5px;
-        left: -1.5px;
-        border-top: 3px solid var(--color-silver);
-        box-sizing: border-box;
-        width: 1252px;
-        height: 3px;
+            position: absolute;
+            top: 171.5px;
+            /* left: 5px; */
+            /* margin-left: 5%; */
+            border-top: 3px solid var(--color-silver);
+            box-sizing: border-box;
+            width: 100%;
+            height: 3px;
         }
         .vote-mustofa1 {
-        position: absolute;
-        top: 9px;
-        left: calc(50% - 297.5px);
-        font-size: var(--font-size-29xl);
-        display: inline-block;
-        width: 595px;
-        height: 68px;
+            position: absolute;
+            top: 98px;
+            /* left: calc(50% - 297.5px); */
+            left: 0;
+            font-size: 70%;
+            display: inline-block;
+            width: 100%;
+            height: 68px;
         }
         .belum-punya-kode1 {
         margin: 0;
@@ -692,69 +711,65 @@
           flex-direction: column;
           gap: 15px;
         }
-        .group-child28 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: var(--br-37xl-5);
-        background-color: #EEE8AA;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
-        width: 290px;
-        height: 68px;
-        }
+
         .group-child29{
-          position: absolute;
-          top: 0;
-          left: 0;
-          border-radius: var(--br-37xl-5);
-          background-color: white;
-          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
-          width: 290px;
-          height: 68px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: var(--br-37xl-5);
+            background-color: white;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+            width: 25%;
+            height: 100%;
+            margin-left: 24%;
         }
+
         .kirim1 {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        text-decoration: none;
-        color:rgba(0, 0, 0, 0.25);
-        border-radius: var(--br-37xl-5);
-        background-color: #EEE8AA;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+            position: absolute;
+            top: 307px;
+            /* left: 100%; */
+            display: inline-block;
+            width: 25%;
+            height: 80%;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.25);
+            border-radius: var(--br-37xl-5);
+            background-color: #EEE8AA;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+            font-size: 50%;
+            margin-left: 5px;
         }
         .kirim1:hover{
           color: black;
         }
         .rectangle-parent18 {
-        position: absolute;
-        top: 638px;
-        left: 664px;
-        width: 290px;
-        height: 68px;
-        color: #EEE8AA;
+            position: absolute;
+            top: 100px;
+            left: 0px;
+            width: 100%;
+            height: 48px;
         }
         .rectangle-parent19{
-          position: absolute;
-          top: 638px;
-          left: 300px;
-          width: 290px;
-          height: 68px;
-          color: black;
+            position: absolute;
+            top: 408px;
+            left: 0px;
+            width: 100%;
+            height: 36px;
+            color: black;
         }
         .pop-up-kode1 {
         position: absolute;
-        width: 1249px;
-        height: 838px;
-        max-width: 100%;
+        left: 0;
+        width: 100%;
+        height: 98%;
+        /* max-width: 100%;
         max-height: 100%;
-        overflow: auto;
+        overflow: auto; */
         text-align: center;
         font-size: var(--font-size-17xl);
         color: var(--color-white);
         font-family: var(--font-alata);
+        /* background-color: #000; */
         }
         /* .rectangle-parent-putras{
           display: flex;
@@ -1285,14 +1300,17 @@ article{
 }
 
 .close-button {
-  position: absolute;
-  top: 7px;
-  left: 45px;
-  display: inline-block;
-  width: 199px;
-  height: 33px;
-  text-decoration: none;
-  color:rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.25);
+    font-size: 49%;
+    margin-left: 24%;
+    margin-top: 5px;
 }
 
 .close-button:hover{

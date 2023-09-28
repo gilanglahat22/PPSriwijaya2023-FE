@@ -172,8 +172,8 @@ body {
     right: 9%;
     padding-top: 3%;
     padding-bottom: 2%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
     margin-bottom: 7%;
     border-radius: 3%;
     background: linear-gradient(180deg, #fff, #ee9090 36.98%);
@@ -396,7 +396,7 @@ body {
     align-items: center;
     text-align: center;
     justify-items: center;
-    font-size: 85%;
+    font-size: 70%;
     font-family: var(--font-alata);
     display: inline-block;
     width: 80%;

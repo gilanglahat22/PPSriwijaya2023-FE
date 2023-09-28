@@ -289,7 +289,7 @@
         left: -1px;
         background-color: var(--color-maroon);
         width: 100%;
-        height: 39px;
+        height: 100%;
     }
     .felineLab {
         text-decoration: underline;
@@ -302,6 +302,7 @@
         display: inline-block;
         width: 347px;
         height: 6px;
+        font-size: 50%;
     }
     .rectangleContainer {
         /* position: relative;
@@ -314,7 +315,7 @@
         position: absolute;
         text-align: center;
         align-items: center;
-        top: 1044px;
+        top: 1060px;
         left: 0;
         width: 100%;
         height: 156px;
@@ -325,7 +326,7 @@
         position: relative;
         background: linear-gradient(180deg, #9b2a06, #b05f5f 52.6%, #ddcaca);
         width: 100%;
-        height: 1200px;
+        height: 1100px;
         overflow: hidden;
         text-align: center;
         font-size: var(--font-size-base);

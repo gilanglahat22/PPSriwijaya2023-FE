@@ -50,6 +50,7 @@ Route::get('/vouchers', function () {
     }else{
         return view('vouchers');
     }
+    // return view('vouchersMobile');
 });
 
 Route::get('/contact', function () {

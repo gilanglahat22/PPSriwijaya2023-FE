@@ -1318,7 +1318,7 @@ article{
 /*# sourceMappingURL=styles.css.map */
 .logoYpps112Parent {
     position: absolute;
-    top: 30px;
+    top: 16px;
     left: 9px;
     display: flex;
     flex-direction: row;
@@ -1345,12 +1345,14 @@ article{
     }
     .sriwijaya {
         margin: 0;
-        font-size: 80%;
+        font-size: 100%;
+        color: white;
     }
     .putraPutri {
         margin-block-start: 0;
-    margin-block-end: 1px;
-    font-size: 80%;
+        margin-block-end: 1px;
+        font-size: 100%;
+        color: white;
     }
     .home-parent3 {
         position: absolute;

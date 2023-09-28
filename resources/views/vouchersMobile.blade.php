@@ -257,7 +257,7 @@ a{
 </head>
 <body>
   <div class="vouchersMobile">
-  <div class="home-parent3">
+    <div class="home-parent3">
         <a class="home5" href="./">Home</a>
         <a class="about5" id="aboutText" href="./about">About</a>
         <a class="contact5" id="contactText" href="./contact">Contact</a>
@@ -266,7 +266,7 @@ a{
           <div class="group-child68"></div>
           <div class="vote7">Vote</div>
         </a>
-      </div>
+    </div>
     <div class="logoYpps112Parent">
       <img class="logoYpps112" alt="" src="/logo-ypps-1-1-2@2x.png" />
       <div class="putraPutriSriwijayaContainer">

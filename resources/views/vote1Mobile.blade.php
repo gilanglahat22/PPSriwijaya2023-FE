@@ -151,12 +151,12 @@
             position: absolute;
             top: 132px;
             left: 0;
-            margin-left: 2%;
+            margin-left: 10%;
             border-radius: var(--br-xl);
             background: linear-gradient(180deg, #d21212 19.79%, #ee9090);
-            width: 96%;
-            height: 550px;
-                }
+            width: 80%;
+            height: 451px;
+        }
         .nama12 {
         position: relative;
         left: -50%;
@@ -180,41 +180,42 @@
         }
         .putra3,
         .putri3 {
-        position: absolute;
-        top: 619.91px;
-        left: 3%;
-        font-size: 190%;
-        color: var(--color-burlywood-200);
-        display: inline-block;
-        width: 183.79px;
-        height: 69px;
-        transform: rotate(-90.1deg);
-        transform-origin: 0 0;
+            position: absolute;
+            top: 551.91px;
+            left: 12%;
+            font-size: 190%;
+            color: var(--color-burlywood-200);
+            display: inline-block;
+            width: 183.79px;
+            height: 69px;
+            transform: rotate(-90.1deg);
+            transform-origin: 0 0;
+            font-size: 145%;
         }
         .putra3 {
-        top: 390.91px;
+            top: 330.91px;
         }
         .vote-desktop-child1,
         .vote-desktop-inner {
-        position: relative;
-        /* display: inline-block; */
-        top: 787px;
-        margin-left: 10%;
-        margin-right: 10%;
-        /* left: 0; */
-        border-radius: var(--br-xl);
-        background: linear-gradient(180deg, #d21212 19.79%, #ee9090);
-        width: 80%;
-        height: 130px;
-        justify-items: center;
-        justify-items: center;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+            position: relative;
+            /* display: inline-block; */
+            top: 657px;
+            margin-left: 20%;
+            margin-right: 10%;
+            /* left: 0; */
+            border-radius: var(--br-xl);
+            background: linear-gradient(180deg, #d21212 19.79%, #ee9090);
+            width: 60%;
+            height: 90px;
+            justify-items: center;
+            justify-items: center;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
         .vote-desktop-child1 {
-        top: 840px;
-        left: 0%;
+            top: 710px;
+            left: 0%;
         }
         .about1,
         .contact1,
@@ -319,7 +320,7 @@
         }
         .rectangle-parent24 {
             position: absolute;
-            top: 2940px;
+            top: 2740px;
             left: 0;
             width: 100%;
             font-family: var(--font-montserrat);
@@ -375,14 +376,15 @@
         height: 47px;
         }
         .rectangle-parent25 {
-        position: absolute;
-        top: 237px;
-        left: 4px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: var(--gap-smi);
+            position: absolute;
+            top: 237px;
+            left: 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: var(--gap-smi);
+            width: 90%;
         }
         .frame-child19 {
         position: relative;
@@ -401,23 +403,22 @@
         height: 47px;
         }
         .vector-parent {
-        position: absolute;
-        top: 9px;
-        left: 4px;
-        display: flex;
-        flex-direction: column;
-        /* align-items: flex-start;
-        justify-content: flex-start; */
-        gap: var(--gap-smi);
+            position: absolute;
+            top: 9px;
+            left: 2px;
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap-smi);
+            width: 90%;
         }
         .group-child36,
         .line-container {
-        position: absolute;
-        top: 215px;
-        left: 6%;
-        margin-left: 17%;
-        width: 70%;
-        height: 401px;
+            position: absolute;
+            top: 157px;
+            left: 10%;
+            margin-left: 17%;
+            width: 70%;
+            height: 401px;
         /* background-color: #000; */
         }
         .group-child36 {
@@ -533,7 +534,7 @@
         }
         .putra4 {
             position: absolute;
-            top: 1240px;;
+            top: 1000px;;
             left: calc(50% - 195px);
             font-size: var(--font-size-37xl);
             color: var(--color-burlywood-200);
@@ -558,7 +559,7 @@
         display: inline-block;
         }
         .putri4 {
-            top: 2007px;
+            top: 1777px;
             left: calc(50% - 195px);
             font-size: var(--font-size-37xl);
             color: var(--color-burlywood-200);
@@ -567,34 +568,34 @@
         }
         .d20h20m1,
         .div11 {
-        top: 38px;
-        position: relative;
-        align-items: center;
-        text-align: center;
-        left: 0%;
-        font-size: 150%;
-        margin-left: 0%;
-        /* width: 478px; */
-        height: 84px;
+            top: 18px;
+            position: relative;
+            align-items: center;
+            text-align: center;
+            left: 0%;
+            font-size: 150%;
+            margin-left: 0%;
+            /* width: 478px; */
+            height: 84px;
         }
         .div11 {
         position: relative;
-        left: -9%;
+        left: -12%;
         width: 219px;
         }
         .gain-up-11 {
-          position: relative;
-          top: -45.8px;
-          left: 52%;
-          width: 46px;
-          height: 52px;
-          object-fit: cover;
+            position: relative;
+            top: -55.8px;
+            left: 54%;
+            width: 26px;
+            height: 32px;
+            object-fit: cover;
         }
         .vote-desktop1 {
             position: relative;
             background: linear-gradient( 180deg, #9b2a06 14.06%, #b05f5f 63.54%, #ddcaca 94.79% );
             width: 100%;
-            height: 2940px;
+            height: 2740px;
             overflow: hidden;
             text-align: center;
             font-size: var(--font-size-5xl);
@@ -780,7 +781,7 @@
             align-items: center;
             place-items: center;
             text-align: center;
-            top: 995px;
+            top: 835px;
         }
 
         .container-2 {
@@ -789,7 +790,7 @@
             align-items: center;
             place-items: center;
             text-align: center;
-            top: 1058px;
+            top: 906px;
             border-radius: 1rem;
         }
 
@@ -1474,7 +1475,7 @@ a{
         <div class="div11">10</div>
         <img class="gain-up-11" alt="" src="gain-up-1@2x.png" />
         </div>
-        <div class="home-group">
+        <!-- <div class="home-group">
           <div class="home1" id="homeText" href="./home">Home</div>
           <div class="about1" id="aboutText" href="./about">About</div>
           <div class="contact1" id="contactText" href="./contact">Contact</div>
@@ -1483,7 +1484,7 @@ a{
             <div class="group-child33"></div>
             <div class="vote2">Vote</div>
           </div>
-        </div>
+        </div> -->
 
       <div class="slider-wrapper">  
         <section class="container">
@@ -1741,9 +1742,9 @@ a{
             // outputNamaHTML = '<div class="nama12">'+data1.toFixed(2)+'%</div>';
             // outputNamaHTML += '<div class="nama12">'+data2.toFixed(2)+'%</div>';
             // outputNamaHTML += '<div class="nama12">'+data3.toFixed(2)+'%</div>';
-            outputHTML = '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width1+'%; height: 42px;"><div style="position: relative; left: '+(0+10)+'%; width: 340px; font-size: 70%; padding-top: 3px; text-align: left;">'+nameP1+' '+' '+data1.toFixed(2)+'%</div></div>';
-            outputHTML += '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width2+'%; height: 42px;"><div style="position: relative; left: '+(0+10)+'%; width: 340px; font-size: 70%; padding-top: 3px; text-align: left;">'+nameP2+' '+' '+data2.toFixed(2)+'%</div></div>';
-            outputHTML += '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width3+'%; height: 42px;"><div style="position: relative; left: '+(0+10)+'%; width: 340px; font-size: 70%; padding-top: 3px; text-align: left;">'+nameP3+' '+' '+data3.toFixed(2)+'%</div></div>';
+            outputHTML = '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width1+'%; height: 42px;"><div style="position: relative; left: 0; width: 218px; padding-top: 3px; text-align: center; font-size: 11px; height: 100%; margin: 0; top: 12%;">'+nameP1+' '+' '+data1.toFixed(2)+'%</div></div>';
+            outputHTML += '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width2+'%; height: 42px;"><div style="position: relative; left: 0; width: 218px; padding-top: 3px; text-align: center; font-size: 11px; height: 100%; margin: 0; top: 12%;">'+nameP2+' '+' '+data2.toFixed(2)+'%</div></div>';
+            outputHTML += '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width3+'%; height: 42px;"><div style="position: relative; left: 0; width: 218px; padding-top: 3px; text-align: center; font-size: 11px; height: 100%; margin: 0; top: 12%;">'+nameP3+' '+' '+data3.toFixed(2)+'%</div></div>';
             document.getElementById(statisticId).innerHTML = outputHTML;
             document.getElementById(nameId).innerHTML = outputNamaHTML;
           }

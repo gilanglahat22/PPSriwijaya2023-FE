@@ -634,7 +634,7 @@ a{
       <div class="ayoDukungPilihanmu">
         Ayo dukung pilihanmu
       </div>
-        <button class="rectangleGroup" @click="onGroupButtonClick">
+        <button class="rectangleGroup" onclick="onGroupButtonClick()">
           <div class="voteNow">Vote Now !</div>
         </button>
     </div>
@@ -647,16 +647,10 @@ a{
       </div>
   </div>
   <script>
-  import { defineComponent  } from "vue";
 
-  export default defineComponent({
-    name: "HomeAndroid",
-    methods: {
-      onGroupButtonClick() {
-        this.$router.push("/votes");
-      },
-    },
-  });
+  function onGroupButtonClick(){
+    window.location.href = "/votes";
+  }
   var groupContainer = document.getElementById("groupContainer");
       if (groupContainer) {
         groupContainer.addEventListener("click", function (e) {

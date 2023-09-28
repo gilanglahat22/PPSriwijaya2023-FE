@@ -135,23 +135,23 @@
         height: 60px;
         }
         .tata-cara-pembelian {
-        position: absolute;
-        top: 196px;
-        left: calc(50% - 417px);
-        font-size: var(--font-size-37xl);
-        font-family: var(--font-abril-fatface);
-        display: inline-block;
-        width: 834px;
-        height: 85px;
+          position: absolute;
+          top: 296px;
+          left: calc(50% - 417px);
+          font-size: var(--font-size-37xl);
+          font-family: var(--font-abril-fatface);
+          display: inline-block;
+          width: 834px;
+          height: 85px;
         }
         .vouchers-desktop-child {
-        position: absolute;
-        top: 339px;
-        left: calc(50% - 596px);
-        border-radius: var(--br-xl);
-        background: linear-gradient(180deg, #d21212 19.79%, #ee9090);
-        width: 1192px;
-        height: 538px;
+          position: absolute;
+          top: 439px;
+          left: calc(50% - 596px);
+          border-radius: var(--br-xl);
+          background: linear-gradient(180deg, #d21212 19.79%, #ee9090);
+          width: 1192px;
+          height: 538px;
         }
         .group-child60 {
         position: absolute;
@@ -255,15 +255,15 @@
         padding-left: 32px;
         }
         .buka-website-wwwibdmcom-container1 {
-        position: absolute;
-        top: 362px;
-        left: calc(50% - 499px);
-        font-size: var(--font-inherit);
-        font-family: var(--font-inherit);
-        text-align: left;
-        display: inline-block;
-        width: 998px;
-        height: 462px;
+          position: absolute;
+          top: 490px;
+          left: calc(50% - 499px);
+          font-size: var(--font-inherit);
+          font-family: var(--font-inherit);
+          text-align: left;
+          display: inline-block;
+          width: 998px;
+          height: 462px;
         }
         .vouchers-desktop {
         position: relative;

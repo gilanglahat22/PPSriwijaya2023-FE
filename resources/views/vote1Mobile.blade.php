@@ -1318,7 +1318,7 @@ article{
 /*# sourceMappingURL=styles.css.map */
 .logoYpps112Parent {
     position: absolute;
-    top: 16px;
+    top: 8px;
     left: 9px;
     display: flex;
     flex-direction: row;
@@ -1356,7 +1356,7 @@ article{
     }
     .home-parent3 {
         position: absolute;
-    top: 26px;
+    top: 11px;
     margin-left: 11%;
     display: flex;
     flex-direction: row;

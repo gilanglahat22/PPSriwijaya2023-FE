@@ -1428,6 +1428,20 @@ a{
   color: white;
 }
     </style>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <Script>
+        $(document).ready(function(){
+            $(".frame-child9").keyup(function () {
+                $this=$(this);
+                if ($this.val().length >=$this.data("maxlength")) {
+                  if($this.val().length>$this.data("maxlength")){
+                    $this.val($this.val().substring(0,4));
+                  }
+                  $this.next(".frame-child9").focus();
+                }
+             });
+        });
+    </Script>
   </head>
   <body>
       <div class="vote-desktop1" id="all_contents">
@@ -1646,13 +1660,13 @@ a{
           tempHTML += '<div class="pop-up-kode-inner"></div>';
           tempHTML += '<div class="masukkan-kode-voucher1">Masukkan Kode Voucher dibawah ini</div>';
           tempHTML += '<div class="rectangle-parent17">';
-          tempHTML += '<input class="frame-child9" maxLength="1" id="input1" onkeypress="onchechnge(1)"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1" id="input2" onkeypress="onchechnge(2)"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1" id="input3" onkeypress="onchechnge(3)"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1" id="input4" onkeypress="onchechnge(4)"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1" id="input5" onkeypress="onchechnge(5)"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1" id="input6" onkeypress="onchechnge(6)"></input>';
-          tempHTML += '<input class="frame-child9" maxLength="1" id="input7" onkeypress="onchechnge(7)"></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input1" ></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input2" ></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input3" ></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input4" ></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input5" ></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input6" ></input>';
+          tempHTML += '<input class="frame-child9" maxLength="1" id="input7" ></input>';
           tempHTML += '</div>';
           tempHTML += '<div class="messageStyle" id="messageVote"></div>';
           tempHTML += '<div class="pop-up-kode-child1"></div>';
@@ -1795,19 +1809,19 @@ a{
         });
       }
 
-    function onchechnge(i){
-        var dom = document.getElementById("input"+i);
-        var ml = dom.maxLength;
-        var lg = dom.value.length;
-        if (lg >= ml && i<=6) {
-            dom.addEventListener('keyup', function() {
-                if (input1.value.length >= 1) {
-                    // document.getElementById("input"+(i+1)).select()
-                    document.getElementById("input"+(i+1)).focus()
-                }
-            });
-        }
-    }
+    // function onchechnge(i){
+    //     var dom = document.getElementById("input"+i);
+    //     var ml = dom.maxLength;
+    //     var lg = dom.value.length;
+    //     if (lg >= ml && i<=6) {
+    //         dom.addEventListener('keyup', function() {
+    //             if (input1.value.length >= 1) {
+    //                 document.getElementById("input"+(i+1)).select();
+    //                 document.getElementById("input"+(i+1)).focus();
+    //             }
+    //         });
+    //         }
+    //     }
       </script>
   </body>
 </html>

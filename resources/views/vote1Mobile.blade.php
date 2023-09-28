@@ -642,7 +642,7 @@
             margin-right: -0.5rem;
         }
 
-        .frame-child input{
+        .frame-child9 input{
             border: #570303;
             outline: none;
             transition: all 0.1s;

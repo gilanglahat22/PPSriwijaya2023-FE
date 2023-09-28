@@ -599,6 +599,16 @@
         justify-items: center;
         font-size: 58px;
         }
+        .frame-child9 input{
+            border: #570303;
+            outline: none;
+            transition: all 0.1s;
+        }
+
+        .frame-child9 input:focus{
+            border: 2px solid #EEE8AA;
+            box-shadow: 0 0 2px 2px #9a0000;
+        }
         .rectangle-parent17 {
         position: absolute;
         top: 276px;
@@ -1281,6 +1291,20 @@ article{
 } */
 /*# sourceMappingURL=styles.css.map */
     </style>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <Script>
+        $(document).ready(function(){
+            $(".frame-child9").keyup(function () {
+                $this=$(this);
+                if ($this.val().length >=$this.data("maxlength")) {
+                  if($this.val().length>$this.data("maxlength")){
+                    $this.val($this.val().substring(0,4));
+                  }
+                  $this.next(".frame-child9").focus();
+                }
+             });
+        });
+    </Script>
   </head>
   <body>
       <div class="vote-desktop1" id="all_contents">

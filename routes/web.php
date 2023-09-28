@@ -44,7 +44,12 @@ Route::get('/votes', function () {
 });
 
 Route::get('/vouchers', function () {
-    return view('vouchers');
+    $isDesktop = Browser::isDesktop();
+    if(!$isDesktop){
+        return view('vouchersMobile');
+    }else{
+        return view('vouchers');
+    }
 });
 
 Route::get('/contact', function () {

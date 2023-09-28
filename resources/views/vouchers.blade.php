@@ -357,27 +357,25 @@
         <p class="sriwijaya9">&nbsp;</p>
         <ul class="buka-website-wwwibdmcom-lalu2">
           <li class="buka-website-wwwibdmcom-lalu3">
-            Buka website www.ibdm.com lalu pilih menu "Voucher"
+          Buka website officialputraputrisriwijaya.com lalu pilih menu "Voucher"
           </li>
           <li class="buka-website-wwwibdmcom-lalu3">
-            Untuk melakukan pembelian voucher hubungi nomor whatsapp berikut
-            08xxxxxxxx
+          Untuk melakukan pembelian voucher hubungi nomor whatsapp berikut 082269791295
           </li>
           <li class="buka-website-wwwibdmcom-lalu3">
-            Pesan nominal voucher yang akan di beli, nominal voucher yang
-            tersedia (10k,25k,50k,100k,500k).
+          Pembelian voucher dapat dilakukan pada jam 08.00 - 22.00
           </li>
           <li class="buka-website-wwwibdmcom-lalu3">
-            Upload Bukti pembayaran sesuai dengan nominal voucher yang di beli,
-            pembayaran dapat melalui ATM/Bank (No Rek BNI : 1104-01-007117-50-4
-            A.n --l)
+          Pesan nominal voucher yang akan di beli, nominal voucher yang tersedia 10k,25k,50k,100k,500k.
           </li>
           <li class="buka-website-wwwibdmcom-lalu3">
-            Setelah verifikasi pembayaran admin selesai kode voucher akan
-            dikirimkan melalui whatsapp
+          Upload Bukti pembayaran sesuai dengan nominal voucher yang di beli, pembayaran dapat melalui Transfer Bank ( Nomor Rekening Sea Bank : 9012-4540-0031 A.N. Muhammad Daffa Nizar Bahari )
           </li>
           <li class="buka-website-wwwibdmcom-lalu3">
-            Setelah mendapatkan voucher masuk ke halaman
+          Setelah verifikasi pembayaran admin selesai kode voucher akan dikirimkan melalui whatsapp 
+          </li>
+          <li class="buka-website-wwwibdmcom-lalu3">
+          Setelah mendapatkan voucher masuk ke halaman Vote dengan cara mengklik tombol vote diatas, kemudian cari Finalis Favorit kalian dan lakukan Voting dengan cara memasukan kode voucher yang sudah dibeli.
             <span class="feline-lab8">Vote</span> dengan cara mengklik tombol
             vote diatas, kemudian cari Finalis Favorit kalian dan lakukan Voting
             dengan cara memasukan kode voucher yang sudah dibeli.

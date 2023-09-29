@@ -1475,8 +1475,8 @@ a{
         <div class="d20h20m1">---</div>
         </div>
         <div class="vote-desktop-child1">
-        <div class="div11">10</div>
-        <img class="gain-up-11" alt="" src="gain-up-1@2x.png" />
+        <div class="div11">-</div>
+        {{-- <img class="gain-up-11" alt="" src="gain-up-1@2x.png" /> --}}
         </div>
         <!-- <div class="home-group">
           <div class="home1" id="homeText" href="./home">Home</div>
@@ -1745,9 +1745,9 @@ a{
             // outputNamaHTML = '<div class="nama12">'+data1.toFixed(2)+'%</div>';
             // outputNamaHTML += '<div class="nama12">'+data2.toFixed(2)+'%</div>';
             // outputNamaHTML += '<div class="nama12">'+data3.toFixed(2)+'%</div>';
-            outputHTML = '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width1+'%; height: 42px;"><div style="position: relative; left: 0; width: 218px; padding-top: 3px; text-align: center; font-size: 11px; height: 100%; margin: 0; top: 12%;">'+nameP1+' '+' '+data1.toFixed(2)+'%</div></div>';
-            outputHTML += '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width2+'%; height: 42px;"><div style="position: relative; left: 0; width: 218px; padding-top: 3px; text-align: center; font-size: 11px; height: 100%; margin: 0; top: 12%;">'+nameP2+' '+' '+data2.toFixed(2)+'%</div></div>';
-            outputHTML += '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width3+'%; height: 42px;"><div style="position: relative; left: 0; width: 218px; padding-top: 3px; text-align: center; font-size: 11px; height: 100%; margin: 0; top: 12%;">'+nameP3+' '+' '+data3.toFixed(2)+'%</div></div>';
+            outputHTML = '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width1+'%; height: 42px;"><div style="position: relative; left: 0; width: 218px; padding-top: 5px; text-align: center; font-size: 11px; height: 100%; margin: 0; top: 12%;">'+nameP1+' '+' '+' '+' '+data1.toFixed(2)+'%</div></div>';
+            outputHTML += '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width2+'%; height: 42px;"><div style="position: relative; left: 0; width: 218px; padding-top: 5px; text-align: center; font-size: 11px; height: 100%; margin: 0; top: 12%;">'+nameP2+' '+' '+' '+' '+data2.toFixed(2)+'%</div></div>';
+            outputHTML += '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width3+'%; height: 42px;"><div style="position: relative; left: 0; width: 218px; padding-top: 5px; text-align: center; font-size: 11px; height: 100%; margin: 0; top: 12%;">'+nameP3+' '+' '+' '+' '+data3.toFixed(2)+'%</div></div>';
             document.getElementById(statisticId).innerHTML = outputHTML;
             document.getElementById(nameId).innerHTML = outputNamaHTML;
           }

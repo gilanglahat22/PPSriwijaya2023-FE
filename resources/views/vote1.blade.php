@@ -1246,11 +1246,11 @@ article{
         <div class="putri3">Putri</div>
         <div class="putra3">Putra</div>
         <div class="vote-desktop-inner">
-        <div class="d20h20m1">20D:20H:20M</div>
+        <div class="d20h20m1">---</div>
         </div>
         <div class="vote-desktop-child1">
-        <div class="div11">10</div>
-        <img class="gain-up-11" alt="" src="gain-up-1@2x.png" />
+        <div class="div11">-</div>
+        {{-- <img class="gain-up-11" alt="" src="gain-up-1@2x.png" /> --}}
         </div>
         <div class="home-group">
           <div class="home1" id="homeText" href="./home">Home</div>
@@ -1517,9 +1517,9 @@ article{
             outputNamaHTML = '<div class="nama12">'+data1.toFixed(2)+'%</div>';
             outputNamaHTML += '<div class="nama12">'+data2.toFixed(2)+'%</div>';
             outputNamaHTML += '<div class="nama12">'+data3.toFixed(2)+'%</div>';
-            outputHTML = '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width1+'px; height: 42px;"><div style="position: relative; left: '+(width1+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP1+'</div></div>';
-            outputHTML += '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width2+'px; height: 42px;"><div style="position: relative; left: '+(width2+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP2+'</div></div>';
-            outputHTML += '<div style="position: relative; background-color: var(--color-gainsboro); width: '+width3+'px; height: 42px;"><div style="position: relative; left: '+(width3+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 3px; text-align: left;">'+nameP3+'</div></div>';
+            outputHTML = '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width1+'px; height: 42px;"><div style="position: relative; left: '+(width1+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 5px; text-align: left;">'+nameP1+'</div></div>';
+            outputHTML += '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width2+'px; height: 42px;"><div style="position: relative; left: '+(width2+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 5px; text-align: left;">'+nameP2+'</div></div>';
+            outputHTML += '<div style="position: relative; background-color: var(--color-burlywood-200); width: '+width3+'px; height: 42px;"><div style="position: relative; left: '+(width3+10)+'px; width: 340px; font-size: var(--font-size-xl); padding-top: 5px; text-align: left;">'+nameP3+'</div></div>';
             document.getElementById(statisticId).innerHTML = outputHTML;
             document.getElementById(nameId).innerHTML = outputNamaHTML;
           }

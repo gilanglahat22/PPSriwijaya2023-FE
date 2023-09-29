@@ -258,12 +258,14 @@ body {
 .home-desktop-child12 {
   position: absolute;
   top: 832px;
-  left: calc(50% - 678px);
+  /* left: calc(50% - 678px); */
   border-radius: var(--br-xl);
   background: linear-gradient(180deg, #b8b8b8 19.79%, #ee9090 66.67%);
-  width: 1350px;
-  height: 750px;
-  padding-top: 3%;
+  width: 86%;
+  /* height: 750px; */
+  margin-left: 7%;
+  /* padding-top: 3%; */
+  padding-top: 1%
 }
 
 .home-desktop-child13 {
@@ -788,8 +790,9 @@ body {
     align-items: center;
     justify-content: center;
     justify-items: center;
-    width: 92%;
+    width: 97.5%;
     border-radius: var(--br-8xs);
+    height: 100%;
   }
 @media (max-width: 1441px){
     .rectangle-parent62 {

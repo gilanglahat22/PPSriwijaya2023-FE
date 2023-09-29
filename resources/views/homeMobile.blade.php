@@ -171,8 +171,8 @@ body {
   .rectangleDiv {
     left: 9%;
     right: 9%;
-    padding-top: 3%;
-    padding-bottom: 2%;
+    padding-top: 1%;
+    padding-bottom: 0%;
     /* margin-left: 2%; */
     /* margin-right: 2%; */
     margin-bottom: 7%;
@@ -184,8 +184,9 @@ body {
     align-items: center;
     justify-content: center;
     justify-items: center;
-    width: 92%;
+    width: 97%;
     border-radius: var(--br-8xs);
+    height: 100%;
   }
   .polygonIcon {
     position: absolute;
@@ -477,6 +478,7 @@ body {
     font-size: var(--font-size-base);
     color: var(--color-white);
     font-family: var(--font-abril-fatface);
+    width: 100%;
   }
   .home-parent3 {
     position: absolute;

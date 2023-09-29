@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-
+    <title>officialputraputrisriwijaya</title>
     <link rel="stylesheet" href="../resources/css/css/global.css" />
     <link rel="stylesheet" href="../resources/css/about-desktop.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata:wght@400&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Average:wght@400&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril Fatface:wght@400&display=swap" />
+    <link rel="icon" type="image/x-icon" href="logo-ypps-1-1-1@2x.png">
     <style>
     body {
       margin: 0;

@@ -485,16 +485,6 @@
         .rectangle-parent36 {
         left: 2045.81px;
         }
-        .slider-1 {
-        position: absolute;
-        top: 1444px;
-        left: calc(50% - 593px);
-        width: 1187px;
-        height: 440px;
-        overflow: hidden;
-        color: var(--color-black);
-        font-family: var(--font-alata);
-        }
         .putra4 {
         position: absolute;
         top: 1235px;
@@ -504,16 +494,6 @@
         display: inline-block;
         width: 390px;
         height: 65px;
-        }
-        .slider-2 {
-        position: absolute;
-        top: 2105px;
-        left: calc(50% - 590px);
-        width: 1187px;
-        height: 440px;
-        overflow: hidden;
-        color: var(--color-black);
-        font-family: var(--font-alata);
         }
         .d20h20m1,
         .div11,
@@ -904,7 +884,7 @@
           border-radius: var(--br-8xs);
         }
 
-        .container .slider-scrollbar .container-2 .slider-scrollbar-2 {
+        .container .container-2 {
           /* position: absolute; */
           height: 10px;
           width: 100%;
@@ -912,66 +892,7 @@
           align-items: center;
           /* top: 1000px; */
         }
-        .slider-scrollbar .scrollbar-track .slider-scrollbar-2 .scrollbar-track-2{
-          /* background: #ccc; */
-          width: 100%;
-          height: 2px;
-          display: flex;
-          align-items: center;
-          border-radius: 4px;
-          position: relative;
-        }
-        .slider-scrollbar:hover .scrollbar-track .slider-scrollbar-2:hover .scrollbar-track-2 {
-          height: 4px;
-        }
-        .slider-scrollbar .scrollbar-thumb {
-          position: absolute;
-          /* background: #000; */
-          top: 0;
-          bottom: 0;
-          width: 50%;
-          height: 100%;
-          cursor: grab;
-          border-radius: inherit;
-        }
-        .slider-scrollbar .scrollbar-thumb:active {
-          cursor: grabbing;
-          height: 8px;
-          top: -2px;
-        }
-        .slider-scrollbar .scrollbar-thumb::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: -10px;
-          bottom: -10px;
-        }
 
-        /* Batas */
-        .slider-scrollbar-2 .scrollbar-thumb-2 {
-          position: absolute;
-          /* background: #000; */
-          top: 0;
-          bottom: 0;
-          width: 50%;
-          height: 100%;
-          cursor: grab;
-          border-radius: inherit;
-        }
-        .slider-scrollbar-2 .scrollbar-thumb-2:active {
-          cursor: grabbing;
-          height: 8px;
-          top: -2px;
-        }
-        .slider-scrollbar-2 .scrollbar-thumb-2::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: -10px;
-          bottom: -10px;
-        }
         @media (max-width: 1441px){
             .rectangle-parent24 {
                 width: 1441px;
